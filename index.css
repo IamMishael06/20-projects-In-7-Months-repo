@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
+
+body{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'exo 2';
+
+}
+nav{
+    justify-content:space-around;
+    align-items: center;
+    font-family: 'exo 2';
+    height: 10vh;
+    width: 100vw;
+    background: #ffffffa8;
+    z-index: 4;
+}
+.logo{
+    align-items: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+.logo h2{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'exo 2';
+}
+.logo span{
+    color: #f9ae21;
+}
+.navItems li{
+margin-left: 5px;
+margin-right: 5px;
+}
+.navItems li a{
+    font-family: 'exo 2';
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display:block;
+}
+.navItems li a:hover{
+    color: #ba1f1d;
+    transition: 0.2s;
+}
+.buttons i{
+    color: #f9ae21;
+}
+.buttons button{
+    background: #ba1f1d;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+.buttons a{
+    color: #FFFFFF;
+}
+.carousel{
+    width: 100vw;
+    height: 100vh;
+}
+.slider{
+    position: relative;
+    margin: 0;
+    left: 0;
+    width: 500%;
+    animation: slider 30s ease-in-out 0.5s infinite;
+    transition: 0.3s;
+    height: 100vh;
+
+}
+.slider figure div{
+    width: 100vw;
+    float: left;
+    height: 100vh;
+}
+.slider figure div img{
+width: 100vw;
+height: 100vh;
+}
+.slider figure .slider-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background:#000000; /* semi-transparent red */
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+.content{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:normal;
+    text-align: left;
+    width: 100vh;
+    padding-left: 5vw;
+    z-index: 6;
+}
+.content p{
+    width: 50vw;
+}
+.content h4{
+    width: 10vw;
+    background: #f3a111;
+    border: 2px solid #fcb611;
+    border: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 2  px;
+ 
+}
+.content h1{
+    font-size: 80px;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+.content p{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.content button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.content button a{
+    font-weight: 700;
+}
+.first-slide{
+    height: 100vh !important;
+}
+@keyframes slider {
+    0%{
+        left: 0;
+        
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    100%{
+        left: -200%;
+    }
+
+}
+.offers{
+    justify-content: center;
+    height: 80vh;
+    margin: 0 auto;
+    margin-top: 20vh;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2vw;
+
+}
+.pizza{
+    height: 70vh;
+    width: 60vw;
+    /* margin-right: 2vw; */
+ 
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius:5px ;
+    border-top-left-radius: 5px;
+   
+   
+}
+.pizza img{
+    height: 70vh;
+    width: 60vw;
+    transition: 0.3s;
+    transform-origin: center center;
+}
+.pizza:hover img{
+    transform: scale(1.3);
+}
+.chicken{
+    height: 30vh;
+    width: 30vw;
+    position: relative;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+}
+.chicken img{
+    height: 30vh;
+    width: 30vw; 
+    max-width: 100%;
+    transition: 0.3s;
+    transition: 0.3s;
+    transform-origin: center center;
+}
+.chicken:hover img{
+    transform: scale(1.3);
+}
+.coffee{
+    height: 30vh;
+    width: 30vw;
+    margin-top: 5vw;
+    position: relative;
+    overflow: hidden;
+    border-bottom-right-radius:5px ;
+    
+}
+.coffee:hover img{
+    transform: scale(1.3);
+}
+.coffee img{
+    height: 30vh;
+    max-width: 100%;
+    transition: 0.3s;
+    transform-origin: center center;
+}
+ .text-overlay{
+    position: absolute; /* position the content absolutely within its parent */
+  top: 50%; /* position the top of the content at the vertical center of its parent */
+  left: 50%; /* position the left side of the content at the horizontal center of its parent */
+  transform: translate(-50%, -50%); /* move the content back up and left by 50% of its own height and width */
+  text-align:left; /* center align the text inside the content */
+  color: #fff; /* set the color of the text */
+  font-size: 20px; /* set the font size of the text */
+  font-weight: bold; /* set the font weight of the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 6;
+  display: flex;
+  font-family: 'roboto';
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  width: 100vw;
+
+
+}
+.meals{
+    width: 30vw;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.overlay:hover{
+    transform: scale(1.2);
+}
+.text-overlay button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5vh;
+}
+.text-overlay button a{
+    font-weight: 700;
+    font-family: 'exo 2';
+    font-size: 15px;
+    cursor: pointer;
+}
+.enjoy{
+    text-align: center;
+    align-items: center;
+}
+.enjoy h4{
+    width: 200px;
+    height: 30px;
+    background: #f3a111;
+    margin: 0 auto;
+    border: 2px solid #fcb611;
+    border-radius: 5px;
+    color: #FFFFFF;
+
+}
+.enjoy h1{
+    font-size: 40px;
+    font-family: 'rubik';
+    font-weight: 600;
+    margin-top: 2vh;
+}
+hr{
+    width:5vw;
+    margin: 0 auto;
+    border-color: #000000;
+    border-width: 2.5px;
+    margin-top: 1vh;
+}
+.enjoy p{
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+#mini-menu{
+    margin-top: 5vh;
+    margin-bottom: 30px;
+}
+#mini-menu ul{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    margin: 0 auto;
+}
+#mini-menu li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#mini-menu li a i{
+    font-size: 28px;
+}
+#mini-menu li a p{
+    font-size: 20px;
+}
+#mini-menu li a::after{
+    content: "";
+    width: 0px;
+    height: 3px;
+    background:#ba1f1d;
+    margin: auto;
+    display: block;
+    
+}
+#mini-menu li a:hover{
+    color: #ba1f1d;
+}
+#mini-menu li a i:hover{
+    font-size: 30px;
+    transition: 0.3s;
+}
+#mini-menu li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+.burger-card{
+    width: 100vw;
+    margin-top: 10vh;
+}
+.burger-sec{
+    width: 30vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+.burger-sec:hover{
+    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.burger-sec img{
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+}
+.burger-text h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.burger-text p{
+    text-align: center;
+}
+.burger-text button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.burger-text button a{
+    font-weight: 700;
+    font-family: 'exo 2';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+.pizza-card{
+    width: 100vw;
+    margin-top: 10vh;
+}
+.pizza-sec{
+    width: 30vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+.pizza-sec:hover{
+    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.pizza-sec img{
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+}
+.pizza-text h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.pizza-text p{
+    text-align: center;
+}
+.pizza-text button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.pizza-text button a{
+    font-weight: 700;
+    font-family: 'exo 2';
+    font-size: 15px;
+    cureveragepointer;
+}
+
+
+.beverage-card{
+    width: 100vw;
+    margin-top: 10vh;
+}
+.beverage-sec{
+    width: 30vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+.beverage-sec:hover{
+    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.beverage-sec img{
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+}
+.beverage-text h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.beverage-text p{
+    text-align: center;
+}
+.beverage-text button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.beverage-text button a{
+    font-weight: 700;
+    font-family: 'exo 2';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.drink-card{
+    width: 100vw;
+    margin-top: 10vh;
+}
+.drink-sec{
+    width: 30vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+.drink-sec:hover{
+    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.drink-sec img{
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+}
+.drink-text h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.drink-text p{
+    text-align: center;
+}
+.drink-text button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.drink-text button a{
+    font-weight: 700;
+    font-family: 'exo 2';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.dessert-card{
+    width: 100vw;
+    margin-top: 10vh;
+}
+.dessert-sec{
+    width: 30vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+.dessert-sec:hover{
+    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.dessert-sec img{
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+}
+.dessert-text h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.dessert-text p{
+    text-align: center;
+}
+.dessert-text button{
+    background: #ba1f1d;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.dessert-text button a{
+    font-weight: 700;
+    font-family: 'exo 2';
+    font-size: 15px;
+    cursor: pointer;
+}
