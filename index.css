@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
+main{
+ 
+    margin-top: 5vh;
+}
+body{
+    background: rgb(114,61,236);
+background: linear-gradient(335deg, rgba(114,61,236,1) 67%, rgba(96,122,230,1) 88%);
+height: 110vh;
+overflow-x: hidden;
+}
+.date{
+    color: #8da8f7;
+    font-size: 13px;
+    font-family: 'poppins';
+    font-weight: 500;
+    margin-left: 10vw;
+}
+form{
+    margin-top: 2.5vh;
+
+}
+
+.cloud{
+    width:50vw;
+}
+.cloud #sun{
+    display: none;
+}
+
+
+.search-area{
+    width: 80vw;
+    height: 8vh;
+    border-radius: 20px;
+    background: #ecf2f7;
+    margin: 0 auto;
+    margin-top: 2.5vh;
+    
+}
+input[type=search]{
+    background: #ecf2f7;
+    width: 60vw;
+    height: 8vh;
+    font-size: 20px;
+    border-radius: 20px;
+    color: #8da8f7;
+    padding-left: 20px;
+
+}
+input[type=search]::first-letter{
+    text-transform: uppercase;
+}
+input[type=search]:focus{
+    outline:none;
+  
+}
+input[type=search]::placeholder{
+    font-family: 'poppins';
+    padding-left: 0px;
+    color: #8da8f7;
+}
+.search-btn{
+    background: #6531bd;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ecf2f7;
+    font-weight: 600;
+
+
+}
+.temp-area h1{
+    font-size: 70px;
+    color: #e7e6fb;
+    font-family: 'lato';
+    font-weight: 700;
+    margin-top: 6vh;
+    margin-left: 10vw;
+}
+.name-area h1{
+    font-size: 40px;
+    color: #e7e6fb;
+    font-family: 'lato';
+    font-weight: 700;
+    margin-top: 2vh;
+    margin-left: 10vw;
+}
+.weather{
+    width: 100vw;
+}
+
+.weather-info h1{
+    color: #7b7ff1;
+    font-family: 'poppins';
+    font-weight: 200;
+    font-size: 20px;
+}
+.weather-info p{
+    color: #ecf2f7;
+    font-family: 'lato';
+    font-weight: 500;
+    font-size: 20px;
+}
+.other-cities{
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 4vh;
+    overflow-y: scroll;
+}
+.name h1{
+    color: #b192f3;
+    font-family: 'lato';
+    font-size: 18px;
+    font-weight: 500;
+}
+.first-city{
+    background: #6531bd;
+    width: 70vw;
+    height: 40vw;
+    border-radius: 30px;
+    margin-top: 2vh;
+}
+.cards{
+width: 80%;
+margin: 0 auto;
+margin-top: 1vh;
+}
+.first-city .clouds{
+    width: 40%;
+}
+.first-city .text{
+    margin-right: 10px;
+}
+.first-city .text h1{
+    color: #8b63cd;
+    font-family: 'poppins'; 
+    font-size: 10px;
+}
+.first-city .text p{
+    color: #e7e6fb;
+    font-family: 'poppins'; 
+}
+.first-city .info h1{
+    color: #7d79de;
+    font-family: 'poppins';
+    font-size: 8px;
+
+}
+.first-city .info p{
+    color: #e7e6fb;
+    font-family: 'lato';
+}

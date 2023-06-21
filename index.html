@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS WEATHER</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f0bfa4a648.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div>
+            <h1 id="date" class="date flex"></h1>
+        </div>
+        <div class="search-area flex items-center">
+            <div>
+                
+            </div>
+            <div >
+                <input type="search" placeholder="Choose Location" id="search-bar">
+            </div>
+            <div class="search-btn">
+                <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                <input type="submit" value="Search" id="search-btn" onclick="getWeather()">
+            </div>
+            
+        </div>
+        <div class="name-area">
+            <h1 id="name"></h1>
+        </div>
+        <div class="temp-area">
+            <h1 id="temperature"></h1>
+        </div>
+        <div class="weather flex justify-evenly items-center">
+            <div class="cloud">
+                <img src="/images/water-removebg-preview.png" alt=""  id="rain">
+                <img src="/images/sunny cloud.png" alt="" id="sun">
+            </div>
+            <div class="weather-info">
+                <div>
+                    <h1>Wind</h1>
+                    <p id="wind"></p>
+                </div>
+                <div>
+                    <h1>Humidity</h1>
+                    <p id="humidity"></p>
+                </div>
+                <div>
+                    <h1>Details<i class="fa-solid fa-up-right-and-down-left-from-center"></i></h1>
+                </div>
+            </div>
+        </div>
+        <div class="other-cities">
+            <div class="name flex justify-between">
+                <div>
+                    <h1>Other Cites</h1>
+                </div>
+                <div>
+                    <h1>View All</h1>
+                </div>
+            </div>
+            <div class="cards flex gap-5">
+                <div class="first-city">
+                    <div class="flex items-center justify-around">
+                        <div class="clouds">
+                            <img src="/images/water-removebg-preview.png" alt="">
+                          
+                        </div>
+                        <div class="text">
+                            <h1>Location</h1>
+                            <p id="randomLocation"></p>
+                        </div>
+                    </div>
+                    <div class="info flex justify-evenly">
+                        <div>
+                            <h1>Wind</h1>
+                            <p id="randomWind"></p>
+                        </div>
+                        <div>
+                            <h1>Humidity</h1>
+                            <p id="randomHumidity"></p>
+                        </div>
+                        <div>
+                            <h1>Temp</h1>
+                            <p id="randomTemp"></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+           
+        </div>
+    </main>
+    <script src="index.js"></script>
+    <script>
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth() + 1; // Note: Months are zero-based, so January is 0
+        const day = currentDate.getDate();
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+        if (month == 1) {
+            var monthName = 'January'
+        }
+        else if(month == 2){
+            var monthName = 'Febuary'
+        } else if(month == 3){
+            var monthName = 'March'
+        } else if(month == 4){
+            var monthName = 'April'
+        } else if(month == 5){
+            var monthName = 'May'
+        } else if(month == 6){
+            var monthName = 'June'
+        } else if(month == 7){
+            var monthName = 'July'
+        } else if(month == 8){
+            var monthName = 'August'
+        }else if(month == 9){
+            var monthName = 'September'
+        }else if(month == 10){
+            var monthName = 'October'
+        }else if(month == 11){
+            var monthName = 'November'
+        }else if(month == 12){
+            var monthName = 'December'
+        }
+
+        document.getElementById("date").textContent = `Today ${day} ${monthName}`
+console.log(`Current Date: ${year}-${month}-${day}`);
+console.log(`Current Time: ${hours}:${minutes}:${seconds}`);
+    </script>
+</body>
+
+</html>
