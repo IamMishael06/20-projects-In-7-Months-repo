@@ -142,7 +142,7 @@ height: 100vh;
     font-weight: 700;
 }
 .first-slide{
-    height: 100vh !important;
+    height: 100vh;
 }
 @keyframes slider {
     0%{
@@ -359,14 +359,23 @@ hr{
     width: 100%;
     transition: width 0.3s linear;
 }
+
+.swiper{
+    /* border: 1px solid red; */
+    padding-bottom: 100px !important;
+}
 .burger-card{
     width: 100vw;
     margin-top: 10vh;
 }
 .burger-sec{
-    width: 30vw;
-    height: 55vh;
+    width: 20vw;
+    height: 60vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .burger-sec:hover{
     box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
@@ -374,8 +383,8 @@ hr{
     transition: 0.5s;
 }
 .burger-sec img{
-    width: 20vw;
-    height: 30vh;
+    width: 15vw;
+    height: 20vh;
     margin: 0 auto;
 }
 .burger-text h1 {
@@ -385,6 +394,7 @@ hr{
 }
 .burger-text p{
     text-align: center;
+    font-size: 15px;
 }
 .burger-text button{
     background: #ba1f1d;
@@ -412,9 +422,13 @@ hr{
     margin-top: 10vh;
 }
 .pizza-sec{
-    width: 30vw;
-    height: 55vh;
+    width: 20vw;
+    height: 60vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .pizza-sec:hover{
     box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
@@ -422,8 +436,8 @@ hr{
     transition: 0.5s;
 }
 .pizza-sec img{
-    width: 20vw;
-    height: 30vh;
+    width: 15vw;
+    height: 20vh;
     margin: 0 auto;
 }
 .pizza-text h1 {
@@ -433,6 +447,7 @@ hr{
 }
 .pizza-text p{
     text-align: center;
+    font-size: 15px;
 }
 .pizza-text button{
     background: #ba1f1d;
@@ -450,7 +465,6 @@ hr{
     font-weight: 700;
     font-family: 'exo 2';
     font-size: 15px;
-    cureveragepointer;
 }
 
 
@@ -459,9 +473,13 @@ hr{
     margin-top: 10vh;
 }
 .beverage-sec{
-    width: 30vw;
-    height: 55vh;
+    width: 20vw;
+    height: 60vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .beverage-sec:hover{
     box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
@@ -480,6 +498,7 @@ hr{
 }
 .beverage-text p{
     text-align: center;
+    font-size: 15px;
 }
 .beverage-text button{
     background: #ba1f1d;
@@ -505,9 +524,13 @@ hr{
     margin-top: 10vh;
 }
 .drink-sec{
-    width: 30vw;
-    height: 55vh;
+    width: 20vw;
+    height: 60vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .drink-sec:hover{
     box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
@@ -526,6 +549,7 @@ hr{
 }
 .drink-text p{
     text-align: center;
+    font-size: 15px;
 }
 .drink-text button{
     background: #ba1f1d;
@@ -552,9 +576,13 @@ hr{
     margin-top: 10vh;
 }
 .dessert-sec{
-    width: 30vw;
+    width: 20vw;
     height: 55vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .dessert-sec:hover{
     box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
@@ -573,6 +601,8 @@ hr{
 }
 .dessert-text p{
     text-align: center;
+    font-size: 15px;
+
 }
 .dessert-text button{
     background: #ba1f1d;
@@ -591,4 +621,169 @@ hr{
     font-family: 'exo 2';
     font-size: 15px;
     cursor: pointer;
+}
+.move{
+ color: #000000;
+ font-size: 40px;
+ cursor: pointer;
+}
+.move:active{
+    color: #ba1f1d;
+    transition: 0.3s;
+}
+
+@media screen and (max-width:425px) {
+    body{
+        overflow-x: hidden !important;
+        padding: 0 !important;
+        margin:  0 !important;
+    }
+    nav{
+        height: auto;
+    }
+    .carousel{
+        height: auto;
+    }
+    .content{
+        height: 40% !important;
+    }
+    .content h4{
+        font-size: 10px;
+        width: 35vw;
+    }
+    .content h1{
+        font-size: 30px;
+    }
+    .content p{
+        width:90%;
+        font-size: 15px;
+    }
+    .content{
+        top: 30%;
+        height: 100%;
+    }
+    .content button{
+        height: 15vh;
+    }
+    .first-slide{
+        height: 70vh !important;
+    }
+    .slider{
+        height: 70vh !important;
+    }
+    .slider figure div img{
+        height: 70vh;
+    }
+    .slider figure .slider-image::after{
+        height: 70vh;
+    }
+    .offers{
+        margin-top: 0 !important;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .meals{
+        flex-direction: row;
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+
+    }
+    .pizza{
+        width: 100%;
+    }
+    .pizza img{
+        width: 100%;
+        border:none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+    }
+    .chicken{
+        width: 50%;
+        height: 100%;
+        border-top-right-radius: 0;
+    }
+    .coffee{
+        width: 50%;
+        height: 100%;
+        margin-top: 0;
+        border-bottom-right-radius: 0;
+    }
+    .text-overlay h4{
+        font-size: 10px;
+    }
+    .text-overlay h1{
+        font-size: 13px;
+    }
+    .enjoy{
+        margin-top: 4vh;
+        width: 100vw;
+    }
+    .enjoy p{
+        width: 90%;
+    }
+    .enjoy h1{
+        font-size: 20px;
+    }
+    #mini-menu  ul{
+        border: 1px solid red;
+        width: 90vw;
+    } 
+    #mini-menu li a p{
+        font-size: 10px;
+    }
+    #mini-menu li a i{
+        font-size: 15px;
+    }
+    .burger-card
+    {
+        flex-direction: column;
+    }
+    .burger-sec{
+        width: 90vw;
+        height: auto;
+        box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+        border-radius: 10px;
+    }
+    .pizza-card{
+        flex-direction: column;
+
+    }
+    .pizza-sec{
+        height: auto;
+        box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+        border-radius: 10px;
+    }
+    .beverage-card{
+        flex-direction: column;
+    }
+    .beverage-sec{
+        height: auto;  
+           width: 50vw;
+           justify-content: space-between;
+           margin-top:5vh;
+           padding-bottom: 10px;
+        box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+        border-radius: 10px;
+    }
+    .drink-card{
+        flex-direction: column;
+    }
+    .drink-sec{
+        height: auto;    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+        border-radius: 10px;
+    }
+    .dessert-card{
+        flex-direction: column;
+    }
+    .dessert-card{
+        height: auto;
+    }
+    .move{
+        font-size: 20px;
+    }
+
+
+
 }
