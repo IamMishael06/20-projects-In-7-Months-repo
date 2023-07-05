@@ -4,20 +4,21 @@ const temp = document.getElementById('temperature');
 const wind = document.getElementById('wind');
 const humidity = document.getElementById('humidity');
 const name = document.getElementById('name');
+const time = document.getElementById('time');
+
 
 async function getWeather(cityName) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
-//   fetch(url)
-//     .then(response => response.json())
-//     .then(data => {
-//       console.log(data);
-     
-//     })
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
 
     const response = await fetch(url)
     const data = await response.json()
     displayWeatherData(data);
     console.log(data)
+
+    const timeResponse = await fetch(weatherUrl)
+    const json = await json.json()
+    console.log(json)
 }
 
 function displayWeatherData(data) {
@@ -25,6 +26,8 @@ function displayWeatherData(data) {
   const weatherDescription = data.weather[0].description;
   const apiWind = data.wind.deg;
   const apiHumidity = data.main.humidity;
+//   const regionTime = 
+console.log(data)
 
   temp.textContent = `${apiTemp} ˚C`;
   wind.textContent = apiWind;

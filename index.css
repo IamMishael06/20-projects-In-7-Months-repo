@@ -6,7 +6,7 @@ main{
 body{
     background: rgb(114,61,236);
 background: linear-gradient(335deg, rgba(114,61,236,1) 67%, rgba(96,122,230,1) 88%);
-height: 110`vh;
+height: 110vh;
 overflow-x: hidden;
 }
 .date{
