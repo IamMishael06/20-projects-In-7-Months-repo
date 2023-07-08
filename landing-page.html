@@ -16,7 +16,39 @@
 </head>
 
 <body>
-    <nav class="flex">
+    <nav class="hamburger-nav flex">
+        <div class="logo flex">
+            <img src="/E-FOOD/image/purepng.com-fast-food-burgerburgerfast-foodhammeatfast-food-burgermc-donaldsburger-king-231519340225glvhm.png"
+                alt="">
+            <h2>MARS<span>FOOD</span></h2>
+        </div>
+        <div class="menu">
+            <div class="bar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu-items">
+                <div class="navItems">
+                    <ul class="">
+                        <li><a href="#">OUR MENU</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">PROFILE</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <div class="buttons">
+                           
+                            <button><a href="#">Sign In</a></button>
+                            <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                        </div>
+                    </ul>
+                </div>
+               
+            </div>
+
+        </div>
+
+    </nav>
+    <nav class="navbar flex">
         <div class="logo flex">
             <img src="/E-FOOD/image/purepng.com-fast-food-burgerburgerfast-foodhammeatfast-food-burgermc-donaldsburger-king-231519340225glvhm.png"
                 alt="">
@@ -152,7 +184,7 @@
         <div class="cards">
             <div class="swiper">
                  <!-- If we need navigation buttons -->
-                 <div class="flex justify-between w-[60vw] mx-auto">
+                 <div class="flex justify-between w-[60vw] mx-auto mt-3">
                     <div class="move move-out"><i class="fa-regular fa-circle-left"></i></div>
                     <div class="move move-on"><i class="fa-regular fa-circle-right"></i></div>
                 </div>
@@ -332,7 +364,6 @@
 
                         </div>
                     </div>
-                    ...
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -368,7 +399,7 @@
 
 
 
-
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
             integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -377,6 +408,7 @@
             AOS.init();
         </script>
         <script src="index.js"></script>
+       
 </body>
 
 </html>
