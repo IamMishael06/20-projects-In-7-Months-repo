@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'exo 2';
+    background: #ba1f1d;
+    font-family: 'exo 2';
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+.register-area{
+    width: 80vw;
+    height: 80vh;
+    background: #fff;
+    position: relative;
+    transition: 0.3s;
+    display: block;
+}
+.login{
+    /* border: 1px solid red; */
+}
+.Login-title h1{
+font-size: 28px;
+font-weight: 600;
+}
+form{
+width:70%;
+margin: 0 auto;
+align-items: center;
+display: flex;
+justify-content: center;
+
+}
+form input[type=text], form input[type=password] {
+    border: none;
+
+    width: 100%;
+
+    border-radius: 2px;
+    outline: none;
+    font-weight: 500;
+}
+form input[type=email]{
+    border: none;
+    width: 100%;
+    border-radius: 2px;
+    outline: none;
+    font-weight: 500;
+}
+form div i{
+    color: #ccc;
+}
+form div{
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+
+}
+form div.active{
+    border-bottom: 2px solid #ba1f1d;
+}
+form input[type=submit]{
+    width: 50%;
+    background: #ba1f1d;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+form input[type=submit]:hover{
+    background: #681312;
+
+}
+.login a{
+    color: #ba1f1d;
+    font-weight: 600;
+}
+.login-btn{
+    color: #ba1f1d;
+    font-weight: 600;
+    cursor: pointer;
+}
+.sign-up{
+    /* border: 1px solid red; */
+    width: 30%;
+
+}
+.signup-btn{
+    color: #ba1f1d;
+    font-weight: 600;
+    cursor: pointer;
+}
+.image-area{
+    position: absolute;
+    width: 70%;
+    height: 80vh !important;
+    transition: 0.7s;
+}
+.image-area.active{
+    transform: translateX(-42.7%);
+}
+/* .image-area.left{
+    transform: translateX(42.7%);
+} */
+.image-area img{
+    height: 80vh !important;
+}
+.p-reset{
+    background: #fff;
+    transform: translateY(200%);
+    transition: 0.5s;
+    position: absolute;
+}
+.go-back{
+    color: #ba1f1d;
+    font-weight: 600;
+    cursor: pointer;
+}
+.mb-register-area, .mb-login{
+    display: none !important;
+}
+.mb-register-area-login{
+    display: none !important;
+}
+.p-reset-mobile{
+    display: none !important;
+}
+@media screen and (max-width:600px) {
+    .register-area{
+        display: none !important;
+    }
+    .image-area img{
+        display: none;
+    }
+    .mb-register-area-login{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 90vh;
+        align-items: normal;
+        width: 80vw;
+        position: absolute;
+        display: block !important;
+        transform: translateY(200%);
+        background: #fff;
+        position: relative;
+        transition: 0.3s;
+    }
+    .mb-register-area{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 90vh;
+        transform: translateY(0%);
+        align-items: normal;
+        width: 80vw;
+        display: block !important;
+        background: #fff;
+        position: relative;
+        transition: 0.3s;
+        position: absolute;
+    }
+    .mb-login{
+        height: 100% !important;
+        display: block !important;
+        display: flex !important;
+    }
+    .mbform{
+        width:80%;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+        }
+        .mbform input[type=text], form input[type=password] {
+            border: none;
+        
+            width: 100%;
+        
+            border-radius: 2px;
+            outline: none;
+            font-weight: 500;
+        }
+        .mbform input[type=email]{
+            border: none;
+            width: 100%;
+            border-radius: 2px;
+            outline: none;
+            font-weight: 500;
+        }
+        .mbform div i{
+            color: #ccc;
+        }
+        .mbform div{
+            width: 100%;
+            border-bottom: 2px solid #ccc;
+        
+        }
+        .mbform div.active{
+            border-bottom: 2px solid #ba1f1d;
+        }
+        .mbform input[type=submit]{
+            width: 50%;
+            background: #ba1f1d;
+            margin: 0 auto;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 8px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3vh;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        .mbform input[type=submit]:hover{
+            background: #681312;
+        
+        }.login a{
+            color: #ba1f1d;
+            font-weight: 600;
+            font-size: 12px;
+
+        }
+        .login-btn-mobile{
+            color: #ba1f1d;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .back-btn-mobile{
+            color: #ba1f1d;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .sign-up{
+            /* border: 1px solid red; */
+            width: 30%;
+        
+        }
+        .signup-btn-mobile{
+            color: #ba1f1d;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .forget-password-mobile{
+            color: #ba1f1d;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .p-reset-mobile{
+            background: #fff;
+            transform: translateY(200%);
+            transition: 0.5s;
+            position: absolute;
+            display: block !important;
+        }
+        .p-reset-mobile h1:nth-child(1){
+            font-size: 25px;
+        }
+        .have-an-acc{
+            font-size: 12px;
+        }
+        .go-back-mobile{
+            color: #ba1f1d;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
+        }
+}
+ @media screen and (max-width:1024px) and (min-width:601px) {
+    .register-area{
+        width: 90vw;
+        height: 80vh;
+        background: #fff;
+        position: relative;
+        transition: 0.3s;
+        display: block;
+        display: flex !important;
+    }
+    .Login-title h1{
+        font-size: 25px;
+    }
+    form {
+        width: 90%;
+    }
+    .links{
+        font-size: 12px;
+        width: 90%;
+    }
+ }

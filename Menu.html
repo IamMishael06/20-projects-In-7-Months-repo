@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS</title>
+    <link rel="icon" type="image/x-icon" href="/E-FOOD/image/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f0bfa4a648.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Menu.css">
+
+</head>
+
+<body class="p-0 m-0 overflow-x-hidden bg-[#f6fafd]">
+    <main class="flex justify-between w-[100vw] h-[100vh] relative">
+        <aside class="w-[20%] h-[100%]  fixed bg-[#ffffff] z-[4] transition-[0.3s]">
+            <div class="side-items flex justify-between flex-col mx-auto w-[100%]">
+                <div class="logo flex h-[10vh] items-center justify-between">
+                    <div class="logo-area flex w-[85%] mx-auto">
+                        <img class="w-[50px] h-[50px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" alt="">
+                        <div class="pl-2">
+                            <h2>MARS<span>FOOD</span></h2>
+                            <h1 id="date"></h1>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                </div>
+                <div class="mini-nav h-[10vh]">
+                    <div class="mini-nav-items flex w-[85%] h-[100%] mx-auto items-center">
+                        <img class="w-[50px] h-[50px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" alt="">
+                        <div class="flex flex-col pl-4">
+                            <p>Menu</p>
+                            <h1>Burger</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-dashboard h-[45vh]">
+                    <div class="dashboard w-[100%] h-[100%] mx-auto flex flex-col justify-evenly">
+                        <div class=" w-[85%] mx-auto mt-5">
+                            <h1>Menu Dashboard</h1>
+                        </div>
+                        <ul class="flex flex-col h-[90%] w-[100%] mx-auto justify-evenly">
+                            <li class="w-[95%] mx-auto"><a href="#" class="flex items-center  w-[85%] mx-auto"><i
+                                        class="fa-solid fa-cubes"></i>
+                                    <p class="pl-3">Dashboard</p>
+                                </a></li>
+                            <li class="w-[95%] mx-auto"><a href="#" class="flex items-center w-[85%] mx-auto"><i
+                                        class="fa-solid fa-list-check"></i>
+                                    <p class="pl-3">Menus</p>
+                                </a></li>
+                            <li class="w-[95%] mx-auto"><a href="#" class="flex items-center w-[85%] mx-auto"><i
+                                        class="fa-solid fa-stopwatch"></i>
+                                    <p class="pl-3">History</p>
+                                </a></li>
+                            <li class="w-[95%] mx-auto"><a href="#" class="flex items-center w-[85%] mx-auto"><i
+                                        class="fa-regular fa-user"></i>
+                                    <p class="pl-3">Profile</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="general h-[35vh] w-[100%] flex flex-col justify-evenly">
+                    <ul class="flex flex-col h-[50%] w-[100%] mx-auto justify-evenly">
+                        <h1 class=" w-[85%] mx-auto">General</h1>
+                        <li class="w-[95%] mx-auto"><a href="#" class="flex items-center  w-[85%] mx-auto"><i
+                                    class="fa-solid fa-gears"></i>
+                                <p class="pl-3">Setting</p>
+                            </a></li>
+                        <li class="w-[95%] mx-auto"><a href="#" class="flex items-center  w-[85%] mx-auto"><i
+                                    class="fa-solid fa-star-half-stroke"></i>
+                                <p class="pl-3">Rate Us</p>
+                            </a></li>
+                    </ul>
+                    <div
+                        class="mode-slider bg-[#f6fafd] w-[85%] h-[15%] mx-auto relative flex justify-evenly items-center">
+                        <div class="dark slider-text flex items-center justify-between">
+                            <i class="fa-regular fa-moon"></i>
+                            <h1>Dark</h1>
+                        </div>
+                        <div class="light slider-text flex items-center justify-between">
+                            <i class="fa-solid fa-sun"></i>
+                            <h1>Light</h1>
+                        </div>
+                        <div
+                            class="mode-slider-bg bg-[#fff] h-[95%] m-auto flex items-center w-[50%] absolute transition-[0.4s] z-[3] right-0">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="ml-[20%] w-[100%] h-[100vh] relative transition-[0.3s]">
+            <nav class="h-[10vh] w-[100%] flex items-center bg-[#fff] ">
+                <div class="nav-area flex justify-between items-center w-[70vw] h-[60%] mx-auto">
+                    <form action="" class="flex items-center">
+                        <div class="search-area flex items-center justify-between">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" placeholder="Search Menu...">
+                            <button>⌘</button>
+                        </div>
+
+
+                    </form>
+                    <div class="nav-items flex justify-between w-[50%]">
+                        <div class="chat flex items-center">
+                            <i class="fa-regular fa-message"></i>
+                            <p class="pl-3">Chat</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <p class="pl-3">More</p>
+                        </div>
+                        <div class="share flex items-center">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                            <p class="pl-3">Share</p>
+                        </div>
+                        <div class="my-orders flex items-center">
+                            <i class="fa-solid fa-arrow-up-wide-short"></i>
+                            <p class="pl-3">My Orders</p>
+                        </div>
+
+            </nav>
+            <div class="menu flex flex-col justify-between mt-5">
+                <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff]">
+                    <div class="swiper-info flex items-center w-[90%] mx-auto">
+                        <div class="move-left flex items-center">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div class="header pl-3">
+                            <h1>Hamburger</h1>
+                            <p>Discover whatever you need easily</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex justify-between flex-wrap gap-5 relative">
+                    <div
+                        class="quick-order h-[80%] w-[25%] bg-[#fff] fixed top-[12%] right-[2%] flex flex-col justify-center">
+                        <div class="order-items h-[90%] w-[90%] mx-auto justify-between flex flex-col">
+                            <div class="flex items-center justify-between">
+                                <div class="order-head">
+                                    <h1>My Order</h1>
+                                    <p>Take out</p>
+                                </div>
+                                <div class="close-x w-[50px] h-[50px] flex items-center justify-center">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="items-order  flex flex-col justify-between gap-5 overflow-scroll">
+                                <div class="card-pick-order mx-auto ">
+                                    <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                                        <div>
+                                            <img class="w-[50px] h-[45px]"
+                                                src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                        </div>
+                                        <div class="item-detail ">
+                                            <h1 class="text-left">Big Mac</h1>
+                                            <p class="text-left">$3.41</p>
+                                        </div>
+                                        <div class="flex items-center flex-col justify-between">
+                                            <p class="cursor-pointer text-[#b2b3b7]">...</p>
+                                            <div class="add-item flex items-center justify-between">
+                                                <p>-</p>
+                                                <h5>1</h5>
+                                                <p>+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-pick-order mx-auto ">
+                                    <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                                        <div>
+                                            <img class="w-[50px] h-[45px]"
+                                                src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                        </div>
+                                        <div class="item-detail ">
+                                            <h1 class="text-left">Big Mac</h1>
+                                            <p class="text-left">$3.41</p>
+                                        </div>
+                                        <div class="flex items-center flex-col justify-between">
+                                            <p class="cursor-pointer text-[#b2b3b7]">...</p>
+                                            <div class="add-item flex items-center justify-between">
+                                                <p>-</p>
+                                                <h5>1</h5>
+                                                <p>+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-pick-order mx-auto ">
+                                    <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                                        <div>
+                                            <img class="w-[50px] h-[45px]"
+                                                src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                        </div>
+                                        <div class="item-detail ">
+                                            <h1 class="text-left">Big Mac</h1>
+                                            <p class="text-left">$3.41</p>
+                                        </div>
+                                        <div class="flex items-center flex-col justify-between">
+                                            <p class="cursor-pointer text-[#b2b3b7]">...</p>
+                                            <div class="add-item flex items-center justify-between">
+                                                <p>-</p>
+                                                <h5>1</h5>
+                                                <p>+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-pick-order mx-auto ">
+                                    <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                                        <div>
+                                            <img class="w-[50px] h-[45px]"
+                                                src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                        </div>
+                                        <div class="item-detail ">
+                                            <h1 class="text-left">Big Mac</h1>
+                                            <p class="text-left">$3.41</p>
+                                        </div>
+                                        <div class="flex items-center flex-col justify-between">
+                                            <p class="cursor-pointer text-[#b2b3b7]">...</p>
+                                            <div class="add-item flex items-center justify-between">
+                                                <p>-</p>
+                                                <h5>1</h5>
+                                                <p>+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-pick-order mx-auto ">
+                                    <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                                        <div>
+                                            <img class="w-[50px] h-[45px]"
+                                                src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                        </div>
+                                        <div class="item-detail ">
+                                            <h1 class="text-left">Big Mac</h1>
+                                            <p class="text-left">$3.41</p>
+                                        </div>
+                                        <div class="flex items-center flex-col justify-between">
+                                            <p class="cursor-pointer text-[#b2b3b7]">...</p>
+                                            <div class="add-item flex items-center justify-between">
+                                                <p>-</p>
+                                                <h5>1</h5>
+                                                <p>+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-pick-order mx-auto">
+                                    <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                                        <div>
+                                            <img class="w-[50px] h-[45px]"
+                                                src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                        </div>
+                                        <div class="item-detail ">
+                                            <h1 class="text-left">Big Mac</h1>
+                                            <p class="text-left">$3.41</p>
+                                        </div>
+                                        <div class="flex items-center flex-col justify-between">
+                                            <p class="cursor-pointer text-[#b2b3b7]">...</p>
+                                            <div class="add-item flex items-center justify-between">
+                                                <p>-</p>
+                                                <h5>1</h5>
+                                                <p>+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="billing-info">
+                                <div class="flex justify-between">
+                                    <p>Subtotal</p>
+                                    <h2>$17.05</h2>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p>Tax (10%\)</p>
+                                    <h2>$0.23</h2>
+                                </div>
+                                <hr class="mt-5 mb-5">
+                                <div class="total flex justify-between">
+                                    <p>Total</p>
+                                    <h4>$17.28</h4>
+                                </div>
+                                <div class="flex justify-center">
+                                    <form action="" method="post" class="mx-auto mt-5 flex items-center justify-center">
+                                        <input type="submit" name="bills" value="Pay" >
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[12%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                    <div class="card-body bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="item-img">
+                            <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                        </div>
+                        <div class="item-detail ">
+                            <h1 class="text-center">Big Mac</h1>
+                            <p class="text-center">$3.41</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+    <script src="Menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth() + 1; // Note: Months are zero-based, so January is 0
+        const day = currentDate.getDate();
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+        if (month == 1) {
+            var monthName = 'January'
+        }
+        else if (month == 2) {
+            var monthName = 'Febuary'
+        } else if (month == 3) {
+            var monthName = 'March'
+        } else if (month == 4) {
+            var monthName = 'April'
+        } else if (month == 5) {
+            var monthName = 'May'
+        } else if (month == 6) {
+            var monthName = 'June'
+        } else if (month == 7) {
+            var monthName = 'July'
+        } else if (month == 8) {
+            var monthName = 'August'
+        } else if (month == 9) {
+            var monthName = 'September'
+        } else if (month == 10) {
+            var monthName = 'October'
+        } else if (month == 11) {
+            var monthName = 'November'
+        } else if (month == 12) {
+            var monthName = 'December'
+        }
+
+        document.getElementById("date").textContent = `Today ${day} ${monthName}`
+    </script>
+
+</body>

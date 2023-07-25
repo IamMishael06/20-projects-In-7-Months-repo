@@ -20,6 +20,7 @@
 //     pizzaCard.style.display ="block"
 
 // })
+
 var menuBtn = document.querySelector('.bar')
 var dashboard = document.querySelector('.hamburger-nav')
 var bar = document.querySelector('.bar div:nth-child(2)')
@@ -30,6 +31,9 @@ menuBtn.addEventListener('click', ()=>{
   bar.classList.toggle('active')
   menu.classList.toggle('active')
 })
+
+
+
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters

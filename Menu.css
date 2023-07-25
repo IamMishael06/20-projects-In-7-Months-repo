@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Tomorrow:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
+aside li.active{
+    color:#fff;
+}
+aside li{
+    transition: 0.3s;
+}
+section nav.active{
+    width: 0%;
+    position: absolute;
+    transition: 0.2s;
+}
+.logo{
+    border-bottom: 1px solid #f6f6f6;
+}
+.logo h2{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'exo 2';
+}
+.logo span{
+    color: #f9ae21;
+}
+#date{
+    font-size: 10px;
+    color: #b5b5b5;
+}
+
+.arrow{
+    background: #f9f8fd;
+    padding: 2px;
+    transform: rotate(180deg);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.arrow i{
+    transition: 0.4s;
+}
+.arrow i.active{
+    transform: rotate(-180deg);
+}
+.mini-nav{
+    border-bottom: 1.5px solid #f6f6f6;
+}
+.mini-nav-items p{
+    font-family: 'exo 2';
+    font-weight: 200;
+    color: #a8a8a8;
+}
+.mini-nav-items h1{
+    font-family: 'Tomorrow';
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+.menu-dashboard{
+    border-bottom: 1.5px solid #f6f6f6;
+}
+.dashboard ul i{
+    font-size: 20px;
+}
+.dashboard h1{
+    font-weight: 400;
+    color: #a8a8a8;
+    font-size: 15px;
+    font-family: 'Tomorrow';
+}
+.dashboard ul {
+    color: #00000080;
+    font-weight: 600;
+}
+.dashboard ul li:hover{
+    border-left: 3px solid #ba1f1d;
+    color: #ba1f1d !important;
+    transition: 0.3s ease-in-out;
+}
+.general ul h1{
+    font-weight: 400;
+    color: #a8a8a8;
+    font-size: 15px;
+    font-family: 'Tomorrow';
+}
+.general ul{
+    color: #00000080;
+    font-weight: 600;
+}
+.general ul li:hover{
+    border-left: 3px solid #ba1f1d;
+    color: #ba1f1d;
+    transition: 0.3s ease-in-out;
+}
+.mode-slider-bg{
+    width: 50% !important;
+    position: absolute !important;
+}
+.mode-slider-bg.active{
+    right: 50%;
+}
+.slider-text{
+    position: relative;
+    z-index: 5 !important;
+    justify-content: space-between !important;
+    cursor: pointer;
+}
+.slider-text h1,.slider-text i{
+    color: #a8a8a8;
+
+
+}
+.slider-text h1{
+    font-family: 'exo 2';
+}
+.mode-slider div{
+    width: 25%;
+    justify-content: center;
+}
+.nav-area form{
+    width: 25%;
+    height: 100%;
+    padding: 0 5px;
+    justify-content: space-between !important;
+    background: #f8f9fd;
+    border-radius: 5px;
+}
+.nav-area form input{
+    background: #f8f9fd;
+    outline: none;
+    margin-left: 5px;  
+    font-size: 13px;
+    color: #7e7e7e;
+}
+input[type="search"]::-webkit-search-cancel-button {
+    color: red;
+    background-color: red;
+  }
+.nav-area form input::placeholder{
+    font-size: 14px;
+    font-family: 'exo 2';
+    letter-spacing: .5px;
+}
+.nav-area form  button{
+    background: #fffffe !important;
+    padding:5px 10px;
+    border-radius: 5px;
+
+    color: #a8a8a8;
+
+}
+.nav-area form i{
+    font-size: 15px;
+    color: #000000a2;
+}
+.chat i{
+    border: 1.2px solid #7e7e7e;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 50px;
+}
+.share {
+    border: 1px solid #f6f6f6;
+    padding:6px 6px;
+    border-radius: 5px;
+}
+.nav-area{
+    /* border: 1px solid red; */
+    font-family: 'exo 2';    
+}
+.nav-area.active{
+    display: none;
+}
+.nav-items p,.nav-items i{
+    color: #7e7e7e;
+    
+}
+.nav-items p{
+    font-size: 15px;
+}
+.nav-items div{
+    cursor: pointer;
+}
+.my-orders{
+    background: #fff6f9;
+border-radius: 8px;
+    font-family: 'lato';
+    padding:0 5px ;
+}
+.my-orders p, .my-orders i{
+    color: #d4a5a7 !important;
+}
+nav{
+    transition: 0.3s;
+}
+.menu{
+    height: 100%;
+}
+.swiper-info{
+    height: 100%;
+}
+.move-left{
+    border: 1.5px solid #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center !important;
+    cursor: pointer;
+}
+.move-left i{
+    color: #a6a6a6;
+}
+.menu .header h1{
+    color: #1f1f1f;
+    font-weight: 700;
+    font-family: 'lato';
+    font-size: 40px;
+}
+.menu .header p{
+    color: #898989;
+    font-family: 'lato';
+
+}
+.card-body{
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px #cccccc43;
+    cursor: pointer;
+}
+.item-detail{
+font-family: 'exo 2';
+}
+.item-detail h1{
+    font-weight: 600;
+    font-size: 18px;
+}
+.item-detail p{
+    font-size: 13px;
+    color: #c0888b;
+
+}
+.quick-order{
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.quick-order.active{
+    transform: translateX(150%);
+}
+.order-items{
+}
+.close-x{
+    border: 1.7px solid #f8f8f8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.close-x i{
+    font-size: 20px;
+    color: #a0a0a0 !important;
+}
+.order-head h1{
+    font-family: 'lato';
+    font-weight: 600;
+    font-size: 30px;
+}
+.order-head{
+    font-family: 'lato';
+}
+.items-order{
+    height: 50% !important;
+    overflow-y: scroll;
+}
+.card-pick-order{
+    background: #f8f9fe;
+    height: 30%;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px;
+}
+.add-item{
+    width: 120%;
+    cursor:pointer;
+
+}
+.add-item p{
+    border: 1px solid #e1e2e6;
+    color: #e1e2e6;
+    padding: 2px 3px;
+    border-radius: 5px;
+}
+.add-item p:active ,.add-item p:hover{
+    background: #eb615d;
+    color: #fff;
+    transition: 0.2s;
+}
+.add-item h5{
+    font-family: 'lato';
+    font-weight: 600;
+}
+.billing-info p{
+    color: #cbcbcb;
+    font-size: 12px;
+    font-family: 'Tomorrow';
+    font-weight: 300;
+}
+.billing-info h2, h4{
+    color: #959595;
+    font-size: 14px;
+    font-family: 'Tomorrow';
+    font-weight: 500;
+}
+.total p{
+    color: #5b5b5b;
+    font-size: 14px;
+    font-family: 'Tomorrow';
+    font-weight: 500;
+}
+.total h4{
+    color: #5b5b5b;
+    font-size: 16px;
+    font-family: 'Tomorrow';
+    font-weight: 600;
+}
+.billing-info form{
+    text-align: center;
+    width: 80%;
+    height: 5vh;
+    border-radius: 5px;
+
+}
+.billing-info form input{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: #ec5956;
+    color: #fff;
+    font-family: 'lato';
+
+}

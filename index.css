@@ -9,7 +9,7 @@ body{
 
 }
 .hamburger-nav{
-    display: none;
+    display: none !important;
 }
 
 .navbar{
@@ -645,11 +645,10 @@ hr{
     .hamburger-nav{
         justify-content:space-between;
         align-items: center;
-        display: block;
         font-family: 'exo 2';
         width: 100vw;
-        display: block;
-        display: flex;
+        display: block !important;
+        display: flex !important;
         background: #fff;
     
     }
