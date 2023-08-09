@@ -308,7 +308,7 @@ height: 100vh;
 }
 hr{
     width:5vw;
-    margin: 0 auto;
+    margin: 0 auto !important;
     border-color: #000000;
     border-width: 2.5px;
     margin-top: 1vh;
