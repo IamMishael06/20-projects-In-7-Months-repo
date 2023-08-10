@@ -14,16 +14,19 @@
         <div>
             <h1 id="date" class="date flex"></h1>
         </div>
-        <div class="search-area flex items-center">
-            <div class="search-input">
-                <input type="search" placeholder="Choose Location" id="search-bar">
+        <form action="">
+            <div class="search-area flex items-center">
+                <div class="search-input">
+                    <input type="search" placeholder="Choose Location" id="search-bar">
+                </div>
+                <div class="search-btn">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <input type="submit" value="Search" id="search-btn" onclick="getWeather()">
+                </div>
+                
             </div>
-            <div class="search-btn">
-                <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                <input type="submit" value="Search" id="search-btn" onclick="getWeather()">
-            </div>
-            
-        </div>
+        </form>
+       
         <div class="name-area">
             <h1 id="name"></h1>
         </div>
