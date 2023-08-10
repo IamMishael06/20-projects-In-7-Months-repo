@@ -6,8 +6,9 @@ main{
 body{
     background: rgb(114,61,236);
 background: linear-gradient(335deg, rgba(114,61,236,1) 67%, rgba(96,122,230,1) 88%);
-height: 110vh;
+height: auto;
 overflow-x: hidden;
+
 }
 .date{
     color: #8da8f7;
@@ -27,7 +28,9 @@ form{
 .cloud #sun{
     display: none;
 }
-
+#rain{
+    
+}
 
 .search-area{
     width: 80vw;
@@ -58,6 +61,7 @@ input[type=search]:focus{
 input[type=search]::placeholder{
     font-family: 'poppins';
     padding-left: 0px;
+    font-size: 15px;
     color: #8da8f7;
 }
 .search-btn{
@@ -110,7 +114,6 @@ input[type=search]::placeholder{
     width: 80vw;
     margin: 0 auto;
     margin-top: 4vh;
-    overflow-y: scroll;
 }
 .name h1{
     color: #b192f3;
@@ -154,4 +157,55 @@ margin-top: 1vh;
 .first-city .info p{
     color: #e7e6fb;
     font-family: 'lato';
+}
+
+@media screen  and (min-width:1024px){
+    body{
+        height: auto;
+    }
+    .search-area{
+        width: 50%;
+        margin: 0;
+        margin-left: 10vw;
+            margin-top: 2.5vh;
+
+    }
+    input[type=search]{
+        width: 100%;
+    }
+    .search-input{
+        width: 80%;
+    }
+    .search-btn{
+        width: 20%;
+    }
+    .cards{
+        width: 50%;
+        height: 100%;
+        margin: 0;
+    }
+    .other-cities{
+    width: 70vw;
+    margin: 0 ;
+    margin-left: 10vw;
+    height: auto;
+    margin-top: 4vh;
+}
+.first-city{
+    height: 100%;
+    padding-bottom: 5vh;
+}
+.text h1{
+    font-size: 20px !important;
+}
+.text p{
+    font-size: 50px !important;
+}
+.info h1{
+        font-size: 15px !important;
+}
+.info p{
+ font-size: 30px !important;
+}
+    
 }

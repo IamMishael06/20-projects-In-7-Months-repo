@@ -26,9 +26,21 @@ function displayWeatherData(data) {
   const weatherDescription = data.weather[0].description;
   const apiWind = data.wind.deg;
   const apiHumidity = data.main.humidity;
+  const apicountry = data.sys.country;
+  clouds = data.weather[0].main
+//   if (clouds === 'Clouds') { // Assuming 'Clouds' is a possible value in data.weather[0].main
+//     alert('hello');
+//     sun.style.display = "block"
+//     rain.style.display = "none"
+// } else {
+//   console.log('error')
+// }
+
+
+
 //   const regionTime = 
 console.log(data)
-
+time.textContent = apicountry;
   temp.textContent = `${apiTemp} ˚C`;
   wind.textContent = apiWind;
   humidity.textContent = apiHumidity;
@@ -36,7 +48,7 @@ console.log(data)
   const sun = document.getElementById('sun')
   const rain = document.getElementById('rain')
   if (data.weather.main =='Clouds') {
-      sun.classList.toggle('active')
+     
   }
   else if(data.weather.main == 'Rain'){
       rain.classList.toggle('active')

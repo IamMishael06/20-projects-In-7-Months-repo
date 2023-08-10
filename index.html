@@ -9,16 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/f0bfa4a648.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="py-[5vh]">
     <main>
         <div>
             <h1 id="date" class="date flex"></h1>
         </div>
         <div class="search-area flex items-center">
-            <div>
-                
-            </div>
-            <div >
+            <div class="search-input">
                 <input type="search" placeholder="Choose Location" id="search-bar">
             </div>
             <div class="search-btn">
@@ -43,12 +40,12 @@
                     <h1>Wind</h1>
                     <p id="wind"></p>
                 </div>
-                <div>
+                <div class="my-[5vh]">
                     <h1>Humidity</h1>
                     <p id="humidity"></p>
                 </div>
-                <div>
-                    <h1>Time</h1>
+                <div class="mb-[5vh]">
+                    <h1>Country</h1>
                     <p id="time"></p>
                 </div>
                 <div>
@@ -65,12 +62,11 @@
                     <h1>View All</h1>
                 </div>
             </div>
-            <div class="cards flex gap-5">
+            <div class="cards flex">
                 <div class="first-city">
                     <div class="flex items-center justify-around">
                         <div class="clouds">
                             <img src="/images/water-removebg-preview.png" alt="">
-                          
                         </div>
                         <div class="text">
                             <h1>Location</h1>
