@@ -83,53 +83,35 @@ var historyBtn = document.querySelector('.history-btn')
 var dashboardBtn = document.querySelector('.dashboard-btn')
 var trackingOrderBtn = document.querySelector('.track-order')
 var trackingOrderSec = document.querySelector('.track-order-sec')
+var customerServiceBtn = document.querySelector('.customer-service')
+var customerSec = document.querySelector('.customer-service-sec')
 dashboardBtn.addEventListener('click',()=>{
     historySec.style.display ='none';
     dashboardSec.style.display ='block';
     trackingOrderSec.style.display ='none';
-})
-historyBtn.addEventListener('click',()=>{
-    dashboardSec.style.display ='none';
-    historySec.style.display ='block';
-    trackingOrderSec.style.display ='none';
+    customerSec.style.display ='none';
 })
 trackingOrderBtn.addEventListener('click', ()=>{
     trackingOrderSec.style.display ='block';
     dashboardSec.style.display ='none';
     historySec.style.display ='none';
-
+    customerSec.style.display ='none'; 
     
 })
+historyBtn.addEventListener('click',()=>{
+    dashboardSec.style.display ='none';
+    historySec.style.display ='block';
+    trackingOrderSec.style.display ='none';
+    customerSec.style.display ='none';
+})
+customerServiceBtn.addEventListener('click',()=>{
+    dashboardSec.style.display ='none';
+    historySec.style.display ='none';
+    trackingOrderSec.style.display ='none';
+    customerSec.style.display ='block';
+})
 
-// MAP API FOR TRACKING ORDER
-(function (window, google) {
-    // map options
-    var options = {
-        center :{
-            lat:6.441290,
-            lng: 3.849760
-        },
-        zoom : 11,
-        disableDefaultUI : false,
-        maxZoom : 15,
-        minZoom : 9,
-        zoomControlOptions:{
-            position : google.maps.ControlPosition.LEFT_BOTTOM,
-            style: google.maps.ZoomControlStyle.SMALL
-
-        },
-        panControlOptions :{
-            position : google.mapS.ControlPosition.RIGHT_BOTTOM
-        }
-    }
-    var mapArea = document.getElementById('map-canvas'),
-    // map
-    map = new google.maps.Map(mapArea, options)
-}(window, google))
-// MAP API FOR TRACKING ORDER
-
-
-
+// why the movement isn't working is because the swiper is after the map
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -151,5 +133,9 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
   });
+
+
+
+
 
 
