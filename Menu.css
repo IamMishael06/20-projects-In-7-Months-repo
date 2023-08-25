@@ -204,12 +204,15 @@ nav{
     /* border: 1px solid red; */
 }
 .dashboard-sec{
-    display: block;
+    display: none;
+}
+.history-sec{
+    display: none;
 }
 .track-order-sec{
-    display: none ;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
 }
 .customer-service-sec{
     display: none;
@@ -351,7 +354,7 @@ font-family: 'exo 2';
     border-radius: 5px;
 
 }
-.billing-info form input{
+.billing-info a input{
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -362,9 +365,6 @@ font-family: 'exo 2';
 }
 
 /* History Styling */
-.history-sec{
-    display: none;
-}
 .history-text    h1{
     color: #1f1f1f;
     font-weight: 700;
@@ -409,7 +409,7 @@ font-weight: 600;
 } 
 
 
-#map-canvas{
+#map{
     width: 95%;
     height: 100%;
     margin: 0 auto;
