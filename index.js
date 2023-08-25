@@ -70,7 +70,7 @@ searchBtn.addEventListener('click', (event) => {
 });
 
 
-var arrayOfCities = ['Lagos', 'Dehli', 'Manchester', 'London', 'Tokyo', 'Moscow', 'Cairo', 'Mumbai', 'Dubai', 'Buenos Aires', 'Paris', 'New York City'];
+var arrayOfCities = ['Lagos', 'Dehli', 'Manchester', 'London', 'Tokyo', 'Moscow', 'Cairo', 'Mumbai', 'Dubai', 'Buenos Aires', 'Paris', 'New York City','Chicago','Prague','Madrid','Budapest','Seoul','Lisbon','Munich','Naples','Brussels','Oslo','Vancouver','Lyon','Liverpool'];
 
 function getRandomCity() {
   var randomCity = arrayOfCities[Math.floor(Math.random() * arrayOfCities.length)];
