@@ -14,20 +14,20 @@
 // }(window,google));
 // // MAP API FOR TRACKING ORDER
 
-let map;
 
-async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
+function initMap() {
+  // Define initial map options
+  var mapOptions = {
+    center: { lat: 6.441290, lng:  3.849760 }, // Coordinates for San Francisco
+    zoom: 11, // Initial zoom level
+    disableDefaultUI : false,
+    maxZoom : 30,
+    minZoom : 9,
+  };
 
-  map = new Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
+  // Create the map instance
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
-
-initMap();
-
-
 
 //(function (window, google) {
     //     // map options

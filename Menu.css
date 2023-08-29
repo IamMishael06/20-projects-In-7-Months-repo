@@ -210,9 +210,10 @@ nav{
     display: none;
 }
 .track-order-sec{
-    display: block;
+    display: none;
     width: 100% !important;
     height: 100% !important;
+
 }
 .customer-service-sec{
     display: none;
@@ -411,9 +412,12 @@ font-weight: 600;
 
 #map{
     width: 95%;
-    height: 100%;
+    height: 80%;
     margin: 0 auto;
+    margin-top: 5vh;
     border-radius: 10px;
+}
+#map.active{
 }
 /* customer service area  */
 .service-icon{
