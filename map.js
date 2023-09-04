@@ -1,64 +1,82 @@
-// // MAP API FOR TRACKING ORDER
-// (function(window,google){
-// // map options
-// var options = {
-//            center :{
-//                lat:6.441290,
-//                lng: 3.849760
-//            },
-//            zoom : 11,
-// }
-// var element = document.getElementById('map-canvas')
-// // map
-// map = new google.maps.Map(element, options);
-// }(window,google));
-// // MAP API FOR TRACKING ORDER
+const apiKey = "4103dee1eb0b0760b4bcfb316ba54e2f";
+// '1234 Elm Street, Springfield, Anytown, USA';
+let userAddress = '1234 Elm Street, Springfield, Anytown, USA';
+console.log(userAddress)
+const query = userAddress;
+const apiUrl = `http://api.positionstack.com/v1/forward?access_key=${apiKey}&query=${encodeURIComponent(query)}`;
+
+let latitude; // Define these as global variables
+let longitude;
+
+async function getGeolocation() {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    if (data && data.data && data.data.length > 0) {
+      // Assuming the first result is the most relevant
+      const firstResult = data.data[0];
+      latitude = firstResult.latitude; // Assign values to the global variables
+      longitude = firstResult.longitude;
+      
+      // Now you can use the latitude and longitude
+      console.log('Latitude:', latitude);
+      console.log('Longitude:', longitude);
+      
+      initMap(); // Call initMap after obtaining the coordinates
+    } else {
+      console.error('No results found for the provided address.');
+    }
+
+  } catch (error) {
+    console.log('Error:', error);
+  }
+}
+
+getGeolocation();
+
 var map;
-let address = document.getElementById('address')
-// const addressValue = address.textContent
-console.log(address)
+
 function initMap() {
   var mapOptions = {
     center: { lat: 6.441290, lng: 3.849760 },
-    zoom: 11,
+    zoom: 12,
     disableDefaultUI: false,
     maxZoom: 30,
-    minZoom: 9,
+    minZoom: -10,
   };
-
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  // Add marker for the second address
-  var secondAddressLatLng = new google.maps.LatLng(6.441290, 3.849760);
-  var secondAddressMarker = new google.maps.Marker({
-    position: secondAddressLatLng,
+  // Add marker for the fixed address
+  let fixedAddressMarkerOptions = {
+    position: new google.maps.LatLng(6.441290, 3.849760),
     map: map,
-    title: 'Second Address'
-  });
+    title: 'Fixed Address'
+  };
+  let fixedAddressMarker = new google.maps.Marker(fixedAddressMarkerOptions);
 
-  // Geocode the fixed address and add marker on page load
-  const addressText = document.getElementById('address').textContent;
-console.log(addressText)
-  var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address': addressText }, function(results, status) {
-    if (status === 'OK') {
-      var userLatLng = results[0].geometry.location;
-
-      // Add marker for the user's address
-      var userMarker = new google.maps.Marker({
-        position: userLatLng,
-        map: map,
-        title: 'User Address'
-      });
-
-      // Calculate and display the distance between the two markers
-      var distance = google.maps.geometry.spherical.computeDistanceBetween(userLatLng, secondAddressLatLng);
-      console.log('Distance between markers: ' + distance + ' meters');
-    } else {
-      console.error('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+  // Check if latitude and longitude are available and add a user marker
+  if (latitude && longitude) {
+    let userMarkerOptions = {
+      position: new google.maps.LatLng(latitude, longitude),
+      map: map,
+      title: 'User Address'
+    };
+    let userMarker = new google.maps.Marker(userMarkerOptions);
+  }
+  // You can add more markers or perform other actions here
 }
+
+// Log the userAddress to check if it's correct
+console.log('User Address:', userAddress);
+
+//       // Calculate and display the distance between the two markers
+//       var distance = google.maps.geometry.spherical.computeDistanceBetween(userLatLng, secondAddressLatLng);
+//       console.log('Distance between markers: ' + distance + ' meters');
+//     } else {
+//       console.error('Geocode was not successful for the following reason: ' + status);
+//     }
+//   });
+// }
 // var map;
 // const addressText = document.getElementById('address')
 // const address = addressText.textContent

@@ -46,7 +46,7 @@
                     </div>
                     <div class="first-name w-[47%] h-[100%]">
                         <p>Address</p>
-                        <div class="info-box flex items-center"><h3 class="pl-3" id="address">Bogije</h3></div>
+                        <div class="info-box flex items-center"><h3 class="address pl-3">no 4 Ahmed bustop, badore, lagos, Nigeria</h3></div>
                     </div>
                 </div>
                 <p class="note">Your location will be gotten from the address put there. Once edited it could take up to 5mins to register a new location</p>
@@ -67,12 +67,15 @@
 
 
 
+<script>
+    let userAddress = document.querySelector('.address').textContent
+console.log(userAddress)
+</script>
 
 
 
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5niuJqzxTjWzsd5qKoHOQcCI5OUqiKo0&callback=ini" async defer></script>
-    <script src="Menu.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5niuJqzxTjWzsd5qKoHOQcCI5OUqiKo0&callback=ini" async defer></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPW55RRsUkz_CiJDHtnq71ynLYVrj80jc&callback=initMap" async defer></script> --> 
     <script src="map.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
