@@ -1,6 +1,8 @@
 const apiKey = "4103dee1eb0b0760b4bcfb316ba54e2f";
 // '1234 Elm Street, Springfield, Anytown, USA';
-let userAddress = '1234 Elm Street, Springfield, Anytown, USA';
+let userAddress = 'cadogan place estate osapa london, lagos'
+console.log(userAddress)
+// let userAddress = document.getElementById('address').textContent;
 console.log(userAddress)
 const query = userAddress;
 const apiUrl = `http://api.positionstack.com/v1/forward?access_key=${apiKey}&query=${encodeURIComponent(query)}`;
@@ -12,6 +14,7 @@ async function getGeolocation() {
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
+    console.log(data)
     if (data && data.data && data.data.length > 0) {
       // Assuming the first result is the most relevant
       const firstResult = data.data[0];
