@@ -1,76 +1,98 @@
-const apiKey = "4103dee1eb0b0760b4bcfb316ba54e2f";
-// '1234 Elm Street, Springfield, Anytown, USA';
-let userAddress = 'cadogan place estate osapa london, lagos'
-console.log(userAddress)
-// let userAddress = document.getElementById('address').textContent;
-console.log(userAddress)
-const query = userAddress;
-const apiUrl = `http://api.positionstack.com/v1/forward?access_key=${apiKey}&query=${encodeURIComponent(query)}`;
+const address = "Adetokunbo Ademola Street, Victoria Island, Lagos, Nigeria";
+// const address = "Tafawa Balewa Square, Lagos Island, Lagos, Nigeria"; 
+// A well-known address for testing
+// const address = document.querySelector('.address').textContent;
+console.log(address)
+// Construct the API URL with the address
+const nominatimGeocodeUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;
 
-let latitude; // Define these as global variables
-let longitude;
-
-async function getGeolocation() {
-  try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    console.log(data)
-    if (data && data.data && data.data.length > 0) {
-      // Assuming the first result is the most relevant
-      const firstResult = data.data[0];
-      latitude = firstResult.latitude; // Assign values to the global variables
-      longitude = firstResult.longitude;
-      
-      // Now you can use the latitude and longitude
-      console.log('Latitude:', latitude);
-      console.log('Longitude:', longitude);
-      
-      initMap(); // Call initMap after obtaining the coordinates
+// Make an HTTP GET request to the Nominatim API
+fetch(nominatimGeocodeUrl)
+  .then(response => response.json())
+  .then(data => {
+    if (data.length > 0) {
+      // Parse the response data to extract latitude and longitude
+      const latitude = parseFloat(data[0].lat);
+      const longitude = parseFloat(data[0].lon);
+      console.log(latitude, longitude)
+      // Call initMap with the latitude and longitude
+      initMap(latitude, longitude);
     } else {
-      console.error('No results found for the provided address.');
+      console.error("Unable to geocode address.");
     }
-
-  } catch (error) {
-    console.log('Error:', error);
-  }
-}
-
-getGeolocation();
-
-var map;
-
-function initMap() {
-  var mapOptions = {
-    center: { lat: 6.441290, lng: 3.849760 },
-    zoom: 12,
-    disableDefaultUI: false,
-    maxZoom: 30,
-    minZoom: -10,
-  };
-  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-  // Add marker for the fixed address
-  let fixedAddressMarkerOptions = {
-    position: new google.maps.LatLng(6.441290, 3.849760),
-    map: map,
-    title: 'Fixed Address'
-  };
-  let fixedAddressMarker = new google.maps.Marker(fixedAddressMarkerOptions);
-
-  // Check if latitude and longitude are available and add a user marker
-  if (latitude && longitude) {
-    let userMarkerOptions = {
-      position: new google.maps.LatLng(latitude, longitude),
-      map: map,
-      title: 'User Address'
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+  function initMap(latitude, longitude) {
+    var mapOptions = {
+      center: { lat: 6.441290, lng: 3.849760 },
+      zoom: 12,
+      disableDefaultUI: false,
+      maxZoom: 30,
+      minZoom: -10,
     };
-    let userMarker = new google.maps.Marker(userMarkerOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  
+    // Add marker for the fixed address
+    let fixedAddressMarkerOptions = {
+      position: new google.maps.LatLng(6.441290, 3.849760),
+      map: map,
+      title: 'Fixed Address'
+    };
+    let fixedAddressMarker = new google.maps.Marker(fixedAddressMarkerOptions);
+  
+    // Check if latitude and longitude are available and add a user marker with a custom color
+    if (latitude && longitude) {
+      // Define the color for the user marker (e.g., red)
+      const userMarkerColor = 'green';
+  
+      // Create a custom icon for the user marker with the specified color
+      const userMarkerIcon = {
+        path: google.maps.SymbolPath.DEFAULT,
+        fillColor: "green",
+        fillOpacity: 1,
+        strokeWeight: 0,
+        scale: 10 // Adjust the scale as needed
+      };
+  
+      let userMarkerOptions = {
+        position: new google.maps.LatLng(latitude, longitude),
+        map: map,
+        title: 'User Address',
+        icon: userMarkerIcon // Set the custom icon
+      };
+      let userMarker = new google.maps.Marker(userMarkerOptions);
+  
+      // Calculate and display the distance between the two markers
+      const userLatLng = userMarker.getPosition();
+      const fixedAddressLatLng = fixedAddressMarker.getPosition();
+      const distance = google.maps.geometry.spherical.computeDistanceBetween(userLatLng, fixedAddressLatLng);
+      const speedInMetersPerSecond = 3.33; // Speed in meters per second
+  
+      // Calculate time in seconds
+      const timeInSeconds = distance / speedInMetersPerSecond;
+  
+      const deliveryTimeElement = document.getElementById('delivery-time');
+  
+      if (timeInSeconds <= 3600) {
+        const minutes = Math.floor(timeInSeconds / 60);
+        console.log('Time: ' + minutes + ' minutes');
+        deliveryTimeElement.textContent = 'Max Delivery Time: ' + minutes + ' minutes';
+      } else {
+        const hours = Math.floor(timeInSeconds / 3600);
+        const remainingMinutes = Math.floor((timeInSeconds % 3600) / 60);
+        console.log('Time: ' + hours + ' hours ' + remainingMinutes + ' minutes');
+        deliveryTimeElement.textContent = 'Max Delivery Time: ' + hours + ' hours ' + remainingMinutes + ' minutes';
+      }
+    }
+  
+    // You can add more markers or perform other actions here
   }
-  // You can add more markers or perform other actions here
-}
+  
+  
 
 // Log the userAddress to check if it's correct
-console.log('User Address:', userAddress);
 
 //       // Calculate and display the distance between the two markers
 //       var distance = google.maps.geometry.spherical.computeDistanceBetween(userLatLng, secondAddressLatLng);
