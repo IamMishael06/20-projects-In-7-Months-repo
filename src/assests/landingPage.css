@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Tomorrow:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
+
+.logo-sec h1{
+    font-family: 'poppins';
+    font-weight: 600;
+}
+.search-bar{
+    outline: none;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'poppins';
+    color: #00000093;
+    text-transform: capitalize;
+}
+.search-bar::placeholder{
+    font-size: 14px;
+}
+.menu{
+    font-family: 'poppins';
+}
+.third-part button{
+    border: 1px solid #8c25b6;
+    height: 60%;
+    color: #8c25b6;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'poppins';
+}
+.nav-items li a{
+    color: #ab5ac6;
+    font-family: 'poppins';
+    font-weight: 400;
+    position: relative;
+}
+.nav-items li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    transition: 0.3s;
+    height: 3px;
+    transform-origin: center;
+    position: absolute;
+    border-bottom: 3px solid #ecb7f2;
+}
+.nav-items li:hover a::after{
+    width: 100%;
+}
+.nav-items li:hover a{
+    color: #ecb7f2;
+}
+/* .hero-box{
+    border: 1px solid red;
+} */
+.text-area h1{
+    font-family: 'poppins';
+    font-weight: 400;
+    color: #eae3e9;
+}
+.text-area h1 span{
+    font-weight: 600;
+}
+.text-area p{
+    font-family: 'inter';
+}
+.collection-btn button{
+    box-shadow: 0px 0px 2px 2px #de156d;
+    color: #fff;
+    font-family: 'poppins';
+    font-weight: 600;
+}
+.hero-stats{
+    color: #fff;
+    font-size: 25px;
+}
+.hero-stats h1{
+    font-family: 'exo 2';
+    font-weight: 700;
+}
+.stats p{
+    color: #9568a3;
+    font-family: 'poppins';
+    font-size: 12px;
+}
+.swiper-slide{
+    height: 100%;
+    min-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 5px #56186b;
+    border: 1px solid #56186b;
+}
+.swiper{
+    /* border: 1px solid red; */
+}
+.cards{
+    border-radius: 20px;
+    position: relative;
+}
+.cards img{
+    border-radius: 20px;
+    width: 100%;
+}
+.cards div{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 1px 4px #f77c08;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'poppins';
+}
+/* Hide the scrollbar but allow scrolling */
+.swiper-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+
+  /* Add custom styling for the scroll track (optional) */
+.swiper-scrollbar-drag {
+    background-color: transparent; /* Change the scroll track background color */
+}
+
+.text-areaWCU{
+    /* border: 1px solid red; */
+    height: 70%;
+    font-family: 'inter';
+}
+.text-areaWCU h1{
+
+    font-size: 20px;
+    font-weight: 500;
+}
+.text-areaWCU p{
+    font-size: 11px;
+    color: #b8b3b9;
+}
+.icon{
+    color: #8d30a8;
+    font-size: 30px;
+}
+
