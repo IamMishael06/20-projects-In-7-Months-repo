@@ -81,36 +81,49 @@ var historySec = document.querySelector('.history-sec')
 var dashboardSec = document.querySelector('.dashboard-sec')
 var historyBtn = document.querySelector('.history-btn')
 var dashboardBtn = document.querySelector('.dashboard-btn')
-var trackingOrderBtn = document.querySelector('.track-order')
-var trackingOrderSec = document.querySelector('.track-order-sec')
 var customerServiceBtn = document.querySelector('.customer-service')
 var customerSec = document.querySelector('.customer-service-sec')
 dashboardBtn.addEventListener('click',()=>{
     historySec.style.display ='none';
     dashboardSec.style.display ='block';
-    trackingOrderSec.style.display ='none';
-    customerSec.style.display ='none';
-})
-trackingOrderBtn.addEventListener('click', ()=>{
-    trackingOrderSec.style.display ='block';
-    dashboardSec.style.display ='none';
-    historySec.style.display ='none';
-    customerSec.style.display ='none'; 
-    
-})
-historyBtn.addEventListener('click',()=>{
-    dashboardSec.style.display ='none';
-    historySec.style.display ='block';
-    trackingOrderSec.style.display ='none';
     customerSec.style.display ='none';
 })
 customerServiceBtn.addEventListener('click',()=>{
     dashboardSec.style.display ='none';
     historySec.style.display ='none';
-    trackingOrderSec.style.display ='none';
     customerSec.style.display ='block';
 })
+historyBtn.addEventListener('click',()=>{
+    dashboardSec.style.display ='none';
+    historySec.style.display ='block';
+    customerSec.style.display ='none';
+})
 
+// The order section logic
+const addButtons = document.querySelectorAll(".add-number");
+const removeButtons = document.querySelectorAll(".remove-num");
+const burgerNumbers = document.querySelectorAll(".burger-number");
+
+addButtons.forEach((addButton) => {
+    addButton.addEventListener("click", function () {
+        const itemID = this.getAttribute("data-item");
+        const burgerNumber = document.querySelector(`#${itemID} .burger-number`);
+        let currentCount = parseInt(burgerNumber.textContent);
+        burgerNumber.textContent = currentCount + 1;
+    });
+});
+
+removeButtons.forEach((removeButton) => {
+    removeButton.addEventListener("click", function () {
+        const itemID = this.getAttribute("data-item");
+        const burgerNumber = document.querySelector(`#${itemID} .burger-number`);
+        let currentCount = parseInt(burgerNumber.textContent);
+        if (currentCount > 0) {
+            burgerNumber.textContent = currentCount - 1;
+        }
+    });
+});
+// The order section logic
 // why the movement isn't working is because the swiper is after the map
 const swiper = new Swiper('.swiper', {
     // Optional parameters

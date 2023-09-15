@@ -54,7 +54,7 @@
                                         class="fa-solid fa-cubes"></i>
                                     <p class="pl-3">Dashboard</p>
                                 </a></li>
-                            <li class="w-[95%] mx-auto track-order"><a href="#" class="flex items-center w-[85%] mx-auto"><i
+                            <li class="w-[95%] mx-auto track-order"><a href="trackOrder.html" class="flex items-center w-[85%] mx-auto"><i
                                         class="fa-solid fa-list-check"></i>
                                     <p class="pl-3">Track Order</p>
                                 </a></li>
@@ -97,6 +97,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="nav-items mobile-nav-items flex justify-between flex-col w-[90%] mx-auto h-[20vh]">
+                    <div class="chat h-[20%] flex items-center">
+                        <i class="fa-regular fa-message"></i>
+                        <p class="pl-3">Chat</p>
+                    </div>
+                    <div class="flex w-[100%] p-0 justify-center h-[20%] items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <p class="pl-3">More</p>
+                    </div>
+                    <div class="share h-[20%] flex items-center">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        <p class="pl-3">Share</p>
+                    </div>
+                    <div class="my-orders h-[20%] flex items-center relative">
+                        <i class="fa-solid fa-arrow-up-wide-short"></i>
+                        <p class="pl-3">Notifications</p>
+                        <div class="absolute w-[20px] h-[20px] bg-[red] right-[-5%] top-[-14%] text-center rounded-[50%] flex items-center justify-center">
+                            <p class="text-white">1</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
         <section class="top-nav ml-[20%] w-[100%] h-[100vh] relative transition-[0.3s]">
@@ -131,9 +152,9 @@
                                 <p class="text-white">1</p>
                             </div>
                         </div>
-
+                    </div>
             </nav>
-            <div class="customer-service-sec w-[100%]">
+            <div class="customer-service-sec w-[100%] h-[100%]">
                 <div class="service-area w-[90%] mx-auto">
                     <div class="service-icon  mx-auto text-center flex ">
                         <i class="fa-solid fa-user-tie" ></i>
@@ -150,19 +171,6 @@
                     </form>
                 </div>
             </div>
-            <!-- Tracking order -->
-            <div class="track-order-sec flex overflow-hidden  justify-center items-center">
-                <div id="map">
-                    
-                </div>
-                <h1 id="delivery-time"> </h1>
-                <!-- <div class="search-location">
-                    <input type="text" id="location-search">
-                    <input type="submit" value="Get Location" class="search-btn">
-                </div> -->
-
-            </div>
-            <!-- Tracking order -->
             <!-- History section -->
             <div class="history-sec w-[100%] h-[100%] hidden">
                 <div class="history-text w-[95%] mx-auto bg-[#fff] h-[20%] mt-5 flex  items-center">
@@ -170,7 +178,7 @@
                 </div>
                 <div class="history-items w-[95%] h-[100%] flex   flex-col mt-5">
                     <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto flex justify-between  items-center  rounded-[10px]">
-                        <div class="w-[10%] h-[100%] bg-[#f9ae21] flex justify-center items-center rounded-l-[10px]">
+                        <div class="img-area w-[10%] h-[100%] bg-[#f9ae21] flex justify-center items-center rounded-l-[10px]">
                             <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" class="w-[50px] h-[50px]" alt="">
                         </div>
                         <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
@@ -187,7 +195,7 @@
                     </div>
                     <!-- pizza history card -->
                     <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto  mt-5  flex justify-between  items-center  rounded-[10px]">
-                        <div class="w-[10%] h-[100%] bg-[#ba1f1d] flex justify-center items-center rounded-l-[10px]">
+                        <div class="img-area w-[10%] h-[100%] bg-[#ba1f1d] flex justify-center items-center rounded-l-[10px] ">
                             <img src="/E-FOOD/image/pizza-removebg-preview.png" class="w-[50px] h-[50px]" alt="">
                         </div>
                         <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
@@ -205,7 +213,7 @@
                     <!-- pizza history card -->
                     <!-- Coffee section card -->
                     <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto  mt-5  flex justify-between  items-center  rounded-[10px]">
-                        <div class="w-[10%] h-[100%] bg-[#000] flex justify-center items-center rounded-l-[10px]">
+                        <div class="img-area w-[10%] h-[100%] bg-[#000] flex justify-center items-center rounded-l-[10px]">
                             <img src="/E-FOOD/image/cofee.png" class="w-[50px] h-[50px]" alt="">
                         </div>
                         <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
@@ -223,7 +231,7 @@
                     <!-- Coffee section card -->
                     <!-- Liquids History Card -->
                     <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto  mt-5  flex justify-between  items-center  rounded-[10px]">
-                        <div class="w-[10%] h-[100%] bg-[#f9906f] flex justify-center items-center rounded-l-[10px]">
+                        <div class="img-area w-[10%] h-[100%] bg-[#f9906f] flex justify-center items-center rounded-l-[10px]">
                             <img src="/E-FOOD/image/drinks.png" class="w-[50px] h-[50px]" alt="">
                         </div>
                         <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
@@ -257,7 +265,7 @@
                     </div>
                 </div>
                 <div class="items-order  flex flex-col justify-between gap-5 overflow-scroll">
-                    <div class="card-pick-order mx-auto ">
+                    <div class="card-pick-order mx-auto " id="item1">
                         <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
                             <div>
                                 <img class="w-[50px] h-[45px]"
@@ -270,15 +278,15 @@
                             <div class="flex items-center flex-col justify-between">
                                 <p class="cursor-pointer text-[#b2b3b7]">...</p>
                                 <div class="add-item flex items-center justify-between">
-                                    <p>-</p>
-                                    <h5>1</h5>
-                                    <p>+</p>
+                                    <p class="remove-num" data-item="item1">-</p>
+                                    <h5 class="burger-number">1</h5>
+                                    <p class="add-number" data-item="item1">+</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="card-pick-order mx-auto ">
+                    <div class="card-pick-order mx-auto" id="item2">
                         <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
                             <div>
                                 <img class="w-[50px] h-[45px]"
@@ -291,15 +299,15 @@
                             <div class="flex items-center flex-col justify-between">
                                 <p class="cursor-pointer text-[#b2b3b7]">...</p>
                                 <div class="add-item flex items-center justify-between">
-                                    <p>-</p>
-                                    <h5>1</h5>
-                                    <p>+</p>
+                                    <p class="remove-num" data-item="item2">-</p>
+                                    <h5 class="burger-number">1</h5>
+                                    <p class="add-number" data-item="item2">+</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="card-pick-order mx-auto ">
+                    <div class="card-pick-order mx-auto" id="item3">
                         <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
                             <div>
                                 <img class="w-[50px] h-[45px]"
@@ -312,15 +320,15 @@
                             <div class="flex items-center flex-col justify-between">
                                 <p class="cursor-pointer text-[#b2b3b7]">...</p>
                                 <div class="add-item flex items-center justify-between">
-                                    <p>-</p>
-                                    <h5>1</h5>
-                                    <p>+</p>
+                                    <p class="remove-num" data-item="item3">-</p>
+                                    <h5 class="burger-number">1</h5>
+                                    <p class="add-number" data-item="item3">+</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="card-pick-order mx-auto ">
+                    <div class="card-pick-order mx-auto " id="item4">
                         <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
                             <div>
                                 <img class="w-[50px] h-[45px]"
@@ -333,15 +341,15 @@
                             <div class="flex items-center flex-col justify-between">
                                 <p class="cursor-pointer text-[#b2b3b7]">...</p>
                                 <div class="add-item flex items-center justify-between">
-                                    <p>-</p>
-                                    <h5>1</h5>
-                                    <p>+</p>
+                                    <p class="remove-num" data-item="item4">-</p>
+                                    <h5 class="burger-number">1</h5>
+                                    <p class="add-number" data-item="item4">+</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="card-pick-order mx-auto ">
+                    <div class="card-pick-order mx-auto " id="item5">
                         <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
                             <div>
                                 <img class="w-[50px] h-[45px]"
@@ -354,15 +362,15 @@
                             <div class="flex items-center flex-col justify-between">
                                 <p class="cursor-pointer text-[#b2b3b7]">...</p>
                                 <div class="add-item flex items-center justify-between">
-                                    <p>-</p>
-                                    <h5>1</h5>
-                                    <p>+</p>
+                                    <p class="remove-num" data-item="item5">-</p>
+                                    <h5 class="burger-number">1</h5>
+                                    <p class="add-number" data-item="item5">+</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="card-pick-order mx-auto">
+                    <div class="card-pick-order mx-auto" id="item6">
                         <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
                             <div>
                                 <img class="w-[50px] h-[45px]"
@@ -375,9 +383,9 @@
                             <div class="flex items-center flex-col justify-between">
                                 <p class="cursor-pointer text-[#b2b3b7]">...</p>
                                 <div class="add-item flex items-center justify-between">
-                                    <p>-</p>
-                                    <h5>1</h5>
-                                    <p>+</p>
+                                    <p class="remove-num" data-item="item6">-</p>
+                                    <h5 class="burger-number">1</h5>
+                                    <p class="add-number" data-item="item6">+</p>
                                 </div>
                             </div>
                         </div>
@@ -389,7 +397,7 @@
                         <h2>$17.05</h2>
                     </div>
                     <div class="flex justify-between">
-                        <p>Tax (10%\)</p>
+                        <p>Tax (10%)</p>
                         <h2>$0.23</h2>
                     </div>
                     <hr class="mt-5 mb-5">
@@ -416,7 +424,7 @@
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <div class="menu flex flex-col justify-between mt-5">
-                    <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff]">
+                    <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff] top-menu">
                         <div class="swiper-info flex items-center w-[90%] mx-auto">
                             <div class="move-left flex items-center">
                                 <i class="fa-solid fa-chevron-right"></i>
@@ -690,7 +698,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPW55RRsUkz_CiJDHtnq71ynLYVrj80jc&libraries=geometry&callback=initMap" async defer></script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPW55RRsUkz_CiJDHtnq71ynLYVrj80jc&callback=initMap" async defer></script> -->
     <script src="Menu.js"></script>
-    <script src="map.js"></script>
+    <!-- <script src="map.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

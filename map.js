@@ -1,5 +1,6 @@
-const address = "Adetokunbo Ademola Street, Victoria Island, Lagos, Nigeria";
-// const address = "Tafawa Balewa Square, Lagos Island, Lagos, Nigeria"; 
+// const address = "Adetokunbo Ademola Street, Victoria Island, Lagos, Nigeria";
+// const address = "Adetokunbo Ademola Street, Victoria ";
+const address = "Tafawa Balewa Square, Lagos Island, Lagos, Nigeria"; 
 // A well-known address for testing
 // const address = document.querySelector('.address').textContent;
 console.log(address)
@@ -27,7 +28,7 @@ fetch(nominatimGeocodeUrl)
   function initMap(latitude, longitude) {
     var mapOptions = {
       center: { lat: 6.441290, lng: 3.849760 },
-      zoom: 12,
+      zoom: 10,
       disableDefaultUI: false,
       maxZoom: 30,
       minZoom: -10,
@@ -38,19 +39,21 @@ fetch(nominatimGeocodeUrl)
     let fixedAddressMarkerOptions = {
       position: new google.maps.LatLng(6.441290, 3.849760),
       map: map,
-      title: 'Fixed Address'
+      title: 'MarsFood Address',
+      label:'MarsFood',
+      icon :'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
     };
     let fixedAddressMarker = new google.maps.Marker(fixedAddressMarkerOptions);
   
     // Check if latitude and longitude are available and add a user marker with a custom color
     if (latitude && longitude) {
       // Define the color for the user marker (e.g., red)
-      const userMarkerColor = 'green';
+      const userMarkerColor = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
   
       // Create a custom icon for the user marker with the specified color
       const userMarkerIcon = {
         path: google.maps.SymbolPath.DEFAULT,
-        fillColor: "green",
+        fillColor: userMarkerColor,
         fillOpacity: 1,
         strokeWeight: 0,
         scale: 10 // Adjust the scale as needed
@@ -59,8 +62,11 @@ fetch(nominatimGeocodeUrl)
       let userMarkerOptions = {
         position: new google.maps.LatLng(latitude, longitude),
         map: map,
+        optimzed: false,
+        animation: google.maps.Animation.Bounce, 
         title: 'User Address',
-        icon: userMarkerIcon // Set the custom icon
+        // draggable : true,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' // Set the custom icon
       };
       let userMarker = new google.maps.Marker(userMarkerOptions);
   
@@ -78,12 +84,12 @@ fetch(nominatimGeocodeUrl)
       if (timeInSeconds <= 3600) {
         const minutes = Math.floor(timeInSeconds / 60);
         console.log('Time: ' + minutes + ' minutes');
-        deliveryTimeElement.textContent = 'Max Delivery Time: ' + minutes + ' minutes';
+        deliveryTimeElement.textContent = 'Arrives in: ' + minutes + ' minutes';
       } else {
         const hours = Math.floor(timeInSeconds / 3600);
         const remainingMinutes = Math.floor((timeInSeconds % 3600) / 60);
         console.log('Time: ' + hours + ' hours ' + remainingMinutes + ' minutes');
-        deliveryTimeElement.textContent = 'Max Delivery Time: ' + hours + ' hours ' + remainingMinutes + ' minutes';
+        deliveryTimeElement.textContent = 'Arrives in: ' + hours + ' hours ' + remainingMinutes + ' minutes';
       }
     }
   

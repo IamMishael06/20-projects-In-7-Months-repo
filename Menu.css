@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Tomorrow:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 aside li.active{
     color:#fff;
 }
@@ -210,10 +213,11 @@ nav{
     display: none;
 }
 .track-order-sec{
-    display: none;
-    width: 100% !important;
-    height: 100% !important;
-
+    width: 90% !important;
+    height: 90% !important;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 4px 2px #00000044;
 }
 .customer-service-sec{
     display: none;
@@ -408,11 +412,9 @@ font-weight: 600;
     font-size: 15px;
     font-weight: 500;
 } 
-
-
 #map{
-    width: 95%;
-    height: 80%;
+    width: 90%;
+    height: 500px;
     margin: 0 auto;
     margin-top: 5vh;
     border-radius: 10px;
@@ -464,11 +466,292 @@ font-weight: 600;
     background: #000;
 }
 #delivery-time{
-    width: 95%;
     margin: 0 auto;
-    font-size: 30px;
-    font-family:'tomorrow';
+    font-size: 20px;
+    font-family: roboto;
     margin-top: 5vh;
     color: #000;
     font-weight: 600;
+}
+.logo-tracking h2{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'exo 2';
+}
+.logo-tracking span{
+    color: #f9ae21;
+}
+.mobile-nav-items{
+    display: none;
+}
+@media screen  and (max-width:650px) {
+    body{
+        overflow-x: hidden !important;
+    }
+    .top-nav {
+        margin-left: 15%;
+        width: 85% !important;
+        /* This will calculate the remaining width after subtracting 15% */
+    }
+    aside{
+        width: 15% !important;
+        /* border: 1px solid red; */
+        height: 100vh;
+        position: fixed;
+    }
+    .logo-area{
+        width: 100%;
+    }
+    .logo-area img{
+        display: none;
+    }
+    .logo-area h2{
+        font-size: 40%;
+    }
+    #date{
+        font-size: 5px;
+    }
+    .arrow i{
+        font-size: 10px;
+    }
+    .mini-nav-items{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .mini-nav img{
+        display: none;
+    }
+    .mini-nav div{
+       padding-left: 0;
+    }
+    .mini-nav p{
+        font-size: 40%;
+    }
+    .mini-nav h1{
+        font-size: 10px !important;
+    }
+    .menu-dashboard{
+        height: 25vh;
+    }
+    .menu-dashboard ul li a{
+        justify-content: center;
+    }
+    .menu-dashboard ul{
+        height: 80%;
+    }
+    .menu-dashboard ul li a i{
+        font-size: 15px;
+    }
+     .menu-dashboard p{
+        display: none;
+    }
+    .menu-dashboard h1{
+        font-size: 8px !important;
+    }
+    .general li a{
+        justify-content: center;
+    }
+    .general h1{
+        font-size: 10px !important;
+    }
+    .general p{
+        display: none;
+    }
+    .general{
+        height: 25vh;
+    
+    }
+    .mode-slider h1{
+        display: none;
+    }
+    .mode-slider{
+        height: 25%;
+        flex-direction: column;
+    }
+    /* top nav */
+    .nav-items{
+        display: none;
+    }
+    .nav-items{
+        justify-content: space-between !important;
+    }
+    .mobile-nav-items{
+        height: 20vh;
+        display: block;
+        margin-top: 5vh;
+        align-items: center;
+        justify-content: space-between !important;
+        /* border: 1px solid red; */
+    }
+    .mobile-nav-items p{
+        display: none;
+    }
+    .chat{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        
+    }
+    .share{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .my-orders{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .my-orders div{
+        width: 12px;
+        height: 12px;
+    }
+    .nav-area form{
+        width: 100%;
+    }
+    .nav-area form input::placeholder{
+        font-size: 10px;
+        font-family: 'exo 2';
+        letter-spacing: .5px;
+    }
+    /* Dashboard */
+    .menu{
+        width: 85%;
+      
+        margin-left: 15%;
+        margin: 0 auto;
+        margin-top: 10%;
+        
+    }
+    .top-menu{
+        height: 15%;
+    }
+    .move-left{
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+    }
+    .header h1{
+        font-size: 20px !important;
+    }
+    .header p{
+        font-size: 10px;
+    }
+    .menu-cards{
+        width: 100%;
+        flex-wrap: wrap !important;
+    }
+    .card-body{
+        min-width: 45% !important;
+    }
+    .quick-order{
+        right: 0;
+        left: 0;
+        z-index: 99;
+        width: 80%;
+        top: 0;
+        height: 100%;
+    }
+    .customer-service-text h1{
+        font-size: 25px;
+    }
+    .customer-service-text p{
+        font-size: 10px;
+    }
+    .customer-service-sec textarea{
+        font-size: 14px;
+    }
+    .service-icon{
+        min-width: 100px;
+    }
+    .service-icon i:nth-child(2){
+        display: none;
+    }
+    .customer-service-sec form input{
+        font-size: 10px;
+    }
+    .history-text{
+        height: 10%;
+    }
+    .history-text h1{
+        font-size: 20px;
+    }
+    .history-items{
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+    .history-cards{
+        width: 100%;
+    }
+    .history-info{
+        width: 75%;
+    }
+    .name h1{
+        font-size: 15px;
+    }
+    .name p{
+        font-size: 15px;
+    }
+    .name h4{
+        font-size: 10px;
+    }
+    .quantity h1{
+        font-size: 10px !important;
+    }
+    .quantity h1 span{
+        font-size: 14px !important;
+    }
+    .img-area{
+        width: 15%;
+    }
+}
+@media screen  and (max-width:1023px) and (min-width:651px) {
+    .logo-area{
+        width: 100%;
+    }
+    .logo-area img{
+        display: none;
+    }
+    .logo-area h2{
+        font-size: 100%;
+    }
+    .nav-items p{
+    display: none;
+    }
+    .nav-area form{
+        width: 40%;
+    }
+    .nav-area form input::placeholder{
+        font-size: 14px;
+        font-family: 'exo 2';
+        letter-spacing: .5px;
+    }
+    .my-orders div{
+        width: 15px;
+        height: 15px;
+    }
+    .quick-order{
+        width: 40%;
+    }
+    .card-body{
+        min-width: 30% !important;
+        gap: 2px;
+    }
+    .menu-dashboard p{
+       font-size: 11px !important;
+    }
+    .general p{
+        font-size: 11px !important;
+    }
+    .customer-service-text h1{
+        font-size: 30px;
+    }
+}
+@media screen  and (max-width:1300px) and (min-width:1024px) {
+    .logo-area h2{
+        font-size: 100%;
+    }
 }
