@@ -2,12 +2,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    transition: 0.3s;
+}
 aside li.active{
     color:#fff;
 }
-aside li{
+/* darkmode */
+.aside-nav.active{
+    background: #060b22;
+}
+.card-pick-order.active{
+    background: #ccc;
+}
+.mars.active{
+    color: #fff;
     transition: 0.3s;
 }
+.burger.active{
+    color: #fff;
+    transition: 0.3s;
+}
+.top-navbar.change{
+    background: #060b22;
+    transition: 0.5s;
+}
+.quick-order.change{
+    background: #060b22;
+    transition: 0.5s;
+}
+.order-head.active{
+    color: #fff;
+    transition: 0.3s;
+}
+.top-menu.active{
+    background: #060b22;
+    transition: 0.3s;
+}
+.pizza.active{
+    background: #060b22; 
+    transition: 0.3s;
+}
+.coffee.active{
+    background: #060b22;
+    transition: 0.3s;
+}
+.water.active{
+    background: #060b22;
+    transition: 0.3s;
+}
+body.active{
+    background: #5b5b5b !important;
+    transition: 0.5s;
+}
+.header h1.active{
+    color: #fff !important;
+    transition: 0.3s;
+}
+.mode-slider.active{
+    background: #5b5b5b;
+    transition: 0.3s;
+}
+.card-body.active{
+    background: #060b22;
+    transition: 0.5s;
+}
+.item-detail h1.active{
+    color: #fff;
+    transition: 0.3s;
+}
+.history-text.change{
+    background: #060b22;
+    border-radius: 5px;
+}
+.history-text h1.active{
+    color: #fff !important;
+}
+.history-cards.active{
+    background: #060b22;
+}
+.history-info h1.active{
+    color: #fff;
+}
+/* darkmode */
+aside li{
+    transition: 0.5s;
+}
+
 section nav.active{
     width: 0%;
     position: absolute;
@@ -28,7 +109,6 @@ section nav.active{
     font-size: 10px;
     color: #b5b5b5;
 }
-
 .arrow{
     background: #f9f8fd;
     padding: 2px;
@@ -375,6 +455,9 @@ font-family: 'exo 2';
     font-weight: 700;
     font-family: 'lato';
     font-size: 40px;
+}
+.history-text{
+    background: #fff;
 }
 .history-info{
     font-family: 'Tomorrow';
