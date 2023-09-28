@@ -85,13 +85,13 @@
     font-family: 'poppins';
     font-size: 12px;
 }
-.swiper-slide{
+/* .swiper-slide{
     height: 100%;
     min-width: 60%;
     border-radius: 10px;
     box-shadow: 0px 0px 4px 5px #56186b;
     border: 1px solid #56186b;
-}
+} */
 .swiper{
     /* border: 1px solid red; */
 }
@@ -102,6 +102,7 @@
 .cards img{
     border-radius: 20px;
     width: 100%;
+    height: 100%;
 }
 .cards div{
     border-top-right-radius: 20px;
@@ -139,4 +140,214 @@
     color: #8d30a8;
     font-size: 30px;
 }
+.mySwiper{
+    width: 340px;
+    height: 420px;
 
+}
+.slide {
+    width: 340px;
+    height: 420px;
+  }
+  
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 2px 4px 4px #00000046;
+  }
+/*   
+  .swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+  } */
+  .slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+  }
+  .slide:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+  }
+  
+  .slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+  }
+  
+  .swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+  }
+  
+  .slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+  
+  .slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+  
+  .slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+  .slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+  
+  .slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+  
+  .slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  }
+  
+.trending-head{
+    font-family: 'lato';
+}
+.trending-head h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #151515;
+}
+.trending-head p{
+color: #cbcbcb;
+font-size: 15px;
+}
+.pfp{
+    border: 3px solid #FFFFFF;;
+}
+.user-in-trending{
+    top: -12%;
+    z-index: 99;
+}
+.pfp-name p{
+    font-family: 'lato';
+    font-weight: 500;
+}
+.stars{
+    color: #ef7404;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 1.2em;
+    
+}
+.top-rated-header h1{
+    font-weight: 700;
+    font-size: 20px;
+}
+.top-rated-header button{
+    color: #b59bb8;
+    font-size: 10px;
+    font-weight: 600;
+}
+.swipe{
+}
+.third-swiper{
+    width: 90% ;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0px 0px 50px 10px #fbf6fa inset;
+}
+.swipe-element{
+    background: transparent !important;
+    width: 15% !important;
+}
+.swipe-element img{
+    /* border: 1px solid red; */
+    height: 50%;
+    width: 100%;
+    object-fit: conver;
+    border-radius: 10px;
+}
+.title h1{
+    font-weight: 600;
+    font-family: 'lato';
+}
+.title p{
+    font-weight: 400;
+    font-family: 'lato';
+    word-spacing: .5px;
+    font-size: 12px;
+}
+.price-sec{
+    height: 6vh;
+    background: #efdef6;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
+}
+.price{
+    font-family: 'poppins';
+    font-weight: 600;
+}
+.basket-div{
+    background: #812c9a;
+    border-radius: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    position: relative;
+    left: 7%;
+    box-shadow: 2px 2px 8px #00000027;
+}
+.move{
+    box-shadow: 0px 0px 8px 5px #0000001b;
+    z-index: 100 !important;
+}
+.fourth-swipe{
+    width: 100% ;
+    margin: 0 auto;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.bestseller-slide{
+    width: 35% !important;
+    height: 400px !important;
+    background: transparent !important;
+    
+}
+.bestseller-slide .type-boxes{
+    font-family: 'lato';
+}
+.type-boxes .type{
+    font-weight: 600;
+}
+.bestseller-price{
+    font-weight: 600;
+    font-family: 'poppins';
+}
+.bestseller-price h4{
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 12px;
+}
+.flash-sale-text h1{
+    font-family: 'poppins';
+    font-size: 40px;
+    color: #ffedff;
+    font-weight:500;
+}
+.flash-sale-text p{
+    color: #ffedff;
+    font-size: 15px;
+
+}
+.time h2{
+    text-align: center;
+    font-family: 'poppins';
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffedff;
+}
+.time p{
+    font-size: 12px;
+    font-family: 'poppins';
+}
