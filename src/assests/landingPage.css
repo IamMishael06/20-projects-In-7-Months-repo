@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Bellefair&family=Crimson+Text:wght@400;600&family=DM+Sans:wght@400;500;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Tomorrow:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;500;600;700&family=Instrument+Serif&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;900&family=Noto+Serif+NP+Hmong&family=Nunito:wght@400;500;600;700;800;900;1000&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,600&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Ubuntu:ital,wght@1,700&display=swap');
-
+body{
+    overflow-x: hidden;
+}
 .logo-sec h1{
     font-family: 'poppins';
     font-weight: 600;
@@ -350,4 +352,62 @@ font-size: 15px;
 .time p{
     font-size: 12px;
     font-family: 'poppins';
+}
+
+/* Flash SALE COMPONENT CSS */
+.flash-sale-swiper{
+    height: 100%;
+    width: 100%;
+}
+.flash-sale-slide{
+    height: 100% !important;
+    width: 75% !important;
+}
+.purple-noise{
+    filter: blur(50px);
+    background:#5c047b;
+    z-index: 99;
+}
+.pic-sec-flash-sale img{
+    /* object-fit: contain;  */
+    border-radius: 15px !important;
+}
+.flash-sale-star p{
+    color: #81309e;
+    font-weight: 600;
+    font-family: 'lato';
+}
+.flash-sale-star{
+    font-family: 'lato';
+}
+.name-flash-sale{
+    font-family: 'lato';
+}
+.name-flash-sale h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: #dbbce2;
+}
+.name-flash-sale h3{
+    font-size: 15px;
+    color: #9d76ab;
+}
+.progress-line{
+    width: 70%;
+    height: 4px;
+    border-radius: 3px;
+    background: #debce9;
+}
+.progress-line::after{
+    content: "";
+    width: 23%;
+    height: 4px;
+    border-radius: 3px;
+    display: block;
+    position: absolute;
+    background: #da805a;
+}
+.book-left p{
+    font-family: 'lato';
+    font-weight: 600;
 }
