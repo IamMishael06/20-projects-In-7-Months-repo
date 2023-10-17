@@ -411,3 +411,6 @@ font-size: 15px;
     font-family: 'lato';
     font-weight: 600;
 }
+.featured-swiper{
+    border: 1px solid green !important;
+}

@@ -81,7 +81,7 @@ function TopRated() {
     }
 
   ]
-  const TopBooks = books.map(book => <SwiperSlide className='swipe-element flex flex-col h-[100%] justify-between'><img src={book.background} alt="" />
+  const TopBooks = books.map(book => <SwiperSlide key={book.title} className='swipe-element flex flex-col h-[100%] justify-between'><img src={book.background} alt="" />
     <div className='flex justify-between items-center w-[80%] mx-auto stars'>
       <FaStar />
       <FaStar />

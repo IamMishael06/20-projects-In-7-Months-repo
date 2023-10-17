@@ -7,6 +7,7 @@ import TrendingBooks from "./TrendingBooks";
 import TopRated from "./TopRated";
 import BestSellers from "./BestSellers";
 import FlashSale from "./FlashSale";
+import FeaturedBook from "./FeaturedBook";
 
 // import BookOne from './assests/book1.jpg';
 // import BookTwo from './assests/book2.jpg';
@@ -23,8 +24,9 @@ function App() {
        <WhyChooseUs/>
        <TrendingBooks/>
        <TopRated/>
-       <BestSellers oldPrice1 = "$20"/>
-       <FlashSale Hour= "05" Minutes = "42" Seconds= "12" />
+       <BestSellers/>
+       <FlashSale />
+       <FeaturedBook />
 
     </div>
   );

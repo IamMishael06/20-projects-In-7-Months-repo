@@ -22,7 +22,7 @@ function Herosec(props) {
         }
     ]
     const {customer} = props
-    const bookBackground = books.map(book => <SwiperSlide className='cards'>
+    const bookBackground = books.map(book => <SwiperSlide key={book.background} className='cards'>
         <img src={book.background} alt="" />
         <div className='absolute w-[30%] h-[50px] bg-[#f77c08] z-99 top-[20%] flex items-center justify-center'>
             <p>Best Seller</p>

@@ -33,7 +33,7 @@ function TrendingBooks() {
             background : BookSix
         }
     ]
-    const bookBackground = books.map(book =><SwiperSlide className='slide'><img src={book.background} alt="" /></SwiperSlide>)
+    const bookBackground = books.map(book =><SwiperSlide key={book.background} className='slide'><img src={book.background} alt="" /></SwiperSlide>)
     return (
         <div className='w-[100vw] h-[100vh] flex flex-col justify-around items-center'>
           <div className="w-[40%] trending-head">
