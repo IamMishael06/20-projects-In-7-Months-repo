@@ -1,6 +1,6 @@
-// const address = "Adetokunbo Ademola Street, Victoria Island, Lagos, Nigeria";
+const address = "";
 // const address = "Adetokunbo Ademola Street, Victoria ";
-const address = "Tafawa Balewa Square, Lagos Island, Lagos, Nigeria"; 
+// const address = "Tafawa Balewa Square, Lagos Island, Lagos, Nigeria"; 
 // A well-known address for testing
 // const address = document.querySelector('.address').textContent;
 console.log(address)
