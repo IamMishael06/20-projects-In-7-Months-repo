@@ -638,7 +638,39 @@ hr{
     color: #ba1f1d;
     transition: 0.3s;
 }
-
+/* forget password ui */
+section{
+    border-radius: 30px;
+    box-shadow: 0px 0px 8px 5px #cccccc52;
+}
+.forget-p-main{
+}
+.forget-p input{
+    border: 2px solid #282727;
+    outline: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #f3a111;
+}
+.expires{
+    font-family: 'lato';
+    margin-top: 10%;
+}
+form button{
+    width: 80%;
+    height: 60px;
+    text-align: center;
+    border-radius: 30px;
+    color: #fff;
+    background: #ba1f1d;
+}
+.disabled{
+    opacity: 0.3;
+}
+/* forget password ui */
 @media screen and (max-width:425px) {
     body{
         overflow-x: hidden !important;

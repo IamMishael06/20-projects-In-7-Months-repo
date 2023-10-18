@@ -92,3 +92,7 @@ goBack.addEventListener('click', ()=>{
     forgetP.style.transform = 'translateY(200%)';
     registerArea.style.transform = 'translateY(0%)';
 })
+
+
+
+

@@ -234,6 +234,8 @@ removeButtons.forEach((removeButton) => {
         }
     });
 });
+
+
 // The order section logic
 // why the movement isn't working is because the swiper is after the map
 const swiper = new Swiper('.swiper', {
