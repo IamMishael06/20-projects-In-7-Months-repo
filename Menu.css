@@ -387,6 +387,7 @@ font-family: 'exo 2';
     width: 90%;
     border-radius: 10px;
     padding: 5px;
+    margin: 0 auto;
 }
 .add-item{
     width: 120%;

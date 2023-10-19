@@ -138,22 +138,243 @@ lightBtn.addEventListener('click', (g)=>{
 })
 
 
-// order section
-var orderCard = document.querySelectorAll('.card-body')
-var closearea = document.querySelector('.close-x')
-var orderArea = document.querySelector('.quick-order')
+// // order section
+// var orderCard = document.querySelectorAll('.card-body');
+// var closearea = document.querySelector('.close-x');
+// var orderArea = document.querySelector('.quick-order');
+// var orderItem = document.querySelector('.items-order');
+// var tax = document.querySelector('.tax');
+// var bill = document.querySelector('.total-bill');
+// var taxAmount = 1.23;
+// tax.textContent += `$${taxAmount}`;
 
-closearea.addEventListener('click',()=>{
-    orderArea.classList.remove('active')
-})
-for (let i = 0; i < orderCard.length; i++) {
-    const card = orderCard[i];
-    card.addEventListener('click',()=>{
-        orderArea.classList.add('active')
-    })
-    
+// closearea.addEventListener('click', () => {
+//     orderArea.classList.remove('active');
+// });
+
+// var subtotal = 0;
+
+// orderCard.forEach((card, index) => {
+//     card.addEventListener('click', (e) => {
+//         orderArea.classList.add('active');
+//         var itemImage;
+//         var itemName = card.querySelector('.name-text').textContent;
+//         var itemPrice = parseFloat(card.querySelector('p').textContent.replace('$', ''));
+//         var foodAmount = 1;
+
+//         if (e.target.classList.contains('burger')) {
+//             itemImage = '/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png';
+//         } else if (e.target.classList.contains('pizza')) {
+//             itemImage = '/E-FOOD/image/pizza-removebg-preview.png';
+//         } else if (e.target.classList.contains('coffee')) {
+//             itemImage = '/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png';
+//         } else if (e.target.classList.contains('liquid')) {
+//             itemImage = '/E-FOOD/image/drinks.png';
+//         }
+
+//         var itemOrder = document.createElement('div');
+//         itemOrder.className = 'card-pick-order';
+//         itemOrder.id = `item${index + 1}`;
+
+//         // Calculate total price for one item
+//         var totalForOne = itemPrice * foodAmount;
+
+//         // Add specific content to the dynamically created div
+//         itemOrder.innerHTML = `
+//             <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+//                 <div class="quick-image">
+//                     <img class="w-[50px] h-[45px]" src="${itemImage}" alt="Item Image">
+//                 </div>
+//                 <div class="item-detail ">
+//                     <h1 class="text-left">${itemName}</h1>
+//                     <p class="text-left item-price">$${itemPrice.toFixed(2)}</p>
+//                 </div>
+//                 <div class="flex items-center flex-col justify-between">
+//                     <p class="cursor-pointer go-back text-[#b2b3b7]">x</p>
+//                     <div class="add-item flex items-center justify-between">
+//                         <p class="remove-num" data-item="item${index + 1}">-</p>
+//                         <h5 class="burger-number">${foodAmount}</h5>
+//                         <p class="add-number" data-item="item${index + 1}">+</p>
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+
+//         orderItem.appendChild(itemOrder);
+
+//         itemOrder.querySelector('.remove-num').addEventListener('click', function() {
+//             if (foodAmount > 1) {
+//                 foodAmount--;
+//                 totalForOne = itemPrice * foodAmount;
+//                 updateTotal();
+//             }
+//         });
+
+//         itemOrder.querySelector('.add-number').addEventListener('click', function() {
+//             foodAmount++;
+//             totalForOne = itemPrice * foodAmount;
+//             updateTotal();
+//         });
+
+        // itemOrder.querySelector('.go-back').addEventListener('click', function() {
+        //     itemOrder.remove();
+        //     totalForOne = 0;
+        //     updateTotal();
+        // });
+
+//         function updateTotal() {
+//             var subtotal = 0;
+//             // document.querySelector('.subtotal').textContent = subtotal;
+
+//             document.querySelectorAll('.card-pick-order').forEach((element) => {
+//                 var quantity = parseFloat(element.querySelector('.burger-number').textContent);
+//                 var price = parseFloat(element.querySelector('.item-price').textContent.replace('$', ''));
+//                 subtotal += quantity * price;
+//             });
+        
+//             var total = subtotal * (1 + taxAmount);
+//             document.querySelector('.subtotal').textContent = `$${subtotal.toFixed(2)}`;
+//             document.querySelector('.total-bill').textContent = `$${total.toFixed(2)}`;
+//         }
+//     });
+// });
+
+
+// logic
+var orderCard = document.querySelectorAll('.card-body');
+var closearea = document.querySelector('.close-x');
+var orderArea = document.querySelector('.quick-order');
+var orderItem = document.querySelector('.items-order');
+var tax = document.querySelector('.tax');
+var bill = document.querySelector('.total-bill');
+var taxAmount = 1.23;
+tax.textContent += `$${taxAmount}`;
+
+var itemsInOrder = [];
+
+closearea.addEventListener('click', () => {
+    orderArea.classList.remove('active');
+});
+
+orderItem.addEventListener('click', function(event) {
+    const target = event.target;
+    const itemID = target.getAttribute('data-item');
+
+    // Handle increment button clicks
+    if (target.classList.contains('add-number')) {
+        const burgerNumber = document.querySelector(`#${itemID} .burger-number`);
+        let currentCount = parseInt(burgerNumber.textContent);
+        burgerNumber.textContent = currentCount + 1;
+
+        // Update individual item's total
+        const itemIndex = itemsInOrder.findIndex(item => item.id === itemID);
+        itemsInOrder[itemIndex].total += itemsInOrder[itemIndex].price;
+    }
+
+    // Handle decrement button clicks
+    if (target.classList.contains('remove-num')) {
+        const burgerNumber = document.querySelector(`#${itemID} .burger-number`);
+        let currentCount = parseInt(burgerNumber.textContent);
+        if (currentCount > 1) {
+            burgerNumber.textContent = currentCount - 1;
+
+            // Update individual item's total
+            const itemIndex = itemsInOrder.findIndex(item => item.id === itemID);
+            itemsInOrder[itemIndex].total -= itemsInOrder[itemIndex].price;
+        }
+    }
+
+    updateTotal();
+
+     // Handle go-back button clicks
+     if (target.classList.contains('go-back')) {
+        const item = target.closest('.card-pick-order');
+
+        // Find the index of the item to remove in itemsInOrder array
+        const itemIndex = itemsInOrder.findIndex(item => item.id === item.id);
+
+        // Remove the item from the array
+        itemsInOrder.splice(itemIndex, 1);
+
+        // Remove the item's div from the DOM
+        item.remove();
+
+        // Recalculate the total
+        updateTotal();
+    }
+});
+
+
+orderCard.forEach((card, index) => {
+    card.addEventListener('click', (e) => {
+        orderArea.classList.add('active');
+        var itemImage;
+        var itemName = card.querySelector('.name-text').textContent;
+        var itemPrice = parseFloat(card.querySelector('p').textContent.replace('$', ''));
+        var foodAmount = 1;
+
+
+      
+        if (e.target.classList.contains('burger')) {
+            itemImage = '/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png';
+        } else if (e.target.classList.contains('pizza')) {
+            itemImage = '/E-FOOD/image/pizza-removebg-preview.png';
+        } else if (e.target.classList.contains('coffee')) {
+            itemImage = '/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png';
+        } else if (e.target.classList.contains('liquid')) {
+            itemImage = '/E-FOOD/image/drinks.png';
+        }
+
+        var itemOrder = document.createElement('div');
+        itemOrder.className = 'card-pick-order';
+        itemOrder.id = `item${index + 1}`;
+
+        // Add specific content to the dynamically created div
+        itemOrder.innerHTML = `
+            <div class="w-[90%] mx-auto flex justify-between items-center h-[100%]">
+                <div class="quick-image">
+                    <img class="w-[50px] h-[45px]" src="${itemImage}" alt="Item Image">
+                </div>
+                <div class="item-detail ">
+                    <h1 class="text-left">${itemName}</h1>
+                    <p class="text-left">$${itemPrice.toFixed(2)}</p>
+                </div>
+                <div class="flex items-center flex-col justify-between">
+                    <p class="cursor-pointer go-back text-[#b2b3b7]">x</p>
+                    <div class="add-item flex items-center justify-between">
+                        <p class="remove-num" data-item="item${index + 1}">-</p>
+                        <h5 class="burger-number">${foodAmount}</h5>
+                        <p class="add-number" data-item="item${index + 1}">+</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        // itemOrder.querySelector('.go-back').addEventListener('click', function() {
+        //     itemOrder.remove();
+        //     totalForOne = 0;
+        //     document.querySelector('.subtotal').textContent = 0;
+        //     document.querySelector('.total-bill').textContent = taxAmount + 0;
+        // });
+        orderItem.appendChild(itemOrder);
+
+        var item = {
+            id: `item${index + 1}`,
+            quantity: foodAmount,
+            price: itemPrice,
+            total: itemPrice,
+        };
+
+        itemsInOrder.push(item);
+        updateTotal();
+    });
+});
+
+function updateTotal() {
+    var subtotal = itemsInOrder.reduce((sum, item) => sum + item.total, 0);
+    var total = subtotal +  taxAmount;
+    document.querySelector('.subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.querySelector('.total-bill').textContent = `$${total.toFixed(2)}`;
 }
-
 // search bar(
 document.querySelector('#search-input').addEventListener('input', filterList);
 
@@ -211,30 +432,6 @@ historyBtn.addEventListener('click',()=>{
 })
 
 // The order section logic
-const addButtons = document.querySelectorAll(".add-number");
-const removeButtons = document.querySelectorAll(".remove-num");
-const burgerNumbers = document.querySelectorAll(".burger-number");
-
-addButtons.forEach((addButton) => {
-    addButton.addEventListener("click", function () {
-        const itemID = this.getAttribute("data-item");
-        const burgerNumber = document.querySelector(`#${itemID} .burger-number`);
-        let currentCount = parseInt(burgerNumber.textContent);
-        burgerNumber.textContent = currentCount + 1;
-    });
-});
-
-removeButtons.forEach((removeButton) => {
-    removeButton.addEventListener("click", function () {
-        const itemID = this.getAttribute("data-item");
-        const burgerNumber = document.querySelector(`#${itemID} .burger-number`);
-        let currentCount = parseInt(burgerNumber.textContent);
-        if (currentCount > 0) {
-            burgerNumber.textContent = currentCount - 1;
-        }
-    });
-});
-
 
 // The order section logic
 // why the movement isn't working is because the swiper is after the map
