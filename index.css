@@ -639,7 +639,7 @@ hr{
     transition: 0.3s;
 }
 /* forget password ui */
-section{
+.section{
     border-radius: 30px;
     box-shadow: 0px 0px 8px 5px #cccccc52;
 }
@@ -677,6 +677,20 @@ form button{
         padding: 0 !important;
         margin:  0 !important;
     }
+    .forget-p{
+        width: 80%;
+    }
+    .forget-p input{
+        height: 30px;
+        width: 30px;
+    }
+    .button-box{
+        flex-wrap: wrap;
+    }
+    .expires{
+        width: 100%;
+    }
+
     .hamburger-nav{
         justify-content:space-between;
         align-items: center;
