@@ -5,7 +5,9 @@ const wind = document.getElementById('wind');
 const humidity = document.getElementById('humidity');
 const name = document.getElementById('name');
 const time = document.getElementById('time');
-
+const sun = document.querySelector('.sun')
+const cloudy = document.querySelector('.cloudy')
+const rain = document.querySelector('.rain')
 
 async function getWeather(cityName) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
@@ -14,11 +16,10 @@ async function getWeather(cityName) {
     const response = await fetch(url)
     const data = await response.json()
     displayWeatherData(data);
-    console.log(data)
 
-    const timeResponse = await fetch(weatherUrl)
-    const json = await json.json()
-    console.log(json)
+    // const timeResponse = await fetch(weatherUrl)
+    // const json = await json.json()
+    // console.log(json)
 }
 
 function displayWeatherData(data) {
@@ -27,26 +28,42 @@ function displayWeatherData(data) {
   const apiWind = data.wind.deg;
   const apiHumidity = data.main.humidity;
   const apicountry = data.sys.country;
-  clouds = data.weather[0].main
-//   if (clouds === 'Clouds') { // Assuming 'Clouds' is a possible value in data.weather[0].main
-//     alert('hello');
-//     sun.style.display = "block"
-//     rain.style.display = "none"
-// } else {
-//   console.log('error')
-// }
-
-
+console.log(apicountry)
 
 //   const regionTime = 
 console.log(data)
+var clouds = data.weather[0].main
+var showCloud = document.getElementById('cloud')
+showCloud.textContent = clouds
+
+if (showCloud.textContent.toLowerCase() == 'clear') {
+  sun.style.display = 'block'
+  rain.style.display = 'none'
+  cloudy.style.display = 'none'
+}else if (showCloud.textContent.toLowerCase() == 'clouds') {
+  sun.style.display = 'none'
+  rain.style.display = 'none'
+  cloudy.style.display = 'block'
+} else if (showCloud.textContent.toLowerCase() == 'rain') {
+  sun.style.display = 'none'
+  rain.style.display = 'block'
+  cloudy.style.display = 'none'
+}
+
+
+
+// }else{
+//   sun.style.display = 'block'
+//   rain.style.display = 'none'
+//   cloudy.style.display = 'none'
+// }
+
 time.textContent = apicountry;
   temp.textContent = `${apiTemp} ˚C`;
   wind.textContent = apiWind;
   humidity.textContent = apiHumidity;
   name.textContent = data.name;
-  const sun = document.getElementById('sun')
-  const rain = document.getElementById('rain')
+
   if (data.weather.main =='Clouds') {
      
   }

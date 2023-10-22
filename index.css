@@ -21,15 +21,17 @@ form{
     margin-top: 2.5vh;
 
 }
-
+.rain{
+    display: none;
+}
 .cloud{
     width:50vw;
 }
-.cloud #sun{
-    display: none;
+.cloudy{
+    display: block;
 }
-#rain{
-    
+.sun{
+    display: none;
 }
 
 .search-area{
