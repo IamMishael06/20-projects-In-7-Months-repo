@@ -8,6 +8,10 @@ const time = document.getElementById('time');
 const sun = document.querySelector('.sun')
 const cloudy = document.querySelector('.cloudy')
 const rain = document.querySelector('.rain')
+const Randomsun = document.querySelector('.random-sun')
+const Randomcloudy = document.querySelector('.random-cloudy')
+const Randomrain = document.querySelector('.random-rain')
+
 
 async function getWeather(cityName) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
@@ -63,6 +67,7 @@ time.textContent = apicountry;
   wind.textContent = apiWind;
   humidity.textContent = apiHumidity;
   name.textContent = data.name;
+  document.querySelector('.country-name').textContent = data.name
 
   if (data.weather.main =='Clouds') {
      
@@ -76,7 +81,7 @@ time.textContent = apicountry;
 }
 
 searchBtn.addEventListener('click', (event) => {
-    // event.preventDefault();
+
   const search = document.getElementById('search-bar');
   const cityName = search.value.trim();
   if (cityName) {
@@ -84,10 +89,11 @@ searchBtn.addEventListener('click', (event) => {
   } else {
     alert('Please enter a city name.');
   }
+  // event.preventDefault();
 });
 
 
-var arrayOfCities = ['Lagos', 'Dehli', 'Manchester', 'London', 'Tokyo', 'Moscow', 'Cairo', 'Mumbai', 'Dubai', 'Buenos Aires', 'Paris', 'New York City','Chicago','Prague','Madrid','Budapest','Seoul','Lisbon','Munich','Naples','Brussels','Oslo','Vancouver','Lyon','Liverpool'];
+var arrayOfCities = ['Lagos', 'Dehli', 'Manchester', 'London', 'Tokyo', 'Moscow', 'Cairo', 'Mumbai', 'Dubai', 'Buenos Aires', 'Paris', 'New York City','Chicago','Prague','Madrid','Budapest','Seoul','Lisbon','Munich','Naples','Brussels','Oslo','Vancouver','Lyon','Liverpool','Turkey', 'Abuja', 'Berlin', 'Glasgow'];
 
 function getRandomCity() {
   var randomCity = arrayOfCities[Math.floor(Math.random() * arrayOfCities.length)];
@@ -120,6 +126,24 @@ function displayRandomWeatherData(city) {
   const weatherDescription = city.weather[0].description;
   const apiWind = city.wind.deg;
   const apiHumidity = city.main.humidity;
+  const randomClouds = city.weather[0].main
+
+
+  console.log(randomClouds.toLowerCase())
+
+  if (randomClouds.toLowerCase() == 'clear') {
+    Randomsun.style.display = 'block'
+    Randomrain.style.display = 'none'
+    Randomcloudy.style.display = 'none'
+  }else if (randomClouds.toLowerCase() == 'clouds' || randomClouds.toLowerCase() == 'mist' ) {
+    Randomsun.style.display = 'none'
+    Randomrain.style.display = 'none'
+    Randomcloudy.style.display = 'block'
+  } else if (randomClouds.toLowerCase() == 'rain') {
+    Randomsun.style.display = 'none'
+    Randomrain.style.display = 'block'
+    Randomcloudy.style.display = 'none'
+  }
 console.log(apiHumidity)
   Rtemp.textContent = `${apiTemp} ˚C`;
   Rwind.textContent = apiWind;
