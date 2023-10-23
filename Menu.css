@@ -10,7 +10,7 @@ aside li.active{
 }
 /* darkmode */
 .aside-nav.active{
-    background: #060b22;
+    background: #303030;
 }
 .card-pick-order.active{
     background: #ccc;
@@ -24,11 +24,11 @@ aside li.active{
     transition: 0.3s;
 }
 .top-navbar.change{
-    background: #060b22;
+    background: #303030;
     transition: 0.5s;
 }
 .quick-order.change{
-    background: #060b22;
+    background: #303030;
     transition: 0.5s;
 }
 .order-head.active{
@@ -36,23 +36,23 @@ aside li.active{
     transition: 0.3s;
 }
 .top-menu.active{
-    background: #060b22;
+    background: #303030;
     transition: 0.3s;
 }
 .pizza.active{
-    background: #060b22; 
+    background: #303030; 
     transition: 0.3s;
 }
 .coffee.active{
-    background: #060b22;
+    background: #303030;
     transition: 0.3s;
 }
 .water.active{
-    background: #060b22;
+    background: #303030;
     transition: 0.3s;
 }
 body.active{
-    background: #5b5b5b !important;
+    background: #111 !important;
     transition: 0.5s;
 }
 .header h1.active{
@@ -64,7 +64,7 @@ body.active{
     transition: 0.3s;
 }
 .card-body.active{
-    background: #060b22;
+    background: #303030;
     transition: 0.5s;
 }
 .item-detail h1.active{
@@ -72,14 +72,14 @@ body.active{
     transition: 0.3s;
 }
 .history-text.change{
-    background: #060b22;
+    background: #303030;
     border-radius: 5px;
 }
 .history-text h1.active{
     color: #fff !important;
 }
 .history-cards.active{
-    background: #060b22;
+    background: #303030;
 }
 .history-info h1.active{
     color: #fff;

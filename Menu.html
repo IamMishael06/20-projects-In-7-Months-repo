@@ -312,7 +312,25 @@
                         </div>
                     </div>
                     
-                    <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex justify-between flex-wrap gap-5 relative">
+                    <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex flex-wrap content-start gap-8 relative">
+                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="item-img">
+                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                            </div>
+                            <div class="item-detail ">
+                                <h1 class="text-center name-text">Chicken Burger</h1>
+                                <p class="text-center">$3.41</p>
+                            </div>
+                        </div>
+                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="item-img">
+                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                            </div>
+                            <div class="item-detail ">
+                                <h1 class="text-center name-text">Chicken Burger</h1>
+                                <p class="text-center">$3.41</p>
+                            </div>
+                        </div>
                         <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
                             <div class="item-img">
                                 <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
@@ -376,7 +394,25 @@
                                 </div>
                             </div>
                         </div>
-                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex justify-between flex-wrap gap-5 relative">
+                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex gap-8 flex-wrap content-start relative">
+                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                                <div class="item-img">
+                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                </div>
+                                <div class="item-detail ">
+                                    <h1 class="text-center name-text">Pepporoni</h1>
+                                    <p class="text-center">$2.41</p>
+                                </div>
+                            </div>
+                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                                <div class="item-img">
+                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                </div>
+                                <div class="item-detail ">
+                                    <h1 class="text-center name-text">Pepporoni</h1>
+                                    <p class="text-center">$2.41</p>
+                                </div>
+                            </div>
                             <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
                                 <div class="item-img">
                                     <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
@@ -440,7 +476,7 @@
                                 </div>
                             </div>
                         </div>
-                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex justify-between flex-wrap gap-5 relative">
+                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex  flex-wrap gap-8 relative">
                             <div class="card-body coffee bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
                                 <div class="item-img">
                                     <img class="w-[50px] h-[45px]" src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
@@ -505,7 +541,7 @@
                                 </div>
                             </div>
                         </div>
-                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex justify-between flex-wrap gap-5 relative">
+                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex flex-wrap gap-8 relative">
                             <div class="card-body liquids bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
                                 <div class="item-img">
                                     <img class="w-[50px] h-[45px]" src="/E-FOOD/image/drinks.png">
@@ -582,6 +618,7 @@
     <script>
         AOS.init();
         const currentDate = new Date();
+        console.log(currentDate)
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth() + 1; // Note: Months are zero-based, so January is 0
         const day = currentDate.getDate();
