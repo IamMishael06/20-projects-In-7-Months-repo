@@ -670,7 +670,22 @@ form button{
 .disabled{
     opacity: 0.3;
 }
+
 /* forget password ui */
+/* reset password */
+.reset-input{
+    border: 2px solid #f3a111;
+}
+.check{
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+}
+.check.active{
+    background: #39FF14;
+    transition: 0.3s ease-in;
+}
 @media screen and (max-width:425px) {
     body{
         overflow-x: hidden !important;
