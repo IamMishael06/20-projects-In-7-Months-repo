@@ -16,10 +16,6 @@ function FirstNav() {
     )
     // console.log(form.username) 
   }
-  const shareMessage = (e) =>{
-      e.preventDefault()
-        alert(`welcome ${form.bookName}`)
-    }
     return (
       <>
         <nav className='bg-[#fff] w-[screen] h-[10vh]'>
@@ -32,10 +28,10 @@ function FirstNav() {
                 <button className='btn bg-[#8c25b6] h-[60%] w-[15%] p-[10px] rounded-[5px] text-[#fff] flex justify-center items-center '>Menu
                 <FaCaretDown className='icons caretUp' />
                 </button>
-                <form onSubmit={shareMessage} action="" className='w-[80%] h-[60%] flex justify-between items-center bg-[#f3f3f3] rounded-[5px] '>
+                <form action="" className='w-[80%] h-[60%] flex justify-between items-center bg-[#f3f3f3] rounded-[5px] '>
                 <input value={form.bookName} onChange={handleForm} type="search" className='search-bar w-[80%] bg-[#f3f3f3] pl-3' placeholder='Find books here...' />            
                 </form>
-            </div>
+            </div> 
             <div className='w-[20%] h-[100%] flex items-center justify-between third-part'>
               <div className='w-[20%] basket h-[60%] bg-[#8c25b6] flex justify-center items-center rounded-[10px] cursor-pointer' >
               <FaShoppingBasket className='basket-item text-[#fff]' />

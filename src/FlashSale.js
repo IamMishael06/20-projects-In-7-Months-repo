@@ -82,7 +82,7 @@ function FlashSale(props) {
       price: `$ ${17.23}`,
       type: 'Adventure',
       prevPrice: `$ ${24.23}`,
-      bookLeft : `${3} books left`
+      bookLeft : `${3} books left`,
     },
     {
       background: BookFour,
