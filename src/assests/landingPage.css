@@ -13,13 +13,9 @@ body{
     outline: none;
     height: 100%;
     border-radius: 5px;
-    font-size: 14px;
     font-family: 'poppins';
     color: #00000093;
     text-transform: capitalize;
-}
-.search-bar::placeholder{
-    font-size: 14px;
 }
 .menu{
     font-family: 'poppins';
@@ -32,8 +28,120 @@ body{
     font-size: 15px;
     font-family: 'poppins';
 }
+/* Initial styles */
+/* .navbar {
+    position: absolute;
+    width: 100%;
+    background-color: #8a2aaa;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height 2.4s;
+    height: 0vh;
+} */
+  
+  /* Open state styles */
+
+  
+  /* Medium screen styles */
+  @media (min-width: 768px) {
+    .navbar {
+      max-height: 7vh;
+      position: relative;
+    }
+
+  }  @media (max-width: 385px) {
+    .mySwiper{
+        width: 60% !important;
+        margin: 0 auto;
+        height: auto !important;
+        padding-top: 30px !important;
+    }
+    .third-swiper{
+        width: 100%;
+    }
+    .swipe-element{
+        width: 100% !important;
+    }
+
+    .basket-div{
+        width: 30px;
+
+    }
+  }
+  @media (max-width: 768px) {
+    .nav-items li a{
+        color: #FFFAFA;
+        font-family: 'poppins';
+        font-weight: 400;
+        font-size: 12px;
+        position: relative;
+    }
+
+    .navbar.open {
+        height: 90vh;
+        position:relative;
+    }
+
+  }
+  @media (min-width: 1024px) and (max-width:1180px){
+    .second-part{
+        width: 80% !important;
+    }
+    .herosecswiper{
+        height: 380px !important;
+    }
+    .third-swiper{
+        width: 100%;
+    }
+    .swipe-element{
+        width: 30% !important;
+    }
+  }
+  @media (min-width: 400px) and (max-width:765px) {
+    .nav-items li a{
+        color: #FFFAFA;
+        font-family: 'poppins';
+        font-weight: 400;
+        font-size: 12px;
+        position: relative;
+    }
+    .mySwiper{
+        width: 60% !important;
+        margin: 0 auto;
+        height: auto !important;
+        padding-top: 30px !important;
+    }
+    .herosecswiper{
+        width: 70%;
+    }
+    .collection-btn button{
+        width: 80%;
+    }
+    .third-swiper{
+        width: 100%;
+    }
+    .swipe-element{
+        width: 100% !important;
+    }
+  }
+  @media (min-width: 600px) and (max-width:767px) {
+    .herosecswiper{
+        width: 40%;
+    }
+    .collection-btn button{
+        width: 50%;
+    }
+  }
+  .mySwiper{
+    width: 340px;
+    height: 420px;
+}
+/* .second-navbar.open{
+    height: 90vh;
+} */
 .nav-items li a{
-    color: #ab5ac6;
+    color: #FFFAFA;
     font-family: 'poppins';
     font-weight: 400;
     position: relative;
@@ -130,8 +238,6 @@ body{
     font-family: 'inter';
 }
 .text-areaWCU h1{
-
-    font-size: 20px;
     font-weight: 500;
 }
 .text-areaWCU p{
@@ -142,11 +248,7 @@ body{
     color: #8d30a8;
     font-size: 30px;
 }
-.mySwiper{
-    width: 340px;
-    height: 420px;
 
-}
 .slide {
     width: 340px;
     height: 420px;
@@ -208,20 +310,14 @@ body{
     font-family: 'lato';
 }
 .trending-head h1{
-    font-size: 30px;
     font-weight: 600;
     color: #151515;
 }
 .trending-head p{
 color: #cbcbcb;
-font-size: 15px;
 }
 .pfp{
     border: 3px solid #FFFFFF;;
-}
-.user-in-trending{
-    top: -12%;
-    z-index: 99;
 }
 .pfp-name p{
     font-family: 'lato';
@@ -229,14 +325,12 @@ font-size: 15px;
 }
 .stars{
     color: #ef7404;
-        width: 70%;
         margin: 0 auto;
         margin-top: 1.2em;
     
 }
 .top-rated-header h1{
     font-weight: 700;
-    font-size: 20px;
 }
 .top-rated-header button{
     color: #b59bb8;
@@ -255,7 +349,7 @@ font-size: 15px;
 }
 .swipe-element{
     background: transparent !important;
-    width: 15% !important;
+    width: 15%;
 }
 .swipe-element img{
     /* border: 1px solid red; */
@@ -287,7 +381,7 @@ font-size: 15px;
     font-weight: 600;
 }
 .basket-div{
-    background: #812c9a;
+    /* background: #812c9a;
     border-radius: 100%;
     width: 25%;
     display: flex;
@@ -295,7 +389,7 @@ font-size: 15px;
     align-items: center;
     height: 80%;
     position: relative;
-    left: 7%;
+    left: 7%; */
     box-shadow: 2px 2px 8px #00000027;
 }
 .move{
@@ -462,4 +556,30 @@ font-size: 15px;
 .heart-icon.active{
     color: #ff2831;
     transition: 0.2s ease-in-out;
+}
+.latest-head{
+    font-family: 'lato';
+}
+.latest-head h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #070707;
+
+}
+.latest-head p{
+    color: #bababa;
+}
+.news-title p{
+    font-family: 'lato';
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: .2px;
+}
+.new-title h6{
+    color: #c5c5c5;
+    font-family: 'lato';
+    font-size: 12px;
+}
+.latest button{
+    font-family: 'lato';
 }

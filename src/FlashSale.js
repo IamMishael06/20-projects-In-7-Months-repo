@@ -8,7 +8,7 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination, Navigation } from 'swiper/modules';
+import {Autoplay, FreeMode, Pagination, Navigation } from 'swiper/modules';
 function FlashSale(props) {
   // const {Hour, Minutes, Seconds } = props
 
@@ -176,6 +176,10 @@ function FlashSale(props) {
             slidesPerView={1.3}
             spaceBetween={30}
               freeMode={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
             onSwiper={(swiper) => console.log(swiper)}
             pagination={{
               clickable: true,
@@ -186,7 +190,7 @@ function FlashSale(props) {
                 nextEl: '.flash-sale-move-right-btn', // Use your custom class here
               }
           }
-            modules={[FreeMode, Navigation, Pagination]}
+            modules={[Autoplay,FreeMode, Navigation, Pagination]}
             className='flash-sale-swiper'
           >
            {pickBook}
