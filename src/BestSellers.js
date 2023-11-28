@@ -57,7 +57,7 @@ function BestSellers(props) {
             rating: ` 4.0`
         },
     ]
-    const BestSellers = books.map(book =>
+    const BestSellers = books.map((book, key) =>
         <SwiperSlide key={book.title} className='bestseller-slide flex flex-row justify-between gap-[10px]'>
             <div className='flex flex-row justify-between gap-[10px] h-[90%]'>
                 <div className='w-[40%]'>
@@ -114,7 +114,7 @@ function BestSellers(props) {
                             clickable: true,
                         }}
                         modules={[FreeMode, Navigation,Pagination]}
-                        className="mySwiper fourth-swipe w-[100%] "
+                        className="mySwiper fourth-swipe  w-[100%] md:w-[30%] lg:w-[100%] "
                     >
                         {BestSellers}
                     </Swiper>
