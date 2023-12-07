@@ -58,12 +58,12 @@ function BestSellers(props) {
         },
     ]
     const BestSellers = books.map((book, key) =>
-        <SwiperSlide key={book.title} className='bestseller-slide flex flex-row justify-between gap-[10px]'>
-            <div className='flex flex-row justify-between gap-[10px] h-[90%]'>
-                <div className='w-[40%]'>
+        <SwiperSlide key={book.title} className='bestseller-slide w-[100%] border-2 border-green-800 lg:w-[80%] lg:h-[400px] flex flex-col  lg:flex-row justify-between gap-[10px] '>
+            <div className='flex flex-col items-center lg:flex-row md:justify-between gap-[20px] lg:gap-[10px] h-[90%]'>
+                <div className='w-[100%] lg:w-[40%]'>
                     <img src={book.background} alt="" className='rounded-[20px]' />
                 </div>
-                <div className='text-view flex flex-col gap-[15%] w-[55%]  items-center'>
+                <div className='text-view flex flex-col gap-[15%] w-[100%] lg:w-[55%]  items-center'>
                     <div className='type-boxes flex justify-between w-[100%]'>
                         <div className='type bg-[#f2dff7] w-[50%] h-[30px] rounded-[5px]'>
                             <p className='text-center text-[#9d83a4]'>{book.type}</p>
@@ -73,11 +73,11 @@ function BestSellers(props) {
                             <p className='pl-2 text-[#ef7404] text-[10px]'>{book.rating}</p>
                         </div>
                     </div>
-                    <div className='title w-[100%]'>
-                        <h1 className='text-[18px]'>{book.title}</h1>
-                        <p className='text-[14px]'>{book.Author}</p>
+                    <div className='title w-[100%] mt-4'>
+                        <h1 className='text-center lg:text-left text-[14px] lg:text-[18px]'>{book.title}</h1>
+                        <p className='text-center lg:text-left text-[10px]  lg:text-[14px]'>{book.Author}</p>
                     </div>
-                    <div className='w-[100%] bestseller-price flex items-center mt-5'>
+                    <div className='w-[100%] bestseller-price flex items-center justify-center mt-5'>
                         <p className='text-[#85578d] text-[20px]'>{book.price}</p><h4 className='pl-3'>{book.prevPrice}</h4>
                     </div>
                 </div>
@@ -91,13 +91,13 @@ function BestSellers(props) {
             <div className='best-seller w-[100%] flex flex-col justify-center mt-20'>
                 <div className='top-rated-header w-[90%]  h-[20%] mx-auto flex justify-between items-center'>
                     <h1>Best Sellers</h1>
-                    <button className='flex items-center justify-between w-[5%]'>
+                    <button className='flex items-center justify-between w-[10%] lg:w-[5%]'>
                         <p>View More</p>
                         <FaArrowRight />
                     </button>
                 </div>
-                <div className='fourth-swiper w-[90%] mx-auto h-[50vh] justify-center flex items-center'>
-                    <div className='move best-seller-move-left-btn ml-[5px] w-[60px] h-[55px] bg-[#f7f9f6] rounded-[100%] relative left-[2%] z-[99px] flex justify-center items-center cursor-pointer'>
+                <div className='fourth-swiper lg:w-[90%] w-[100%] mx-auto h-auto lg:h-[50vh] justify-center flex items-center'>
+                    <div className='move best-seller-move-left-btn ml-[2px] lg:ml-[5px] w-[30px] h-[35px] lg:w-[] bg-[#f7f9f6] rounded-[100%] relative left-[0] z-[99px] flex justify-center items-center cursor-pointer'>
                         <FaArrowLeft className='text-[#98899a] ' />
                     </div>
                     <Swiper
@@ -110,15 +110,30 @@ function BestSellers(props) {
                                 nextEl: '.best-seller-move-right-btn', // Use your custom class here
                             }
                         }
+                        breakpoints={{
+                            1024:{
+                                slidesPerView: 6,
+                                pagination: {
+                                  clickable: true,
+                                }
+                              },
+                            // When window width is < 800px
+                            0: {
+                              slidesPerView: 1,
+                              pagination: {
+                                clickable: false,
+                              },
+                            },
+                          }}
                         pagination={{
                             clickable: true,
                         }}
                         modules={[FreeMode, Navigation,Pagination]}
-                        className="mySwiper fourth-swipe  w-[100%] md:w-[30%] lg:w-[100%] "
+                        className="mySwiper fourth-swipe  w-[90%] md:w-[80%] lg:w-[100%] border-2 border-red-600"
                     >
                         {BestSellers}
                     </Swiper>
-                    <div className='move best-seller-move-right-btn mr-[5px] w-[60px] h-[55px] bg-[#8724ad] rounded-[100%] relative right-[2%] z-[99px] flex justify-center items-center cursor-pointer'>
+                    <div className='move best-seller-move-right-btn mr-[2px] lg:mr-[5px] w-[60px] h-[55px] bg-[#8724ad] rounded-[100%] relative right-[2%] z-[99px] flex justify-center items-center cursor-pointer'>
                         <FaArrowRight className='text-[#fff]' /> 
                     </div>
                 </div>
