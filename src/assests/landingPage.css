@@ -50,6 +50,7 @@ body{
       position: relative;
     }
 
+
   }  @media (max-width: 385px) {
     .mySwiper{
         width: 60% !important;
@@ -81,6 +82,13 @@ body{
     .navbar.open {
         height: 90vh;
         position:relative;
+    }
+    .flash-sale{
+        flex-direction: column;
+    }
+    .flash-sale-slide{
+        width: 100% !important;
+        height: 100% !important;
     }
 
   }

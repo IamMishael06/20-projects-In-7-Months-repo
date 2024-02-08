@@ -103,9 +103,9 @@ function FlashSale(props) {
       bookLeft : `${22} books left`
     },
   ]
-  const pickBook = books.map((book) =>  <SwiperSlide key={book.title} className='flash-sale-slide'>
-    <div className='w-[95%] mx-auto h-[100%] flex justify-center items-center rounded-[20px] bg-[#310042]'>
-     <div className='flex justify-between items-center gap-5 w-[100%] h-[90%]'>
+  const pickBook = books.map((book) =>  <SwiperSlide key={book.title} className='flash-sale-slide  border-2 border-red-500'>
+    <div className='w-[100%] h-auto border-2 border-blue-500 lg:w-[95%] mx-auto lg:h-[100%] flex justify-center items-center rounded-[20px] bg-[#310042]'>
+     <div className='flex-col md:flex justify-between items-center gap-5 w-[100%] h-[90%]'>
       <div className='pic-sec-flash-sale w-[35%] ml-[3%] h-[100%] rounded-[15px]'>
          <img src={book.background} alt=""  className='h-[100%] rounded-[15px]'/>
       </div>
@@ -145,14 +145,14 @@ function FlashSale(props) {
   </SwiperSlide> )
   return (
     <React.Fragment>
-      <div className='flash-sale w-[100%] flex-col lg:flex justify-between items-center bg-[#5b067d] h-auto md:h-[60vh] mt-10 pt-10 relative'>
+      <div className='flash-sale w-[100%] md:flex lg:justify-between lg:items-center bg-[#5b067d] h-auto md:h-[60vh] mt-10 pt-10 relative'>
         <div className='purple-noise hidden lg:block absolute w-[300px] h-[400px] rounded-[100%] right-[-9%]'></div>
         <div className='purple-noise hidden lg:block  absolute w-[200px] h-[400px] rounded-[100%] left-[30%]'></div>
         <div className='lg:w-[45%] w-[100%] mx-auto  h-[80%]'>
           <div className=' w-[80%]  mx-auto h-[100%] flex flex-col flash-sale-text'>
             <h1>Flash Sale</h1>
             <p className='mt-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quia quas iusto distinctio exercitationem eius cupiditate modi amet illo laudantium recusandae minima odio vero, explicabo, aspernatur voluptatum quam fugiat? Repellendus!!!!</p>
-            <div className='time border border-[#ffedff67] w-[70%] lg:w-[60%] h-[70px] mt-10 rounded-[10px] flex justify-center gap-5 items-center'>
+            <div className='time border border-[#ffedff67] w-[80%] lg:w-[60%] h-[70px] mt-10 rounded-[10px] flex justify-center gap-5 items-center'>
               <div>
                 <h2>{hour}</h2>
                 <p>Hours</p>
@@ -168,7 +168,7 @@ function FlashSale(props) {
             </div>
           </div>
         </div>
-        <div className='flash-sale-swiper-div w-[60%] h-[80%] relative'>
+        <div className='flash-sale-swiper-div w-[100%]  border-2 border-red-500  h-[80%] mx-auto mt-5 lg:mt-0 relative'>
         <div className='move flash-sale-move-left-btn ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute top-40 left-[-5%] z-[99px] flex justify-center items-center cursor-pointer'>
               <FaArrowLeft className='text-[#98899a] ' />
             </div>
@@ -179,6 +179,21 @@ function FlashSale(props) {
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
+              }}
+              breakpoints={{
+                1024:{
+                    slidesPerView: 1.3,
+                    pagination: {
+                      clickable: true,
+                    }
+                  },
+                // When window width is < 800px
+                0: {
+                  slidesPerView: 1,
+                  pagination: {
+                    clickable: false,
+                  },
+                },
               }}
             onSwiper={(swiper) => console.log(swiper)}
             pagination={{
@@ -195,7 +210,7 @@ function FlashSale(props) {
           >
            {pickBook}
           </Swiper>
-          <div className='move flash-sale-move-right-btn ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute right-[5%] top-40 z-[99px] flex justify-center items-center cursor-pointer'>
+          <div className='move flash-sale-move-right-btn lg:ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute right-[5%] top-40 z-[99px] flex justify-center items-center cursor-pointer'>
               <FaArrowRight className='text-[#98899a] ' />
             </div>
         </div>
