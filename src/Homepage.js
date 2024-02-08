@@ -20,9 +20,9 @@ function Homepage() {
        <TrendingBooks/>
        <TopRated/>
        <BestSellers/>
-       {/* <FlashSale />
-       <FeaturedBook />
-       <LatestNews /> */}
+       <FlashSale />
+       {/* <FeaturedBook /> */}
+       {/* <LatestNews /> */}
     </div>
   )
 }

@@ -404,8 +404,10 @@ color: #cbcbcb;
     align-items: center;
     /* border: 1px solid red; */
 }
+/* ============================== BEST SELLER.JS ============================== */
 .bestseller-slide{
     background: transparent !important;
+    border: none;
     
 }
 .bestseller-slide .type-boxes{
@@ -446,7 +448,7 @@ color: #cbcbcb;
     font-family: 'poppins';
 }
 
-/* Flash SALE COMPONENT CSS */
+/*==============================  Flash SALE COMPONENT CSS *============================== */
 .flash-sale-swiper{
     height: 100%;
     width: 100%;

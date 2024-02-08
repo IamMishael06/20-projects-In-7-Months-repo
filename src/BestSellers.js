@@ -60,7 +60,7 @@ function BestSellers(props) {
     const BestSellers = books.map((book, key) =>
         <SwiperSlide key={book.title} className='bestseller-slide w-[100%] border-2 border-green-800 lg:w-[80%] lg:h-[400px] flex flex-col  lg:flex-row justify-between gap-[10px] '>
             <div className='flex flex-col items-center lg:flex-row md:justify-between gap-[20px] lg:gap-[10px] h-[90%]'>
-                <div className='w-[100%] lg:w-[40%]'>
+                <div className='w-[60%] lg:w-[40%]'>
                     <img src={book.background} alt="" className='rounded-[20px]' />
                 </div>
                 <div className='text-view flex flex-col gap-[15%] w-[100%] lg:w-[55%]  items-center'>
@@ -97,11 +97,11 @@ function BestSellers(props) {
                     </button>
                 </div>
                 <div className='fourth-swiper lg:w-[90%] w-[100%] mx-auto h-auto lg:h-[50vh] justify-center flex items-center'>
-                    <div className='move best-seller-move-left-btn ml-[2px] lg:ml-[5px] w-[30px] h-[35px] lg:w-[] bg-[#f7f9f6] rounded-[100%] relative left-[0] z-[99px] flex justify-center items-center cursor-pointer'>
+                    <div className='move best-seller-move-left-btn ml-[2px] lg:ml-[5px] w-[60px] h-[55px] lg:w-[] bg-[#f7f9f6] rounded-[100%] relative left-[0] z-[99px] flex justify-center items-center cursor-pointer'>
                         <FaArrowLeft className='text-[#98899a] ' />
                     </div>
                     <Swiper
-                        slidesPerView={2.75}
+                        slidesPerView={3}
                         spaceBetween={30}
                         freeMode={true}
                         navigation={
@@ -112,7 +112,7 @@ function BestSellers(props) {
                         }
                         breakpoints={{
                             1024:{
-                                slidesPerView: 6,
+                                slidesPerView: 3,
                                 pagination: {
                                   clickable: true,
                                 }
@@ -129,7 +129,7 @@ function BestSellers(props) {
                             clickable: true,
                         }}
                         modules={[FreeMode, Navigation,Pagination]}
-                        className="mySwiper fourth-swipe  w-[90%] md:w-[80%] lg:w-[100%] border-2 border-red-600"
+                        className="mySwiper fourth-swipe  w-[90%] md:w-[80%] lg:w-[100%]"
                     >
                         {BestSellers}
                     </Swiper>
