@@ -21,18 +21,21 @@
 
 // })
 
-var menuBtn = document.querySelector('.bar')
-var dashboard = document.querySelector('.hamburger-nav')
-var bar = document.querySelector('.bar div:nth-child(2)')
-var menu = document.querySelector('.hamburger-nav .menu-items')
-console.log(menuBtn)
-menuBtn.addEventListener('click', ()=>{
-  dashboard.classList.toggle('active')
-  bar.classList.toggle('active')
-  menu.classList.toggle('active')
+var navItem = document.querySelector('.fold')
+var closeBtn = document.querySelector('.close-div')
+var openBtn = document.querySelector('.bars')
+var firstBar = document.querySelector('.bars > div:nth-child(1)')
+var secondBar = document.querySelector('.bars > div:nth-child(3)')
+closeBtn.addEventListener('click', (e)=>{
+    navItem.classList.toggle('mobile')
+    firstBar.classList.remove('active')
+    secondBar.classList.remove('active')
 })
-
-
+openBtn.addEventListener('click', (e)=>{
+    navItem.classList.toggle('mobile')
+    firstBar.classList.add('active')
+    secondBar.classList.add('active')
+})
 
 
 const swiper = new Swiper('.swiper', {

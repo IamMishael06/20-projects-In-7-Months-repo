@@ -4,13 +4,13 @@
 @tailwind utilities;
 
 body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'exo 2';
-
 }
+
 .hamburger-nav{
     display: none !important;
 }
@@ -36,7 +36,7 @@ body{
     font-weight: 900;
     font-family: 'exo 2';
 }
-.logo span{
+.logo .design{
     color: #f9ae21;
 }
 .navItems li{
@@ -65,6 +65,108 @@ margin-right: 5px;
 }
 .buttons a{
     color: #FFFFFF;
+}
+.button-mobile{
+    display: none;
+}
+.bars{
+    display: none;
+}
+.close-div{
+    display: none;
+}
+@media screen and  (max-width: 768px){
+    .logo .mobile{
+        display: none;
+    }
+    .button-mobile{
+        display: block;
+    }
+    .bars{
+        display: block;
+    }
+    .close-div{
+        display: block;
+    }
+    .fold{
+        position: fixed;
+        background: #ccc;
+        height: 600px;
+        z-index: 99;
+        top: 5px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        left:-100%;
+        transition:left 0.4s;
+      
+    }
+    .fold.mobile{
+        left: 5%;
+    }
+    .close-div{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .fold .close{
+        font-size: 30px;
+        margin-left: auto;
+    }
+    .fold ul{
+
+        flex-direction: column;
+        height: 80%;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+    }
+    .button-desktop{
+        border: 1px solid red;
+        display: none;
+    }
+    .bars{
+        width: 20%;
+        height: 90%;
+    }
+    .bars div{
+        width: 60%;
+        margin: 0 auto;
+        height: 15%;
+        background: #121212;
+        margin-top: 5px;
+        border-radius: 8px;
+        transition: 1.5s;
+    }
+    .bars div:nth-child(1){
+        margin-left: 20px;
+        background: #ba1f1d;
+        transition: 1.5s;
+    }
+    .bars div:nth-child(1).active{
+        margin-left: auto;
+    }
+    .bars div:nth-child(3).active{
+        margin-right: auto;
+    }
+    .bars div:nth-child(3){
+        margin-right: 20px;
+        background: #f9ae21;
+        transition: 1.5s;
+    }
+}
+@media screen and (min-width:600px) {
+    .bars{
+        width: 10%;
+    }
 }
 .carousel{
     width: 100vw;
@@ -685,6 +787,19 @@ form button{
     background: #39FF14;
     transition: 0.3s ease-in;
 }
+/* NAVITEMS CSS */
+.hamburger-slider{
+    position:absolute;
+    border-radius: 55% 45% 47% 53% / 14% 11% 89% 86% ;
+    width: 100vw;
+bottom: 0;
+    z-index: 99;
+    height: 60vh;
+    background: #fff;
+    border: 1px solid red;
+
+}
+/* NAVITEMS CSS */
 @media screen and (max-width:425px) {
     body{
         overflow-x: hidden !important;
@@ -704,18 +819,6 @@ form button{
     .expires{
         width: 100%;
     }
-
-    .hamburger-nav{
-
-        justify-content:space-between;
-        align-items: center;
-        font-family: 'exo 2';
-        width: 100vw;
-        display: block !important;
-        display: flex !important;
-        background: #fff;
-    
-    }
     .bar div:nth-child(2).active{
         width: 25px;
         transition: 0.3s;
@@ -724,20 +827,7 @@ form button{
         align-items: center;
         flex-direction: row;
     }
-    .logo img{
-        width: 50px;
-        height: 50px;
-    }
-    .logo h2{
-        font-size: 20px;
-        font-weight: 900;
-        font-family: 'exo 2';
-    }
-    .logo span{
-        color: #f9ae21;
-    }
     .menu{
-        position: relative;
         width: 40%;
         z-index: 5;
     }
@@ -745,24 +835,6 @@ form button{
         display: flex;
         flex-direction: column;
         align-items: end;
-    }
-    .bar{
-        padding: 10px;
-    }
-    .bar div{
-        width: 20px;
-        background: #ba1f1d;
-        height: 3px;
-        border-radius: 5px;
-        margin: 1px 0px;
-    }
-    .bar div:nth-child(2){
-        width: 15px;
-         transition: 0.3s;
-    }
-    .navbar{
-        display: none !important;
-
     }
     .carousel{
         height: auto;
