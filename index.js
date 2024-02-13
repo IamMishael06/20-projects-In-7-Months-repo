@@ -60,3 +60,16 @@ const swiper = new Swiper('.swiper', {
     },
   });
 
+
+
+  const swiperOne = new Swiper('.swiper-one', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    autoplay: {
+      delay: 5000, // Adjust the delay (in milliseconds) between slides
+    },
+    // If we need pagination
+    // Navigation arrows
+  });

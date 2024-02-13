@@ -90,12 +90,11 @@ margin-right: 5px;
     }
     .fold{
         position: fixed;
-        background: #ccc;
+        background: #f5f5f5;
         height: 600px;
         z-index: 99;
         top: 5px;
-        width: 90%;
-        margin: 0 auto;
+        width: 22%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,7 +106,7 @@ margin-right: 5px;
       
     }
     .fold.mobile{
-        left: 5%;
+        left: 1.5%;
     }
     .close-div{
         width: 90%;
@@ -168,40 +167,34 @@ margin-right: 5px;
         width: 10%;
     }
 }
+/*=============================== CAROUSEL  ===============================*/
 .carousel{
     width: 100vw;
     height: 100vh;
-}
-.slider{
+    border: 1px solid red;
     position: relative;
-    margin: 0;
-    left: 0;
-    width: 500%;
-    animation: slider 30s ease-in-out 0.5s infinite;
-    transition: 0.3s;
-    height: 100vh;
-
 }
-.slider figure div{
-    width: 100vw;
-    float: left;
-    height: 100vh;
+.swiper-one{
+    height: 100%;
 }
-.slider figure div img{
-width: 100vw;
-height: 100vh;
-object-fit: cover;
-}
-.slider figure .slider-image::after {
-    content: "";
+.swiper-one::after{
+    content: '';
+    height: 100%;
     position: absolute;
     width: 100%;
-    height: 100%;
-    z-index: 2;
-    background:#000000; /* semi-transparent red */
+    display: block;
+    background: #00000043;
+    z-index: 1;
     top: 0;
-    left: 0;
-    opacity: 0.5;
+
+}
+.slider-image{
+    border: 1px solid red;
+    height: 100%;
+}
+.slider-image img{
+    height:100%;
+    width: 100%;
 }
 .content{
     position: absolute;
@@ -250,31 +243,6 @@ object-fit: cover;
 }
 .content button a{
     font-weight: 700;
-}
-.first-slide{
-    height: 100vh;
-}
-@keyframes slider {
-    0%{
-        left: 0;
-        
-    }
-    20%{
-        left: 0;
-    }
-    25%{
-        left: -100%;
-    }
-    45%{
-        left: -100%;
-    }
-    50%{
-        left: -200%;
-    }
-    100%{
-        left: -200%;
-    }
-
 }
 .offers{
     justify-content: center;
