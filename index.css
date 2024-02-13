@@ -192,12 +192,21 @@ margin-right: 5px;
     top: 0;
 
 }
+
 .slider-image{
     height: 100%;
 }
 .slider-image img{
     height:100%;
     width: 100%;
+}
+.slide-one{
+    background: url(/E-FOOD/image/0062541_0.jpeg);
+}
+.slide-two{
+    background: url(/E-FOOD/image/foods-to-avoid-during-period-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .content{
     position: absolute;
@@ -770,15 +779,29 @@ bottom: 0;
     border: 1px solid red;
 
 } */
+/* =========================== RESPONSIVENESS ===========================*/
 @media screen and (max-width:425px) {
     body{
         overflow-x: hidden !important;
         padding: 0 !important;
         margin:  0 !important;
     }
-    
+    .content{
+        width: 90%;
+    }
+    .content h4{
+        width: 60%;
+    }
+    .content h1{
+        font-size: 40px;
+        width: 100%;
+    }
+    .content p{
+        width: 100%;
+        font-size: 14px;
+    }
     .offers{
-        margin-top: 0 !important;
+        margin-top: 50px !important;
         flex-direction: column;
         gap: 1px;
     }
@@ -791,6 +814,7 @@ bottom: 0;
     }
     .pizza{
         width: 100%;
+        border-radius: 0;
     }
     .pizza img{
         width: 100%;
@@ -807,7 +831,7 @@ bottom: 0;
     }
     .chicken img{
         width: 50%;
-        object-fit: cover;
+        object-fit: contain;
     }
     .coffee{
         width: 50%;
@@ -835,14 +859,15 @@ bottom: 0;
         font-size: 20px;
     }
     #mini-menu  ul{
-        border: 1px solid #000000;
         background: #ba1f1d;
-        border-radius: 50px;
+        border-radius: 10px;
         padding: 5px 0;
         width: 90vw;
+        color: #f5f5f5;
     } 
     #mini-menu li a p{
         font-size: 14px;
+ 
     }
     #mini-menu li a i{
         font-size: 15px;
@@ -851,6 +876,7 @@ bottom: 0;
     {
         flex-direction: column;
     }
+    /*========================== BURGER AREA ==========================*/
     .burger-sec{
         height: auto;
         box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
@@ -859,6 +885,7 @@ bottom: 0;
         justify-content: space-between;
         margin-top:5vh;
         padding-bottom: 10px;
+        padding-top: 10px;
     }
     .burger-sec img{
         width: 15vw;
@@ -870,7 +897,7 @@ bottom: 0;
     .burger-text p{
         font-size: 10px;
     }
-    /* pizza area */
+    /*========================== PIZZA AREA ==========================*/
     .pizza-card{
         flex-direction: column;
 
@@ -885,6 +912,7 @@ bottom: 0;
         justify-content: space-between;
         margin-top:5vh;
         padding-bottom: 10px;
+        padding-top: 10px;
     }
     .pizza-sec img{
         width: 15vw;
@@ -896,7 +924,7 @@ bottom: 0;
     .pizza-text p{
         font-size: 10px;
     }
-    /* pizza area */
+    /*========================== BEVERGAGE AREA ==========================*/
     .beverage-card{
         flex-direction: column;
     }
@@ -908,6 +936,7 @@ bottom: 0;
         padding-bottom: 10px;
         box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
         border-radius: 10px;
+        padding-top: 10px;
     }
     .beverage-sec img{
         height: 15vh;
@@ -919,6 +948,7 @@ bottom: 0;
     .beverage-text p{
         font-size: 10px;
     }
+    /*========================== DRINK AREA ==========================*/
     .drink-card{
         flex-direction: column;
     }
@@ -929,7 +959,9 @@ bottom: 0;
         justify-content: space-between;
         margin-top:5vh;
         padding-bottom: 10px;
+        padding-top: 10px;
     }
+    /*========================== DESSERT AREA ==========================*/
     .dessert-card{
         flex-direction: column;
     }
@@ -938,6 +970,7 @@ bottom: 0;
         width: 70vw;
         justify-content: space-between;
         margin-top:5vh;
+        padding-top: 10px;
         padding-bottom: 10px;
         
     }
