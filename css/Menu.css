@@ -4,6 +4,17 @@
 @tailwind utilities;
 body{
     transition: 0.3s;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background: #f6fafd;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 aside li.active{
     color:#fff;
@@ -88,7 +99,22 @@ body.active{
 aside li{
     transition: 0.5s;
 }
+aside{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background: #ffffff;
+    z-index: 4;
+    transition: 0.5s;
 
+}
+.side-items{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
 section nav.active{
     width: 0%;
     position: absolute;
@@ -96,6 +122,22 @@ section nav.active{
 }
 .logo{
     border-bottom: 1px solid #f6f6f6;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-area{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+}
+.logo-area img{
+    width: 50px;
+    height: 50px;
+}
+.logo-area div{
+    padding-left: 0.5rem;
 }
 .logo h2{
     font-size: 30px;
