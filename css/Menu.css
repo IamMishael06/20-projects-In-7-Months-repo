@@ -166,6 +166,23 @@ section nav.active{
 }
 .mini-nav{
     border-bottom: 1.5px solid #f6f6f6;
+    height: 10vh;
+}
+.mini-nav-items{
+    display: flex;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+.mini-nav-items > div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+.mini-nav-items img{
+    width: 50px;
+    height: 50px;
 }
 .mini-nav-items p{
     font-family: 'exo 2';
@@ -180,6 +197,27 @@ section nav.active{
 }
 .menu-dashboard{
     border-bottom: 1.5px solid #f6f6f6;
+    height: 45vh;
+}
+.dashboard{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.dashboard > div{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+.dashboard ul li{
+    width: 95%;
+    margin: 0 auto;
+}
+.dashboard ul li p{
+    padding-left: 0.75rem;
 }
 .dashboard ul i{
     font-size: 20px;
@@ -193,6 +231,18 @@ section nav.active{
 .dashboard ul {
     color: #00000080;
     font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.dashboard ul li a{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
 }
 .dashboard ul li:hover{
     border-left: 3px solid #ba1f1d;
@@ -205,18 +255,68 @@ section nav.active{
     font-size: 15px;
     font-family: 'Tomorrow';
 }
+.general{
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 .general ul{
     color: #00000080;
     font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+
+}
+.general h1{
+    width: 85%;
+    margin: 0 auto;
+}
+.general ul li{
+    width: 95%;
+    margin: 0 auto;
+}
+.general ul li a{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+.general ul li p{
+    padding-left: 0.75rem;
 }
 .general ul li:hover{
     border-left: 3px solid #ba1f1d;
     color: #ba1f1d;
     transition: 0.3s ease-in-out;
 }
+.mode-slider{
+    background: #f6fafd;
+    width: 85%;
+    height: 15%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .mode-slider-bg{
     width: 50% !important;
     position: absolute !important;
+    height: 95%;
+    background: #fff;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition:right 0.4s;
+    z-index: 3;
+    right: 0;
 }
 .mode-slider-bg.active{
     right: 50%;
@@ -229,8 +329,11 @@ section nav.active{
 }
 .slider-text h1,.slider-text i{
     color: #a8a8a8;
-
-
+}
+.slider-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .slider-text h1{
     font-family: 'exo 2';
@@ -238,6 +341,39 @@ section nav.active{
 .mode-slider div{
     width: 25%;
     justify-content: center;
+}
+.mobile-nav-items{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    height: 20vh;
+}
+.mobile-nav-items .chat{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.mobile-nav-items > div:nth-child(2){
+    background: red;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    height: 20%;
+    align-items: center;
+}
+.mobile-nav-items .share{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.mobile-nav-items p{
+    padding-left: 0.75rem;
+}
+.my-orders{
+
 }
 .nav-area form{
     width: 25%;
@@ -306,6 +442,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .my-orders{
     background: #fff6f9;
 border-radius: 8px;
+height: 20%;
+
     font-family: 'lato';
     padding:0 5px ;
 }
@@ -326,7 +464,6 @@ nav{
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    /* border: 1px solid red; */
 }
 .dashboard-sec{
     display: none;
@@ -492,7 +629,7 @@ font-family: 'exo 2';
 
 }
 
-/* History Styling */
+/*========================== HISTORY PAGE  =========================*/
 .history-text    h1{
     color: #1f1f1f;
     font-weight: 700;
