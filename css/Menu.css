@@ -372,6 +372,9 @@ section nav.active{
 .mobile-nav-items p{
     padding-left: 0.75rem;
 }
+.nav-items p{
+    padding-left: 0.75rem;
+}
 .my-orders{
 
 }
@@ -382,6 +385,8 @@ section nav.active{
     justify-content: space-between !important;
     background: #f8f9fd;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 .nav-area form input{
     background: #f8f9fd;
@@ -389,6 +394,11 @@ section nav.active{
     margin-left: 5px;  
     font-size: 13px;
     color: #7e7e7e;
+}
+.search-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 input[type="search"]::-webkit-search-cancel-button {
     color: red;
@@ -424,7 +434,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .nav-area{
     /* border: 1px solid red; */
-    font-family: 'exo 2';    
+    font-family: 'exo 2';   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    height: 60%;
+    margin: 0 auto; 
 }
 .nav-area.active{
     display: none;
@@ -443,23 +459,57 @@ input[type="search"]::-webkit-search-cancel-button {
     background: #fff6f9;
 border-radius: 8px;
 height: 20%;
-
+display: flex;
+align-items: center;
     font-family: 'lato';
-    padding:0 5px ;
+    position: relative;
+padding:0 5px ;
+}
+.my-orders p{
+    padding-left: 3px;
 }
 .my-orders p, .my-orders i{
     color: #d4a5a7 !important;
+}
+.notification-card{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    right: -5%;
+    top: -14%;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-card p{
+    color: white;
 }
 nav{
     /* transition: 0.3s; */
     width: 100%;
 }
+.top-navbar{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
 .menu{
     height: 100%;
 }
 .top-nav{
     width: 80% !important;
+    margin-left: 20%;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transition: 0.3s;
 }
+
 .swiper-wrapper{
     height: 100%;
     width: 100%;
@@ -480,6 +530,8 @@ nav{
 }
 .customer-service-sec{
     display: none;
+    width: 100%;
+    height: 100%;
 }
 .swiper{
     height: 100%;
@@ -684,18 +736,38 @@ font-weight: 600;
 }
 #map.active{
 }
-/* customer service area  */
+/*=============== customer service area  ===============*/
+.service-area{
+    width: 90%;
+    margin: 0 auto;
+}
 .service-icon{
     color: #ba1f1d;
     justify-content: center;
     align-items: center;
     font-size: 60px;
     width: 15vw;
+    margin: 0 auto;
     background:#f9ae21;
     height: 15vh;
      border-radius: 50%;
     margin-top: 5vh;
     position: relative;
+ 
+    text-align: center;
+    display: flex;
+}
+.service-icon > i:nth-child(2){
+    position: absolute;
+    font-size: 13px;
+    right: 3rem;
+    color: green;
+    top: 20%;
+}
+.service-icon > i:nth-child(3){
+    position: absolute;
+    font-size: 13px;
+    left: 2rem;
 }
 .customer-service-text{
     width: 60%;
@@ -712,11 +784,18 @@ font-weight: 600;
     font-family: 'Tomorrow';
     font-size: 20px;
     margin: 0 auto;
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 .customer-service-sec form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.25rem;
 }
 .customer-service-sec form input{
     width: 40%;
