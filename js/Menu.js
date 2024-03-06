@@ -7,8 +7,22 @@ arrow.addEventListener('click', ()=>{
     section.classList.toggle('active')
     navItems.classList.toggle('active')
 })
-
 // light and dark modes
+
+
+// ========================== 
+var mainNavBtn = document.querySelector('.top-nav-icon')
+var mainNavMove = document.querySelector('.top-nav')
+var sideNavMove = document.querySelector('.aside-nav')
+var moveBack = document.querySelector('.move-back')
+mainNavBtn.addEventListener('click', (e)=>{
+    mainNavMove.classList.toggle('move');
+    sideNavMove.classList.toggle('move')
+})
+moveBack.addEventListener('click', (e)=>{
+    mainNavMove.classList.toggle('move');
+    sideNavMove.classList.toggle('move')
+})
 
 const darkbtn = document.querySelector('.dark')
 const lightBtn = document.querySelector('.light')
@@ -248,12 +262,7 @@ orderCard.forEach((card, index) => {
                 </div>
             </div>
         `;
-        // itemOrder.querySelector('.go-back').addEventListener('click', function() {
-        //     itemOrder.remove();
-        //     totalForOne = 0;
-        //     document.querySelector('.subtotal').textContent = 0;
-        //     document.querySelector('.total-bill').textContent = taxAmount + 0;
-        // });
+
         orderItem.appendChild(itemOrder);
 
         var item = {

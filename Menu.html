@@ -17,11 +17,12 @@
 </head>
 <body>
     <main>
+        <!-- ======================== SIDE NAV ======================== -->
         <aside class="aside-nav">
             <div class="side-items">
                 <div class="logo">
                     <div class="logo-area">
-                        <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" alt="">
+                        <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" alt="" class="move-back">
                         <div>
                             <a href="landing-page.html">
                                 <h2 class="mars">MARS<span>FOOD</span></h2>
@@ -43,6 +44,7 @@
                         </div>
                     </div>
                 </div>
+                   <!-- ======================== MENU DASHBOARD ======================== -->
                 <div class="menu-dashboard">
                     <div class="dashboard">
                         <div>
@@ -119,7 +121,8 @@
                 </div>
             </div>
         </aside>
-        <section class="top-nav">
+            <!--======================== INFO BOXES ========================   -->
+            <section class="top-nav">
             <nav class="top-navbar">
                 <div class="nav-area">
                     <form action="">
@@ -131,16 +134,16 @@
 
 
                     </form>
-                    <div class="nav-items flex justify-between w-[50%]">
-                        <div class="chat flex items-center">
+                    <div class="nav-items desktop-nav-items">
+                        <div class="chat">
                             <i class="fa-regular fa-message"></i>
                             <p>Chat</p>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div>
+                            <i class="fa-solid fa-ellipsis-vertical top-nav-icon"></i>
                             <p>More</p>
                         </div>
-                        <div class="share flex items-center">
+                        <div class="share">
                             <i class="fa-solid fa-circle-nodes"></i>
                             <p>Share</p>
                         </div>
@@ -148,11 +151,12 @@
                             <i class="fa-solid fa-arrow-up-wide-short"></i>
                             <p >Notifications</p>
                             <div class="notification-card">
-                                <p class="text-white">1</p>
+                                <p>1</p>
                             </div>
                         </div>
                     </div>
             </nav>
+               <!-- ======================== CUSTOMER SERVICE SECTION ======================== -->
             <div class="customer-service-sec">
                 <div class="service-area">
                     <div class="service-icon">
@@ -170,119 +174,117 @@
                     </form>
                 </div>
             </div>
-            <!-- History section -->
-            <div class="history-sec w-[100%] h-[100%] hidden">
-                <div class="history-text w-[95%] mx-auto bg-[#fff] h-[20%] mt-5 flex  items-center">
-                    <h1 class="pl-10">History</h1>
+               <!-- ======================== HISTORY SECTION ======================== -->
+            <!-- <div class="history-sec">
+                <div class="history-text">
+                    <h1>History</h1>
                 </div>
-                <div class="history-items w-[95%] h-[100%] flex   flex-col mt-5">
-                    <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto flex justify-between  items-center  rounded-[10px]">
-                        <div class="img-area w-[10%] h-[100%] bg-[#f9ae21] flex justify-center items-center rounded-l-[10px]">
-                            <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" class="w-[50px] h-[50px]" alt="">
+                <div class="history-items">
+                    <div class="history-cards">
+                      <div class="img-area">
+                            <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png" alt="">
                         </div>
-                        <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
-                            <div class="name flex flex-col justify-between ">
-                                <h1 class="text-[#000]">Big Mac</h1>
+                        <div class="history-info">
+                            <div class="name">
+                                <h1>Big Mac</h1>
                                 <p>Price:<span>$6.82</span></p>
                                 <h4>Status: <span>Succesful</span></h4>
                             </div>
-                            <div class="quantity flex flex-col justify-between">
+                            <div class="quantity">
                                 <h1>Quantity: <span>2</span></h1>
                                 <h1>27th July 2023</h1>
                             </div>
                         </div>
-                    </div>
-                    <!-- pizza history card -->
-                    <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto  mt-5  flex justify-between  items-center  rounded-[10px]">
-                        <div class="img-area w-[10%] h-[100%] bg-[#ba1f1d] flex justify-center items-center rounded-l-[10px] ">
-                            <img src="/E-FOOD/image/pizza-removebg-preview.png" class="w-[50px] h-[50px]" alt="">
+                    </div> -->
+                    <!--==================== pizza history card ====================-->
+                    <!-- <div class="history-cards">
+                        <div class="img-area">
+                            <img src="/E-FOOD/image/pizza-removebg-preview.png" alt="">
                         </div>
-                        <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
-                            <div class="name flex flex-col justify-between ">
-                                <h1 class="text-[#000]">Pepporoni</h1>
+                        <div class="history-info">
+                            <div class="name">
+                                <h1>Pepporoni</h1>
                                 <p>Price:<span>$2.82</span></p>
                                 <h4>Status: <span>Succesful</span></h4>
                             </div>
-                            <div class="quantity flex flex-col justify-between">
+                            <div class="quantity">
                                 <h1>Quantity: <span>1</span></h1>
                                 <h1>14th July 2023</h1>
                             </div>
                         </div>
-                    </div>
-                    <!-- pizza history card -->
-                    <!-- Coffee section card -->
-                    <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto  mt-5  flex justify-between  items-center  rounded-[10px]">
-                        <div class="img-area w-[10%] h-[100%] bg-[#000] flex justify-center items-center rounded-l-[10px]">
-                            <img src="/E-FOOD/image/cofee.png" class="w-[50px] h-[50px]" alt="">
+                    </div> -->
+                    <!--==================== Coffee section card ====================-->
+                    <!-- <div class="history-cards">
+                        <div class="img-area">
+                            <img src="/E-FOOD/image/cofee.png" alt="">
                         </div>
-                        <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
-                            <div class="name flex flex-col justify-between ">
-                                <h1 class="text-[#000]">Coffee</h1>
+                        <div class="history-info">
+                            <div class="name ">
+                                <h1>Coffee</h1>
                                 <p>Price:<span>$4.82</span></p>
                                 <h4>Status: <span>Succesful</span></h4>
                             </div>
-                            <div class="quantity flex flex-col justify-between">
+                            <div class="quantity ">
+                                <h1>Quantity: <span>2</span></h1>
+                                <h1>14th July 2023</h1>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--====================Liquids History Card ====================-->
+                    <!-- <div class="history-cards ">
+                        <div class="img-area">
+                            <img src="/E-FOOD/image/drinks.png" alt="">
+                        </div>
+                        <div class="history-info">
+                            <div class="name">
+                                <h1 >Liquid</h1>
+                                <p>Price:<span>$4.82</span></p>
+                                <h4>Status: <span>Succesful</span></h4>
+                            </div>
+                            <div class="quantity">
                                 <h1>Quantity: <span>2</span></h1>
                                 <h1>14th July 2023</h1>
                             </div>
                         </div>
                     </div>
-                    <!-- Coffee section card -->
-                    <!-- Liquids History Card -->
-                    <div class="history-cards w-[80%] bg-[#fff] h-[15%] mx-auto  mt-5  flex justify-between  items-center  rounded-[10px]">
-                        <div class="img-area w-[10%] h-[100%] bg-[#f9906f] flex justify-center items-center rounded-l-[10px]">
-                            <img src="/E-FOOD/image/drinks.png" class="w-[50px] h-[50px]" alt="">
-                        </div>
-                        <div class="history-info w-[80%] h-[90%] mx-auto flex justify-between items-stretch">
-                            <div class="name flex flex-col justify-between ">
-                                <h1 class="text-[#000]">Liquid</h1>
-                                <p>Price:<span>$4.82</span></p>
-                                <h4>Status: <span>Succesful</span></h4>
-                            </div>
-                            <div class="quantity flex flex-col justify-between">
-                                <h1>Quantity: <span>2</span></h1>
-                                <h1>14th July 2023</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Liquids History Card -->
                                         
                 </div>
                 
-            </div>
-            <!-- History section Ends -->
-            <!-- Dashboard Section -->
-            <div class="quick-order h-[80%] w-[25%] bg-[#fff] fixed top-[10%] right-[2%] flex flex-col justify-center z-[3]">
-            <div class="order-items h-[90%] w-[90%] mx-auto justify-between flex flex-col">
-                <div class="flex items-center justify-between">
+            </div> -->
+            <!--============================== HISTORY SECTION ENDS============================== -->
+
+            <!--============================== MY ORDER SECTION ============================== -->
+            <div class="quick-order">
+            <div class="order-items">
+                <div>
                     <div class="order-head">
                         <h1>My Order</h1>
                         <p>Take out</p>
                     </div>
-                    <div class="close-x w-[50px] h-[50px] flex items-center justify-center">
+                    <div class="close-x">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div class="items-order  flex flex-col content-center  gap-5 overflow-scroll">
+                <div class="items-order">
                     
                 </div>
                 <div class="billing-info">
-                    <div class="flex justify-between">
+                    <div>
                         <p>Subtotal</p>
                         <h2 class="subtotal"></h2>
                     </div>
-                    <div class="flex justify-between">
+                    <div>
                         <p>Tax (10%)</p>
                         <h2 class="tax"></h2>
                     </div>
-                    <hr class="mt-5 mb-5">
-                    <div class="total flex justify-between">
+                    <hr>
+                    <div class="total">
                         <p>Total</p>
                         <h4 class="total-bill"></h4>
                     </div>
-                    <div class="flex justify-center">
-                        <a href="payment.html" class="mx-auto w-[100%] h-[100%]  mt-5 flex items-center justify-center">
-                            <input type="submit" name="bills" value="Pay" class="py-[10px]" >
+                    <div>
+                        <a href="payment.html">
+                            <input type="submit" name="bills" value="Pay">
                         </a>
                         <!-- <form action="payment.html" method="post" >
                            
@@ -292,81 +294,81 @@
 
             </div>
         </div>
-
-            <div class="swiper flex flex-col justify-between mt-5 dashboard-sec dashboard-sec">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+      <!--============================== ORDER CARDS SECTION ============================== -->
+            <!-- <div class="swiper dashboard-sec dashboard-sec">
+                <div class="swiper-wrapper"> -->
                   <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="menu flex flex-col justify-between mt-5">
-                    <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff] top-menu">
-                        <div class="swiper-info flex items-center w-[90%] mx-auto">
-                            <div class="move-left flex items-center">
+                        <!--============================== BURGER SECTION ============================== -->
+                  <!-- <div class="swiper-slide">
+                    <div class="menu">
+                    <div class="top-menu">
+                        <div class="swiper-info">
+                            <div class="move-left">
                                 <i class="fa-solid fa-chevron-right"></i>
                             </div>
-                            <div class="header pl-3">
+                            <div class="header">
                                 <h1>Hamburger</h1>
                                 <p>Discover whatever you need easily</p>
                             </div>
                         </div>
                     </div>
                     
-                    <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex flex-wrap content-start gap-8 relative">
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                    <section class="menu-cards">
+                        <div class="card-body burger">
                             <div class="item-img">
-                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
-                            <div class="item-detail ">
-                                <h1 class="text-center name-text">Chicken Burger</h1>
-                                <p class="text-center">$3.41</p>
+                            <div class="item-detail">
+                                <h1 class="name-text">Chicken Burger</h1>
+                                <p>$3.41</p>
                             </div>
                         </div>
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="card-body burger">
                             <div class="item-img">
-                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
                             <div class="item-detail ">
-                                <h1 class="text-center name-text">Chicken Burger</h1>
-                                <p class="text-center">$3.41</p>
+                                <h1 class="name-text">Chicken Burger</h1>
+                                <p>$3.41</p>
                             </div>
                         </div>
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="card-body burger ">
                             <div class="item-img">
-                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
                             <div class="item-detail ">
-                                <h1 class="text-center name-text">Chicken Burger</h1>
-                                <p class="text-center">$3.41</p>
+                                <h1 class=" name-text">Chicken Burger</h1>
+                                <p>$3.41</p>
                             </div>
                         </div>
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="card-body burger ">
                             <div class="item-img">
-                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
                             <div class="item-detail ">
-                                <h1 class="text-center name-text">Big Mac</h1>
-                                <p class="text-center">$3.41</p>
+                                <h1 class="name-text">Big Mac</h1>
+                                <p>$3.41</p>
                             </div>
                         </div>
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="card-body burger ">
                             <div class="item-img">
-                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
                             <div class="item-detail ">
-                                <h1 class="text-center name-text">Big Mac</h1>
-                                <p class="text-center">$3.41</p>
+                                <h1 class="name-text">Big Mac</h1>
+                                <p >$3.41</p>
                             </div>
                         </div>
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="card-body burger ">
                             <div class="item-img">
-                                <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
+                                <img src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
                             <div class="item-detail ">
-                                <h1 class="text-center name-text">Big Mac</h1>
-                                <p class="text-center">$3.41</p>
+                                <h1 class="name-text">Big Mac</h1>
+                                <p >$3.41</p>
                             </div>
                         </div>
-                        <div class="card-body burger bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <div class="card-body burger">
                             <div class="item-img">
                                 <img class="w-[50px] h-[45px]" src="/E-FOOD/image/Hamburger_PNG_Clip_Art-1491 (1).png">
                             </div>
@@ -379,92 +381,95 @@
                     </section>
         
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="menu flex flex-col justify-between mt-5">
-                        <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff] pizza">
-                            <div class="swiper-info flex items-center w-[90%] mx-auto">
-                                <div class="move-left flex items-center">
+                  </div> -->
+                    <!--============================= PIZZA SECTION ============================== -->
+                  <!-- <div class="swiper-slide">
+                    <div class="menu">
+                        <div class="pizza">
+                            <div class="swiper-info">
+                                <div class="move-left">
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </div>
-                                <div class="header pl-3">
+                                <div class="header">
                                     <h1>Pizza</h1>
                                     <p>Discover whatever you need easily</p>
                                 </div>
                             </div>
                         </div>
-                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex gap-8 flex-wrap content-start relative">
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <section class="menu-cards">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p>$2.41</p>
                                 </div>
                             </div>
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p class="">$2.41</p>
                                 </div>
                             </div>
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p>$2.41</p>
                                 </div>
                             </div>
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p class="">$2.41</p>
                                 </div>
                             </div>
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p>$2.41</p>
                                 </div>
                             </div>
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p class="">$2.41</p>
                                 </div>
                             </div>
-                            <div class="card-body pizza bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body pizza">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/pizza-removebg-preview.png">
+                                    <img src="/E-FOOD/image/pizza-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Pepporoni</h1>
-                                    <p class="text-center">$2.41</p>
+                                    <h1 class="name-text">Pepporoni</h1>
+                                    <p>$2.41</p>
                                 </div>
                             </div>
+                            
                             <h1 id="message"></h1>
                         </section>
             
                         </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="menu flex flex-col justify-between mt-5">
-                        <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff] coffee">
+                  </div> -->
+                        <!--============================== COFEE SECTION ============================== -->
+                  <!-- <div class="swiper-slide">
+                    <div class="menu">
+                        <div class="coffee">
                             <div class="swiper-info flex items-center w-[90%] mx-auto">
                                 <div class="move-left flex items-center">
                                     <i class="fa-solid fa-chevron-right"></i>
@@ -475,130 +480,91 @@
                                 </div>
                             </div>
                         </div>
-                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex  flex-wrap gap-8 relative">
-                            <div class="card-body coffee bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <section class="menu-cards">
+                            <div class="card-body coffee">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
+                                    <img src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Coffee</h1>
-                                    <p class="text-center">$5.41</p>
+                                    <h1 class="name-text">Coffee</h1>
+                                    <p>$5.41</p>
                                 </div>
                             </div>
-                            <div class="card-body coffee bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body coffee">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
+                                    <img src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Coffee</h1>
-                                    <p class="text-center">$5.41</p>
+                                    <h1 class="name-text">Coffee</h1>
+                                    <p>$5.41</p>
                                 </div>
                             </div>
-                            <div class="card-body coffee bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body coffee">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
+                                    <img src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center">Coffee</h1>
-                                    <p class="text-center">$5.41</p>
+                                    <h1 class="name-text">Coffee</h1>
+                                    <p>$5.41</p>
                                 </div>
                             </div>
-                            <div class="card-body coffee bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body coffee">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
+                                    <img src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Coffee</h1>
-                                    <p class="text-center">$5.41</p>
+                                    <h1 class="name-text">Coffee</h1>
+                                    <p>$5.41</p>
                                 </div>
                             </div>
-                            <div class="card-body coffee bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                            <div class="card-body coffee">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
+                                    <img src="/E-FOOD/image/big-mug-of-cold-beer-with-foam-and-bubbles-vector-11236182-removebg-preview.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Coffee</h1>
-                                    <p class="text-center">$5.41</p>
+                                    <h1 class="name-text">Coffee</h1>
+                                    <p>$5.41</p>
                                 </div>
                             </div>
                             <h1 id="message"></h1>
                             
                         </section>
                   </div>
-                  
-                </div>
-                <div class="swiper-slide">
-                    <div class="menu flex flex-col justify-between mt-5">
-                        <div class="w-[95%] flex items-center mx-auto h-[20%] bg-[#ffffff] water">
-                            <div class="swiper-info flex items-center w-[90%] mx-auto">
+                       
+                </div> -->
+                 <!--============================== LIQUIDS SECTION ============================== -->
+                <!-- <div class="swiper-slide">
+                    <div class="menu">
+                        <div class="water">
+                            <div class="swiper-info">
                                 <div class="move-left flex items-center">
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </div>
-                                <div class="header pl-3">
+                                <div class="header">
                                     <h1>Liquids</h1>
                                     <p>Discover whatever you need easily</p>
                                 </div>
                             </div>
                         </div>
-                        <section class="menu-cards w-[95%] h-[100%] mx-auto mt-5 flex flex-wrap gap-8 relative">
-                            <div class="card-body liquids bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
+                        <section class="menu-cards">
+                            <div class="card-body liquids">
                                 <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/drinks.png">
+                                    <img src="/E-FOOD/image/drinks.png">
                                 </div>
                                 <div class="item-detail ">
-                                    <h1 class="text-center name-text">Sparkling Water</h1>
-                                    <p class="text-center">$1.21</p>
-                                </div>
-                            </div>
-                            <div class="card-body liquids bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
-                                <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/drinks.png">
-                                </div>
-                                <div class="item-detail ">
-                                    <h1 class="text-center name-text">Fruit Mix</h1>
-                                    <p class="text-center">$1.21</p>
-                                </div>
-                            </div>
-                            <div class="card-body liquids bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
-                                <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/drinks.png">
-                                </div>
-                                <div class="item-detail ">
-                                    <h1 class="text-center name-text">Sparkling Water</h1>
-                                    <p class="text-center">$1.21</p>
-                                </div>
-                            </div>
-                            <div class="card-body liquids bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
-                                <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/drinks.png">
-                                </div>
-                                <div class="item-detail ">
-                                    <h1 class="text-center name-text">Sparkling Water</h1>
-                                    <p class="text-center">$1.21</p>
-                                </div>
-                            </div>
-                            <div class="card-body liquids bg-[#fff] w-[14%] h-[25%] flex flex-col justify-evenly items-center ">
-                                <div class="item-img">
-                                    <img class="w-[50px] h-[45px]" src="/E-FOOD/image/drinks.png">
-                                </div>
-                                <div class="item-detail ">
-                                    <h1 class="text-center name-text">Sparkling Water</h1>
-                                    <p class="text-center">$1.21</p>
+                                    <h1 class=" name-text">Sparkling Water</h1>
+                                    <p>$1.21</p>
                                 </div>
                             </div>
                             <h1 id="message"></h1>
                         </section>
-                  </div>
-                <!-- If we need pagination
-                <div class="swiper-pagination"></div> -->
+                  </div> -->
               
-                <!-- If we need navigation buttons
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>  -->
               
               </div>
-              <!-- Dashboard Section ends -->
-            
+        
             
         </section>
     </main>

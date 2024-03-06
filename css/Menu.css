@@ -143,6 +143,7 @@ section nav.active{
     font-size: 30px;
     font-weight: 900;
     font-family: 'exo 2';
+    color: #000;
 }
 .logo span{
     color: #f9ae21;
@@ -433,7 +434,6 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 5px;
 }
 .nav-area{
-    /* border: 1px solid red; */
     font-family: 'exo 2';   
     display: flex;
     justify-content: space-between;
@@ -500,6 +500,19 @@ nav{
 
 .menu{
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+.menu > div{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 20%;
+    background: #ffffff;
+
 }
 .top-nav{
     width: 80% !important;
@@ -520,6 +533,8 @@ nav{
 }
 .history-sec{
     display: none;
+    width: 100%;
+    height: 100%;
 }
 .track-order-sec{
     width: 90% !important;
@@ -537,9 +552,18 @@ nav{
     height: 100%;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1.25rem;
 }
 .swiper-info{
     height: 100%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
 }
 
 .move-left{
@@ -549,6 +573,8 @@ nav{
     border-radius: 50%;
     justify-content: center !important;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .move-left i{
     color: #a6a6a6;
@@ -562,12 +588,36 @@ nav{
 .menu .header p{
     color: #898989;
     font-family: 'lato';
-
+}
+.header{
+    padding-left: 0.75rem;
+}
+.menu-cards{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 2rem;
+    position: relative;
 }
 .card-body{
     border-radius: 10px;
     box-shadow: 0px 0px 5px 2px #cccccc43;
     cursor: pointer;
+    background: #fff;
+    min-width: 14%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item-img img{
+    height: 45px;
+    width: 50px;
 }
 .item-detail{
 font-family: 'exo 2';
@@ -575,26 +625,54 @@ font-family: 'exo 2';
 .item-detail h1{
     font-weight: 600;
     font-size: 16px;
+    text-align: center;
 }
 .item-detail p{
     font-size: 13px;
-    color: #c0888b;
-
+    color: #c0888b; 
+    text-align: center;
 }
 .quick-order{
     border-radius: 10px;
     transition: 0.8s;
     transform: translateY(-200%);
+    height: 80%;
+    width: 25%;
+    background: #fff;
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+
 }
 .quick-order.active{
   transform: translateY(0%);
 }
 .order-items{
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
 }
-.close-x{
+.order-items > div:nth-child(1){
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.quick-order .close-x{
     border: 1.7px solid #f8f8f8;
     border-radius: 50%;
     cursor: pointer;
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .close-x i{
     font-size: 20px;
@@ -611,6 +689,11 @@ font-family: 'exo 2';
 .items-order{
     height: 50% !important;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1.25rem;
+    overflow: scroll;
 }
 .card-pick-order{
     background: #f8f9fe;
@@ -646,6 +729,29 @@ font-family: 'exo 2';
     font-family: 'Tomorrow';
     font-weight: 300;
 }
+.billing-info hr{
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.billing-info div{
+    display: flex;
+    justify-content: space-between;
+}
+.billing-info div:last-of-type{
+    display: flex;
+    justify-content: center;
+}
+
+.billing-info div:last-of-type a{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .billing-info h2, h4{
     color: #959595;
     font-size: 14px;
@@ -678,35 +784,98 @@ font-family: 'exo 2';
     background: #ec5956;
     color: #fff;
     font-family: 'lato';
-
+    padding: 10px 0;
 }
 
+
 /*========================== HISTORY PAGE  =========================*/
+.history-text{
+    width: 95%;
+    margin: 0 auto;
+    background: #fff;
+    height: 20%;
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+}
 .history-text    h1{
     color: #1f1f1f;
     font-weight: 700;
     font-family: 'lato';
     font-size: 40px;
+    padding-left: 2.5rem;
 }
 .history-text{
     background: #fff;
 }
+.history-items{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+.history-cards{
+    width: 80%;
+    background: #fff;
+    height: 15%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 1.25rem;
+}
+.history-cards:nth-child(1) .img-area{
+    background: #f9ae21;
+}
+.history-cards:nth-child(2) .img-area{
+    background: #ba1f1d;
+}
+.history-cards:nth-child(3) .img-area{
+    background: #000;
+}
+.history-cards:nth-child(4) .img-area{
+    background: #f9ae21;
+}
+.img-area{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.img-area img{
+    width: 50px;
+    height: 50px;
+}
 .history-info{
     font-family: 'Tomorrow';
     color: #f9ae21;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .name h1{
-    /* font-family: 'lato'; */
     font-size: 25px;
     font-weight: 600;
+    color: #000;
 }
 .name p{
-/* font-family: 'lato'; */
 font-size: 20px;
 font-weight: 300;
 }
 .name p span{
-    /* font-family: 'lato'; */
 font-size: 15px;
 font-weight: 600;
 }
@@ -719,6 +888,9 @@ font-weight: 600;
 }
 .quantity{
     color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .quantity h1:nth-child(1) span{
     font-size: 22px;font-weight: 600;
@@ -736,7 +908,7 @@ font-weight: 600;
 }
 #map.active{
 }
-/*=============== customer service area  ===============*/
+/*=============== CUSTOMER SERVICE AREA ===============*/
 .service-area{
     width: 90%;
     margin: 0 auto;
@@ -826,228 +998,96 @@ font-weight: 600;
 .mobile-nav-items{
     display: none;
 }
+
+.desktop-nav-items{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.desktop-nav-items div{
+    display: flex;
+    align-items: center;
+}
 @media screen  and (max-width:650px) {
     body{
         overflow-x: hidden !important;
-    }
-    .top-nav {
-        margin-left: 15%;
-        width: 85% !important;
-        /* This will calculate the remaining width after subtracting 15% */
-    }
-    aside{
-        width: 15% !important;
-        /* border: 1px solid red; */
-        height: 100vh;
-        position: fixed;
-    }
-    .logo-area{
         width: 100%;
+    }
+    .aside-nav{
+        width: 60.5vw;
+        transform: translateX(-100%);
+        transition: 0.35s ease-in;
+    }
+    .aside-nav.move{
+        transform: translateX(0);
     }
     .logo-area img{
-        display: none;
+        width: 40px;
     }
-    .logo-area h2{
-        font-size: 40%;
-    }
-    #date{
-        font-size: 5px;
-    }
-    .arrow i{
-        font-size: 10px;
-    }
-    .mini-nav-items{
-        width: 80%;
-        margin: 0 auto;
-    }
-    .mini-nav img{
-        display: none;
-    }
-    .mini-nav div{
-       padding-left: 0;
-    }
-    .mini-nav p{
-        font-size: 40%;
-    }
-    .mini-nav h1{
-        font-size: 10px !important;
-    }
-    .menu-dashboard{
-        height: 25vh;
-    }
-    .menu-dashboard ul li a{
-        justify-content: center;
-    }
-    .menu-dashboard ul{
-        height: 80%;
-    }
-    .menu-dashboard ul li a i{
-        font-size: 15px;
-    }
-     .menu-dashboard p{
-        display: none;
-    }
-    .menu-dashboard h1{
-        font-size: 8px !important;
-    }
-    .general li a{
-        justify-content: center;
-    }
-    .general h1{
-        font-size: 10px !important;
-    }
-    .general p{
-        display: none;
-    }
-    .general{
-        height: 25vh;
-    
-    }
-    .mode-slider h1{
-        display: none;
-    }
-    .mode-slider{
-        height: 25%;
-        flex-direction: column;
-    }
-    /* top nav */
-    .nav-items{
-        display: none;
-    }
-    .nav-items{
-        justify-content: space-between !important;
-    }
-    .mobile-nav-items{
-        height: 20vh;
-        display: block;
-        margin-top: 5vh;
-        align-items: center;
-        justify-content: space-between !important;
-        /* border: 1px solid red; */
-    }
-    .mobile-nav-items p{
-        display: none;
-    }
-    .chat{
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-        
-    }
-    .share{
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    .my-orders{
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    .my-orders div{
-        width: 12px;
-        height: 12px;
-    }
-    .nav-area form{
-        width: 100%;
-    }
-    .nav-area form input::placeholder{
-        font-size: 10px;
-        font-family: 'exo 2';
-        letter-spacing: .5px;
-    }
-    /* Dashboard */
-    .menu{
-        width: 85%;
-      
-        margin-left: 15%;
-        margin: 0 auto;
-        margin-top: 10%;
-        
-    }
-    .top-menu{
-        height: 15%;
-    }
-    .move-left{
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
-    }
-    .header h1{
-        font-size: 20px !important;
-    }
-    .header p{
-        font-size: 10px;
-    }
-    .menu-cards{
-        width: 100%;
-        flex-wrap: wrap !important;
-    }
-    .card-body{
-        min-width: 45% !important;
-    }
-    .quick-order{
-        right: 0;
-        left: 0;
-        z-index: 99;
-        width: 80%;
-        top: 0;
-        height: 100%;
-    }
-    .customer-service-text h1{
-        font-size: 25px;
-    }
-    .customer-service-text p{
-        font-size: 10px;
-    }
-    .customer-service-sec textarea{
-        font-size: 14px;
-    }
-    .service-icon{
-        min-width: 100px;
-    }
-    .service-icon i:nth-child(2){
-        display: none;
-    }
-    .customer-service-sec form input{
-        font-size: 10px;
-    }
-    .history-text{
-        height: 10%;
-    }
-    .history-text h1{
+    .logo-area a h2{
         font-size: 20px;
     }
-    .history-items{
-        width: 85%;
-        margin: 0 auto;
-        margin-top: 5%;
+    .dashboard ul p{
+        font-weight: 500;
+        font-size: 14px;
     }
-    .history-cards{
-        width: 100%;
+    .general p{
+        font-weight: 500;
+        font-size: 14px;
     }
-    .history-info{
-        width: 75%;
+    .mode-slider h1{
+        font-weight: 500;
+        font-size: 14px;
     }
-    .name h1{
-        font-size: 15px;
+    /* ==============TOP NAV======== */
+    .top-nav{
+        margin-left: 0;
+        transform: translateX(0);
+        transition: 0.4s ease-in;
     }
-    .name p{
-        font-size: 15px;
+    .top-nav.move{
+        transform: translateX(78%);
     }
-    .name h4{
+    .desktop-nav-items p{
+        display: none;
+    }
+    .top-navbar{
+
+        width: 100vw;
+    }
+    .top-navbar .nav-area{
+        width: 100vw;
+    }
+    .nav-area form{
+        width: 50%;
+        margin-left: 1px;
+    }
+    .nav-area form input{
+        width: 60%;
+        height: 100%;
+    }
+    .nav-area form input::placeholder{
+        font-size: 9px;
+    }
+
+    .nav-area form i{
         font-size: 10px;
     }
-    .quantity h1{
-        font-size: 10px !important;
+    .nav-area form  button{
+        padding: 2px 5px;
     }
-    .quantity h1 span{
-        font-size: 14px !important;
+    .nav-area{
+        gap: 8px;
+        justify-content: initial;
     }
-    .img-area{
-        width: 15%;
+    .nav-items{
+        align-items: center;
+    }
+    .nav-items > div{
+    }
+    .notification-card{
+        width: 10px;
+        height: 10px;
     }
 }
 @media screen  and (max-width:1023px) and (min-width:651px) {
@@ -1060,7 +1100,7 @@ font-weight: 600;
     .logo-area h2{
         font-size: 100%;
     }
-    .nav-items p{
+    .desktop-nav-items p{
     display: none;
     }
     .nav-area form{
@@ -1078,10 +1118,6 @@ font-weight: 600;
     .quick-order{
         width: 40%;
     }
-    .card-body{
-        min-width: 30% !important;
-        gap: 2px;
-    }
     .menu-dashboard p{
        font-size: 11px !important;
     }
@@ -1090,6 +1126,10 @@ font-weight: 600;
     }
     .customer-service-text h1{
         font-size: 30px;
+    }
+    .card-body{
+        min-width: 20%;
+        gap: 2px;
     }
 }
 @media screen  and (max-width:1300px) and (min-width:1024px) {
