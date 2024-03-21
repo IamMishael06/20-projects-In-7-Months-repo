@@ -1016,7 +1016,7 @@ font-weight: 600;
     .aside-nav{
         width: 60.5vw;
         transform: translateX(-100%);
-        transition: 0.35s ease-in;
+        transition: 0.4s ease-in;
     }
     .aside-nav.move{
         transform: translateX(0);
