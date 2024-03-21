@@ -103,7 +103,7 @@ function FlashSale(props) {
       bookLeft : `${22} books left`
     },
   ]
-  const pickBook = books.map((book) =>  <SwiperSlide key={book.title} className='flash-sale-slide '>
+  const pickBook = books.map((book) =>  <SwiperSlide key={book.title} className='flash-sale-slide `'>
     <div className='w-[100%] h-auto border-2 border-blue-500 lg:w-[95%] mx-auto lg:h-[100%] flex justify-center items-center rounded-[20px] bg-[#310042]'>
      <div className='flex-col md:flex justify-between items-center gap-5 w-[100%] h-[90%]'>
       <div className='pic-sec-flash-sale w-[35%] ml-[3%] h-[100%] rounded-[15px]'>
