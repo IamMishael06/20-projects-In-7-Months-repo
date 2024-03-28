@@ -16,21 +16,22 @@ var dashboardBtn = document.querySelector('.dashboard-btn')
 var customerServiceBtn = document.querySelector('.customer-service')
 var customerSec = document.querySelector('.customer-service-sec')
 dashboardBtn.addEventListener('click',()=>{
-    historySec.style.display ='none';
+    console.log('help')
     dashboardSec.style.display ='block';
+    historySec.classList.remove('active')
     customerSec.style.display ='none';
 })
 customerServiceBtn.addEventListener('click',()=>{
-    console.log('help')
+
     customerSec.style.display ='block';
     historySec.classList.remove('active')
     dashboardSec.style.display ='none';
 })
 historyBtn.addEventListener('click',()=>{
-
     historySec.classList.add('active')
-    customerSec.style.display ='none';
     dashboardSec.style.display ='none';
+    customerSec.style.display ='none';
+    
 
 })
 // light and dark modes
