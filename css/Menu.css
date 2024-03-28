@@ -536,6 +536,9 @@ nav{
     width: 100%;
     height: 100%;
 }
+.history-sec.active{
+    display: block !important;
+}
 .track-order-sec{
     width: 90% !important;
     height: 90% !important;
@@ -853,7 +856,7 @@ font-family: 'exo 2';
 }
 .history-info{
     font-family: 'Tomorrow';
-    color: #f9ae21;
+    color: #1f1f1f;
     width: 80%;
     height: 90%;
     margin: 0 auto;
@@ -880,7 +883,7 @@ font-size: 15px;
 font-weight: 600;
 }
 .name h4{
-    color: #ba1f1d;
+    color: #A7D94C;
 }
 .quantity h1:nth-child(1){
     font-size: 15px;
@@ -893,7 +896,8 @@ font-weight: 600;
     justify-content: space-between;
 }
 .quantity h1:nth-child(1) span{
-    font-size: 22px;font-weight: 600;
+    font-size: 22px;
+    font-weight: 600;
 }
 .quantity h1:nth-child(2){
     font-size: 15px;
@@ -1077,18 +1081,97 @@ font-weight: 600;
         padding: 2px 5px;
     }
     .nav-area{
-        gap: 8px;
+        gap: 5px;
         justify-content: initial;
     }
     .nav-items{
         align-items: center;
-    }
-    .nav-items > div{
+        font-size: 13px;
+        gap: 20px;
+        justify-content:initial;
     }
     .notification-card{
         width: 10px;
         height: 10px;
     }
+    /* ================HISTORY SECTION RESPONSIVESNESS =================== */
+    .top-nav{
+        width: 100% !important;
+        height: auto;
+    }
+    .history-text h1{
+        font-size: 30px;
+    }
+    .history-items{
+        margin: 0 auto;
+    }
+    .history-cards{
+        width: 100%;
+    }
+    .img-area{
+        width: 15%;
+    }
+    .img-area img{
+        width: 40px;
+        height: 40px;
+    }
+    .name h1{
+        font-size: 20px;
+    }
+    .name p{
+    font-size: 13px;
+    }
+    .name p span{
+        font-size: 12px;
+    }
+    .quantity h1:nth-child(1) span{
+        font-size: 14px;
+    }
+    .quantity h1:nth-child(2){
+        font-size: 12px;
+    } 
+     /* ================HISTORY SECTION RESPONSIVESNESS =================== */
+     .service-area{
+     }
+     .service-icon{
+        width: 80px;
+        height: 80px;
+     }
+     .service-icon > i:nth-child(2){
+        display: none;
+     }
+     .customer-service-text{
+        width: 90%;
+        margin: 0 auto;
+     }
+     .customer-service-text h1{
+        font-size: 30px;
+     }
+     .customer-service-text p{
+        font-size: 14px;
+     }
+     .customer-service-sec textarea{
+        font-size: 14px;
+        width: 90%;
+     }
+     .customer-service-sec form input{
+        width: 60%;
+     }
+    /* ================ DASHBOARD RESPONSIVESNESS =================== */
+    .menu-cards{
+        gap: 10px;
+        align-content: start;
+    }
+    .card-body{
+        width: 30%;
+    }
+    /* ================ ADD TO CART RESPONSIVESNESS =================== */
+    .quick-order{
+        width: 80%;
+    }
+
+
+
 }
 @media screen  and (max-width:1023px) and (min-width:651px) {
     .logo-area{

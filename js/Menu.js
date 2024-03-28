@@ -7,6 +7,32 @@ arrow.addEventListener('click', ()=>{
     section.classList.toggle('active')
     navItems.classList.toggle('active')
 })
+
+// opoening diffenernt pages
+var historySec = document.querySelector('.history-sec')
+var dashboardSec = document.querySelector('.dashboard-sec')
+var historyBtn = document.querySelector('.history-btn')
+var dashboardBtn = document.querySelector('.dashboard-btn')
+var customerServiceBtn = document.querySelector('.customer-service')
+var customerSec = document.querySelector('.customer-service-sec')
+dashboardBtn.addEventListener('click',()=>{
+    historySec.style.display ='none';
+    dashboardSec.style.display ='block';
+    customerSec.style.display ='none';
+})
+customerServiceBtn.addEventListener('click',()=>{
+    console.log('help')
+    customerSec.style.display ='block';
+    historySec.classList.remove('active')
+    dashboardSec.style.display ='none';
+})
+historyBtn.addEventListener('click',()=>{
+
+    historySec.classList.add('active')
+    customerSec.style.display ='none';
+    dashboardSec.style.display ='none';
+
+})
 // light and dark modes
 
 
@@ -316,28 +342,7 @@ function filterList() {
         }
     }
 }
-// opoening diffenernt pages
-var historySec = document.querySelector('.history-sec')
-var dashboardSec = document.querySelector('.dashboard-sec')
-var historyBtn = document.querySelector('.history-btn')
-var dashboardBtn = document.querySelector('.dashboard-btn')
-var customerServiceBtn = document.querySelector('.customer-service')
-var customerSec = document.querySelector('.customer-service-sec')
-dashboardBtn.addEventListener('click',()=>{
-    historySec.style.display ='none';
-    dashboardSec.style.display ='block';
-    customerSec.style.display ='none';
-})
-customerServiceBtn.addEventListener('click',()=>{
-    dashboardSec.style.display ='none';
-    historySec.style.display ='none';
-    customerSec.style.display ='block';
-})
-historyBtn.addEventListener('click',()=>{
-    dashboardSec.style.display ='none';
-    historySec.style.display ='block';
-    customerSec.style.display ='none';
-})
+
 
 // The order section logic
 
@@ -367,6 +372,10 @@ const swiper = new Swiper('.swiper', {
 
 
 
-
+  if (window.matchMedia('(max-width: 450px)').matches) {
+    setTimeout(() => {
+        alert('Use the burger image to close the side nav')
+    }, 3000);
+  }
 
 
