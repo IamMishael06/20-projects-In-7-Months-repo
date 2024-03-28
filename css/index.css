@@ -202,10 +202,10 @@ margin-right: 5px;
     width: 100%;
 }
 .slide-one{
-    background: url(./image/0062541_0.jpeg);
+    background: url(/image/0062541_0.jpeg);
 }
 .slide-two{
-    background: url(./image/foods-to-avoid-during-period-1.jpg);
+    background: url(/image/foods-to-avoid-during-period-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
