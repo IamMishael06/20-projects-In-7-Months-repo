@@ -343,7 +343,7 @@ section nav.active{
     width: 25%;
     justify-content: center;
 }
-.mobile-nav-items{
+/* .mobile-nav-items{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -375,7 +375,7 @@ section nav.active{
 }
 .nav-items p{
     padding-left: 0.75rem;
-}
+} */
 .my-orders{
 
 }
@@ -444,6 +444,11 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .nav-area.active{
     display: none;
+}
+.nav-items{
+    border: 1px solid red;
+    display: flex;
+align-items: center;
 }
 .nav-items p,.nav-items i{
     color: #7e7e7e;
@@ -1082,17 +1087,26 @@ font-weight: 600;
     }
     .nav-area{
         gap: 5px;
-        justify-content: initial;
+        justify-content: space-between;
     }
     .nav-items{
         align-items: center;
         font-size: 13px;
-        gap: 20px;
+        width: 10%;
         justify-content:initial;
     }
     .notification-card{
         width: 10px;
         height: 10px;
+    }
+    .chat{
+        display: none !important;
+    }
+    .my-orders{
+        display: none !important;
+    }
+    .share{
+        display: none !important;
     }
     /* ================HISTORY SECTION RESPONSIVESNESS =================== */
     .top-nav{
