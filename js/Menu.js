@@ -8,6 +8,12 @@ arrow.addEventListener('click', ()=>{
     navItems.classList.toggle('active')
 })
 
+if (window.matchMedia('(max-width: 500px)').matches) {
+    setTimeout(() => {
+        alert('Use the burger image to close the side nav')
+    }, 3000);
+  }
+
 // opoening diffenernt pages
 var historySec = document.querySelector('.history-sec')
 var dashboardSec = document.querySelector('.dashboard-sec')
@@ -373,10 +379,5 @@ const swiper = new Swiper('.swiper', {
 
 
 
-  if (window.matchMedia('(max-width: 450px)').matches) {
-    setTimeout(() => {
-        alert('Use the burger image to close the side nav')
-    }, 3000);
-  }
 
 
