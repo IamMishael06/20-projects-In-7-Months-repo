@@ -446,7 +446,6 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none;
 }
 .nav-items{
-    border: 1px solid red;
     display: flex;
 align-items: center;
 }
