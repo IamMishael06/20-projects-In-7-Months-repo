@@ -144,6 +144,9 @@ form input[type=submit]:hover{
     display: none !important;
 }
 @media screen and (max-width:600px) {
+    body{
+        background: #fff;
+    }
     .register-area{
         display: none !important;
     }
@@ -156,7 +159,7 @@ form input[type=submit]:hover{
         justify-content: space-between !important;
         height: 90vh;
         align-items: normal;
-        width: 80vw;
+        width: 90vw;
         position: absolute;
         display: block !important;
         transform: translateY(200%);
@@ -171,7 +174,7 @@ form input[type=submit]:hover{
         height: 90vh;
         transform: translateY(0%);
         align-items: normal;
-        width: 80vw;
+        width: 90vw;
         display: block !important;
         background: #fff;
         position: relative;
