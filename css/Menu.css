@@ -1067,8 +1067,8 @@ font-weight: 600;
         width: 100vw;
     }
     .nav-area form{
-        width: 50%;
-        margin-left: 1px;
+        width: 60%;
+        margin-left: 10px;
     }
     .nav-area form input{
         width: 60%;
