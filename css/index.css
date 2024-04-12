@@ -7,6 +7,7 @@ body{
     overflow-x: hidden !important;
     padding: 0;
     margin: 0;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'exo 2';
 }
@@ -207,6 +208,7 @@ margin-right: 5px;
 .slide-one{
     background: url(/image/0062541_0.jpeg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .slide-two{
     background: url(/image/foods-to-avoid-during-period-1.jpg);
