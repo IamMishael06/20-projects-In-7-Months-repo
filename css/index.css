@@ -40,6 +40,9 @@ body{
 .logo .design{
     color: #f9ae21;
 }
+.navItems{
+    border: 1px solid red;
+}
 .navItems li{
 margin-left: 5px;
 margin-right: 5px;
@@ -203,6 +206,7 @@ margin-right: 5px;
 }
 .slide-one{
     background: url(/image/0062541_0.jpeg);
+    background-repeat: no-repeat;
 }
 .slide-two{
     background: url(/image/foods-to-avoid-during-period-1.jpg);
