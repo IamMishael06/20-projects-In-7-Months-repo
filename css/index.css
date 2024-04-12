@@ -41,7 +41,7 @@ body{
     color: #f9ae21;
 }
 .navItems{
-    border: 1px solid red;
+    width: 50%;
 }
 .navItems li{
 margin-left: 5px;
