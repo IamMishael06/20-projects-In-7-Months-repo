@@ -67,7 +67,9 @@ body{
 
     .basket-div{
         width: 30px;
-
+    }
+    .flash-sale-slide{
+        width: 100%;
     }
   }
   @media (max-width: 768px) {
@@ -85,10 +87,6 @@ body{
     }
     .flash-sale{
         flex-direction: column;
-    }
-    .flash-sale-slide{
-        width: 100% !important;
-        height: 100% !important;
     }
 
   }
@@ -461,15 +459,12 @@ color: #cbcbcb;
     height: 100%;
     width: 100%;
 }
-.flash-sale-slide{
-    height: 100% !important;
-    width: 75% !important;
-}
 .purple-noise{
     filter: blur(50px);
     background:#5c047b;
     z-index: 99;
 }
+
 .pic-sec-flash-sale img{
     /* object-fit: contain;  */
     border-radius: 15px !important;
@@ -486,12 +481,10 @@ color: #cbcbcb;
     font-family: 'lato';
 }
 .name-flash-sale h1{
-    font-size: 25px;
     font-weight: 600;
     color: #dbbce2;
 }
 .name-flash-sale h3{
-    font-size: 15px;
     color: #9d76ab;
 }
 .progress-line{

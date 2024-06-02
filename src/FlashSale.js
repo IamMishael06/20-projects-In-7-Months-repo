@@ -103,30 +103,30 @@ function FlashSale(props) {
       bookLeft : `${22} books left`
     },
   ]
-  const pickBook = books.map((book) =>  <SwiperSlide key={book.title} className='flash-sale-slide `'>
-    <div className='w-[100%] h-auto border-2 border-blue-500 lg:w-[95%] mx-auto lg:h-[100%] flex justify-center items-center rounded-[20px] bg-[#310042]'>
-     <div className='flex-col md:flex justify-between items-center gap-5 w-[100%] h-[90%]'>
-      <div className='pic-sec-flash-sale w-[35%] ml-[3%] h-[100%] rounded-[15px]'>
-         <img src={book.background} alt=""  className='h-[100%] rounded-[15px]'/>
+  const pickBook = books.map((book) =>  <SwiperSlide key={book.title} className='flash-sale-slide w-[100%]'>
+    <div className='borders w-[90%]  h-[100%] flex gap-[50px]    lg:w-[95%] mx-auto lg:h-[100%] rounded-[20px] bg-[#310042] lg:py-2 py-3'>
+     <div className='flex-col gap-3  md:flex md:flex-row items-center w-[100%] h-[30%] md:h-[100%]'>
+      <div className='pic-sec-flash-sale  w-[100%] md:w-[70%]   h-[100%] md:h-[100%] rounded-[15px]'>
+         <img src={book.background} alt=""  className='h-[100%] ml-5 md:ml-auto md:h-[100%] rounded-[15px]'/>
       </div>
-      <div className='w-[60%] h-[100%] flex flex-col gap-2 second-part-two'>
-        <div className='h-[8%] w-[80%] flex justify-between items-center flash-sale-star'>
+      <div className='md:w-[100%] pl-5 mt-5 md:mt-0 md:pl-auto h-[100%] md:h-[90%] md:justify-center flex flex-col gap-2 second-part-two'>
+        <div className='h-[8%] w-[80%] gap-2  flex justify-between items-center flash-sale-star'>
           <p>{book.type}</p>
-          <div className='flex gap-4 items-center'>
+          <div className='flex gap-3 items-center text-[12px] md:text-[14px]'>
             <FaStar className='text-[#ef7404]'/>
             <FaStar className='text-[#ef7404]'/>
             <FaStar className='text-[#ef7404]'/>
             <FaStar className='text-[#ef7404]'/>
             <FaStar className='four-star text-[#fff]'/>
-            <h6 className='text-[#fff]'>(450)</h6>
+            <h6 className='text-[#fff] text-[12px] md:text-[12px]'>(450)</h6>
           </div>
         </div>
         <div className='name-flash-sale'>
-          <h1>{book.title}</h1>
-          <h3>{book.Author}</h3>
+          <h1 className='text-[20px] md:text-[25px]'>{book.title}</h1>
+          <h3 className='text-[12px] md:text-[15px]'>{book.Author}</h3>
         </div>
         <div className='w-[100%] bestseller-price flex items-center mt-5'>
-             <p className='text-[#932eb4] text-[30px]'>{book.price}</p><h4 className='pl-3 text-[#9d76ab]'>{book.prevPrice}</h4>
+             <p className='text-[#932eb4] text-[20px] md:text-[30px] '>{book.price}</p><h4 className='pl-3 text-[#9d76ab]'>{book.prevPrice}</h4>
         </div>
         <div className='flex justify-between w-[70%] items-center h-[20%'>
           <div className='progress-line' >
@@ -145,7 +145,7 @@ function FlashSale(props) {
   </SwiperSlide> )
   return (
     <React.Fragment>
-      <div className='flash-sale w-[100%] md:flex lg:justify-between lg:items-center bg-[#5b067d] h-auto md:h-[60vh] mt-10 pt-10 relative'>
+      <div className='flash-sale w-[100%] md:flex lg:justify-between lg:items-center bg-[#5b067d]  h-auto md:h-[60vh] mt-10 py-10 relative'>
         <div className='purple-noise hidden lg:block absolute w-[300px] h-[400px] rounded-[100%] right-[-9%]'></div>
         <div className='purple-noise hidden lg:block  absolute w-[200px] h-[400px] rounded-[100%] left-[30%]'></div>
         <div className='lg:w-[45%] w-[100%] mx-auto  h-[80%]'>
@@ -168,8 +168,8 @@ function FlashSale(props) {
             </div>
           </div>
         </div>
-        <div className='flash-sale-swiper-div w-[100%]  border-2 border-red-500  h-[80%] mx-auto mt-5 lg:mt-0 relative'>
-        <div className='move flash-sale-move-left-btn ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute top-40 left-[-5%] z-[99px] flex justify-center items-center cursor-pointer'>
+        <div className='flash-sale-swiper-div w-[100%] h-[500px]  md:h-[100%] mx-auto mt-5 lg:mt-0 md:w-[50%] relative'>
+        <div className='move flash-sale-move-left-btn ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute top-[60%] md:top-40 left-[5%] z-[99px] flex justify-center items-center cursor-pointer'>
               <FaArrowLeft className='text-[#98899a] ' />
             </div>
           <Swiper
@@ -190,6 +190,7 @@ function FlashSale(props) {
                 // When window width is < 800px
                 0: {
                   slidesPerView: 1,
+                  spaceBetween: 50,
                   pagination: {
                     clickable: false,
                   },
@@ -210,7 +211,7 @@ function FlashSale(props) {
           >
            {pickBook}
           </Swiper>
-          <div className='move flash-sale-move-right-btn lg:ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute right-[5%] top-40 z-[99px] flex justify-center items-center cursor-pointer'>
+          <div className='move flash-sale-move-right-btn lg:ml-[5px] w-[60px] h-[60px] bg-[#f7f9f6] rounded-[100%] absolute right-[5%] top-[60%] md:top-40 z-[99px] flex justify-center items-center cursor-pointer'>
               <FaArrowRight className='text-[#98899a] ' />
             </div>
         </div>
