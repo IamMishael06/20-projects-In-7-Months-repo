@@ -39,8 +39,8 @@ function LatestNews() {
             pfp : pfp4
         }
     ]
-    const showNew = news.map(item => <div className='w-[100%] mt-5 h-[400px] md:w-[24%]'>
-        <div className='w-[100%]'>
+    const showNew = news.map(item => <div className='w-[100%] mt-10 h-[400px] md:w-[24%] '>
+        <div className='w-[100%] lg:mt-0'>
             <img src={item.image} alt="" className='rounded-[10px] h-[20%]'/>
         </div>
         <div className='news-title mt-5 h-[10%]'>
@@ -49,8 +49,8 @@ function LatestNews() {
         <div className='new-title mt-5'>
         <h6 className='leading-[20px]'>{item.desc}<a href="#" className='text-[#9a30b4] font-bold'>...Continue reading</a></h6>
         </div>
-        <div className='pfp-area w-[80%] mt-3 flex flex-wrap items-center gap-5 md: flex-nowrap '>
-            <img src={item.pfp} alt="" className='w-[60px] h-[60px] rounded-[50%]' />
+        <div className='pfp-area w-[80%] mt-3 flex flex-wrap items-center mb-5 gap-5 md:flex-nowrap '>
+            <img src={item.pfp} alt="" className='w-[55px] h-[50px] rounded-[50%] md:w-[50px] object-cover' />
             <div>
                 <p className='font-bold'>{item.username}</p>
                 <p className='text-[#c5c5c5] text-[13px]'>20th August 2023</p>

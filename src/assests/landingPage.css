@@ -506,15 +506,16 @@ color: #cbcbcb;
     font-family: 'lato';
     font-weight: 600;
 }
-.featured-swiper{
+/* .featured-swiper{
     border: 1px solid green !important;
+} */
+.feature-swiper-slie{
+
 }
 .feature-swiper-slide{
     background: #fafafa !important;
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 25px 0px !important; */
     border-radius: 20px !important;
-    margin: 10px auto;
-    box-shadow: 0px 0px 7px 7px rgba(100, 100, 111, 0.2);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .featured-reviews h2, .featured-reviews span{
     color: #9d999f;
@@ -528,7 +529,6 @@ color: #cbcbcb;
     color: red;
 }
 .feature-title h1{
-    font-size: 32px;
     font-weight: 600;
     letter-spacing: .5px;
     font-family: 'lato';

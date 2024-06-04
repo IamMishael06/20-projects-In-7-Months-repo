@@ -76,17 +76,17 @@ function FeaturedBook() {
             reviews: `${450}`
         },
     ]
-    const BestSellers = books.map(book => <SwiperSlide className='feature-swiper-slide w-[80%] h-[100%]'>
+    const BestSellers = books.map(book => <SwiperSlide className='feature-swiper-slide w-[80%] h-[100%] lg:mb-5 pb-4'>
         <div className='feature-info-area w-[90%] h-[80%] mx-auto flex justify-between mt-10'>
-            <div className='w-[40%] h-[100%] flex '>
-                <img src={book.background} alt="" className='rounded-[50px] h-[100%]' />
+            <div className='w-[40%] h-[100%] md:w-[40%] md:h-[100%] flex items-center '>
+                <img src={book.background} alt="" className=' rounded-[20px] md:rounded-[50px]  md:h-[100%]' />
             </div>
             <div className='w-[55%] mt-3'>
-                <div className='flex items-center  gap-4'>
-                    <div className='type bg-[#f2dff7] w-[20%] h-[30px] rounded-[5px]'>
+                <div className='flex items-center flex-wrap  gap-4'>
+                    <div className='type bg-[#f2dff7] w-fit px-[3px] h-[30px] rounded-[5px]'>
                         <p className='text-center text-[#9d83a4]'>{book.type}</p>
                     </div>
-                    <div className='flex w-[20%]   justify-between'>
+                    <div className='flex w-[30%] md:w-[20%]   justify-between'>
                         <FaStar className='text-[#ef7404]' />
                         <FaStar className='text-[#ef7404]' />
                         <FaStar className='text-[#ef7404]' />
@@ -98,25 +98,25 @@ function FeaturedBook() {
                     </div>
                 </div>
                 <div className='feature-title mt-3'>
-                    <h1>{book.title}</h1>
+                    <h1 className='text-[20px] md:text-[32px]'>{book.title}</h1>
                 </div>
                 <div className='mt-4 feature-desc'>
-                    <p className='text-[#a7a6a6] '>{book.Author}</p>
+                    <p className='text-[#a7a6a6] text-[10px]'>{book.Author}</p>
                 </div>
                 <div className='w-[100%] bestseller-price flex items-center mt-5'>
-                    <p className='text-[#85578d] text-[35px]'>{book.price}</p><h4 className='pl-3 text-[20px]'>{book.prevPrice}</h4>
+                    <p className='text-[#85578d] text-[22px] md:text-[35px]'>{book.price}</p><h4 className='pl-3 text-[20px]'>{book.prevPrice}</h4>
                 </div>
-                <div className='mt-5 w-[70%] flex items-center gap-6'>
-                    <button className='flex items-center gap-2 w-[40%] justify-center h-[50px] rounded-[5px] bg-[#8a25aa] text-[#f6f4f4] add-to-cart'><FaShoppingBasket />Add to Cart</button>
-                    <button onClick={changeHeart} className='heart w-[20%] h-[50px] flex items-center justify-center rounded-[5px]'><FaHeart className='heart-icon' /></button>
-                    <button className='w-[30%] text-[12px] text-[#8a25aa] font-bold'>View Details</button>
+                <div className='mt-5 w-[70%] flex items-center gap-6 flex-wrap'>
+                    <button className='flex items-center gap-2 w-[80%] justify-center h-[50px] rounded-[5px] bg-[#8a25aa] text-[#f6f4f4] add-to-cart'><FaShoppingBasket />Add to Cart</button>
+                    <button onClick={changeHeart} className='heart w-[50px] h-[50px] flex items-center justify-center rounded-[5px]'><FaHeart className='heart-icon' /></button>
+                    <button className='w-[20%] text-[12px] text-[#8a25aa] font-bold'>View Details</button>
                 </div>
             </div>
         </div>
     </SwiperSlide>)
     return (
         <>
-            <div className='h-[80vh] mt-[5vh]'>
+            <div className='md:h-[80vh] h-auto mt-[5vh]'>
                 <div className='top-rated-header w-[90%] flex justify-between mx-auto'>
                     <h1>Featured Book</h1>
                     <button className='flex items-center justify-between w-[5%]'>
@@ -145,6 +145,22 @@ function FeaturedBook() {
                         pagination={{
                             clickable: true,
                         }}
+                        breakpoints={{
+                            1024:{
+                                slidesPerView: 1.3,
+                                pagination: {
+                                  clickable: true,
+                                }
+                              },
+                            // When window width is < 800px
+                            0: {
+                              slidesPerView: 1,
+                              spaceBetween: 50,
+                              pagination: {
+                                clickable: false,
+                              },
+                            },
+                          }}
                         modules={[FreeMode, Navigation, Pagination]}
                         className=" feature-swiper w-[100%] h-[100%]"
                     >
