@@ -584,3 +584,12 @@ color: #cbcbcb;
 .latest button{
     font-family: 'lato';
 }
+/* ========== TESTIMONIAL ========= */
+.testimonial-text h1{
+    font-family:'poppins';
+    font-weight: 600;
+}
+.testimonial-text p{
+    font-weight: 500;
+    font-family: 'poppins'
+}

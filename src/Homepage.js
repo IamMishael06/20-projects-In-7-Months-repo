@@ -10,6 +10,7 @@ import BestSellers from "./BestSellers";
 import FlashSale from "./FlashSale";
 import FeaturedBook from "./FeaturedBook";
 import LatestNews from './LatestNews';
+import Testimonials from './Testimonials';
 
 function Homepage() {
   return (
@@ -23,6 +24,7 @@ function Homepage() {
        <FlashSale />
        <FeaturedBook />
        <LatestNews />
+       <Testimonials />
     </div>
   )
 }
