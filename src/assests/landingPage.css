@@ -593,3 +593,17 @@ color: #cbcbcb;
     font-weight: 500;
     font-family: 'poppins'
 }
+/* .testimonial-slide{
+    border: 1px solid red;
+} */
+.swiper-slide-testimonial {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  position: relative;
+  z-index: 30;
+  height: 240px !important;
+  background: #fff;
+  font-family: 'poppins';
+
+}
