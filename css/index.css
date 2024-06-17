@@ -475,11 +475,6 @@ hr{
     align-items: center;
     justify-content: center;
 }
-.burger-sec:hover{
-    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
-    border-radius: 10px;
-    transition: 0.5s;
-}
 .burger-sec img{
     width: 15vw;
     height: 20vh;
@@ -528,11 +523,6 @@ hr{
     align-items: center;
     justify-content: center;
 }
-.pizza-sec:hover{
-    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
-    border-radius: 10px;
-    transition: 0.5s;
-}
 .pizza-sec img{
     width: 15vw;
     height: 20vh;
@@ -578,11 +568,6 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.beverage-sec:hover{
-    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
-    border-radius: 10px;
-    transition: 0.5s;
 }
 .beverage-sec img{
     width: 20vw;
@@ -887,7 +872,6 @@ bottom: 0;
     /*========================== BURGER AREA ==========================*/
     .burger-sec{
         height: auto;
-        box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
         border-radius: 10px;
         width: 70vw;
         justify-content: space-between;
@@ -913,7 +897,6 @@ bottom: 0;
     }
     .pizza-sec{
         height: auto;
-        box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
         border-radius: 10px;
         width: 70vw;
         margin: 0 auto;
@@ -942,7 +925,6 @@ bottom: 0;
         justify-content: space-between;
         margin-top:5vh;
         padding-bottom: 10px;
-        box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
         border-radius: 10px;
         padding-top: 10px;
     }
@@ -961,7 +943,7 @@ bottom: 0;
         flex-direction: column;
     }
     .drink-sec{
-        height: auto;    box-shadow: 0 4px 8px 0 #00000043, 0 6px 20px 0 #00000043;
+        height: auto;  
         border-radius: 10px;
         width: 70vw;
         justify-content: space-between;

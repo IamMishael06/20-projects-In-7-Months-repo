@@ -3,7 +3,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb+srv://Tari:xxxxxxx@marsfood.h8q9aen.mongodb.net/?retryWrites=true&w=majority&appName=Marsfood';
+const uri = 'mongodb+srv://Tari:Uk94PH!6r2uqgCY@marsfood.h8q9aen.mongodb.net/?retryWrites=true&w=majority&appName=Marsfood';
 
 const dbName = 'Marsfood'
 
