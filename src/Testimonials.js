@@ -12,7 +12,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 function Testimonials() {
   return (
     <>
-      <div className='mt-5 pb-10 h-auto md:h-[60vh] bg-[#fdf8fe] z-10 flex-col gap-10 md:flex-row  md:justify-between px-[50px]'>
+      <div className='testimonial-sec mt-5 pb-10 h-auto md:h-[60vh] bg-[#fdf8fe] z-10 flex-col gap-10 md:flex-row  md:justify-between px-[50px]'>
         <div className='testimonial-text md:w-[40%] h-auto md:h-[80%] w-[100%]  pt-[100px]'>
           <h1 className=' text-[18px] md:text-[25px]'>Testimonial</h1>
           <p className='text-[12px] text-[#9d989e] md:text-[14px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magnam ipsam fugiat repudiandae distinctio mollitia pariatur vitae accusantium, voluptas cum aliquid id voluptatum iusto.</p>
@@ -26,7 +26,7 @@ function Testimonials() {
             </div>
           </div>
         </div>
-        <div className='testimonial-slide mt-5 md:w-[50%] w-[100%] md:h-[80%] relative '>
+        <div className='testimonial-slide w-[100%] mt-5  md:w-[50%]  md:h-[80%] relative '>
           <Swiper
             effect={'coverflow'}
             grabCursor={true}

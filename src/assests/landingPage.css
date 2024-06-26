@@ -599,11 +599,16 @@ color: #cbcbcb;
 .swiper-slide-testimonial {
   background-position: center;
   background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
   width: 300px;
   position: relative;
   z-index: 30;
-  height: 240px !important;
+  height: 100% !important;
   background: #fff;
   font-family: 'poppins';
 
+}
+.testimonial-sec{
+    display: flex;
+    align-items: center;
 }
