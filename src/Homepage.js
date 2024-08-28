@@ -11,6 +11,7 @@ import FlashSale from "./FlashSale";
 import FeaturedBook from "./FeaturedBook";
 import LatestNews from './LatestNews';
 import Testimonials from './Testimonials';
+import Footer from './Footer';
 
 function Homepage() {
   return (
@@ -25,6 +26,8 @@ function Homepage() {
        <FeaturedBook />
        <LatestNews />
        <Testimonials />
+       <Footer />
+
     </div>
   )
 }

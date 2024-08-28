@@ -39,6 +39,10 @@ function Testimonials() {
               modifier: 1,
               slideShadows: true,
             }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper-testimonial h-[100%]"

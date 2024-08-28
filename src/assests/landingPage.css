@@ -612,3 +612,11 @@ color: #cbcbcb;
     display: flex;
     align-items: center;
 }
+/* ============OUR NEWSLETTER============ */
+.newsletter{
+    font-family: 'poppins';
+}
+.newsletter input[type=text]{
+    background: rgba(255, 255, 255, 0.187);
+    color: #ffffffc1;
+}
