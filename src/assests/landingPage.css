@@ -620,3 +620,18 @@ color: #cbcbcb;
     background: rgba(255, 255, 255, 0.187);
     color: #ffffffc1;
 }
+
+
+/* ============ FOOTER ============ */
+.footer-logo-sec h1{
+    font-family: 'poppins';
+    font-weight: 600;
+}
+.social-icon div{
+    border: 1px solid #81309e;
+}
+.sec-2 div p{
+font-size: 14px;
+color: #b5b5b5;
+font-family: 'poppins';
+}
